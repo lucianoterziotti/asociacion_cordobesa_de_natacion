@@ -3,7 +3,7 @@
 
 Reglas de commit, push y codigo en general:
 
-Git pull Antes de empezar a programar.
+Git pull antes de empezar a programar.
 
 Notacion camello para todo, paquetes con minuscula y clases con mayuscula.
 
