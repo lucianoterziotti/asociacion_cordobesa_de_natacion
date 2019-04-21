@@ -1,0 +1,70 @@
+CREATE TABLE CodigoPostal(
+cod_post int NOT NULL,
+nombre varchar(255),
+PRIMARY KEY (cod_post)
+);
+CREATE TABLE TipoDoc(
+tipo_doc varchar(255) NOT NULL,
+nombre varchar(255),
+PRIMARY KEY (tipo_doc)
+);
+CREATE TABLE Especialidad(
+cod_espec int NOT NULL,
+descripcion varchar(255),
+tiempo_record time,
+PRIMARY KEY (cod_espec)
+);
+CREATE TABLE Clubes(
+cod_club int NOT NULL,
+nombre varchar(255),
+calle varchar(255),
+numero int,
+PRIMARY KEY (cod_club)
+);
+
+CREATE TABLE Torneos(
+cod_torneo int NOT NULL,
+descripccion varchar(255),
+PRIMARY KEY(cod_torneo)
+);
+
+CREATE TABLE Profesores (
+    cod_prof int NOT NULL,
+    nombre varchar(255),
+    calle varchar(255),
+	numero varchar(255),
+	cod_post int FOREIGN KEY REFERENCES CodigoPostal(cod_post),
+	tipo_doc varchar(255) FOREIGN KEY REFERENCES TipoDoc(tipo_doc),
+	nro_doc int NOT NULL
+PRIMARY KEY(cod_prof)
+);
+
+CREATE TABLE Nadadores (
+    cod_nacional int NOT NULL,
+    nombre varchar(255),
+    calle varchar(255),
+	cod_postal int FOREIGN KEY REFERENCES CodigoPostal(cod_post),
+	tipo_doc varchar(255) FOREIGN KEY REFERENCES TipoDoc(tipo_doc),
+	nro_doc int, 
+PRIMARY KEY(cod_nacional)
+);
+CREATE TABLE NadadxEspe(
+cod_nad int FOREIGN KEY REFERENCES Nadadores(cod_nacional),
+cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
+);
+
+CREATE TABLE TorneosxAnio(
+cod_torneo int FOREIGN KEY REFERENCES Torneos(cod_torneo) NOT NULL,
+anio int NOT NULL,
+cod_club int FOREIGN KEY REFERENCES Clubes(cod_club),
+PRIMARY KEY(cod_torneo, anio)
+);
+CREATE TABLE Inscriptos(
+cod_torneo int NOT NULL FOREIGN KEY REFERENCES TorneosxAnio(cod_torneo),
+anio int NOT NULL FOREIGN KEY REFERENCES TorneosxAnio(anio),
+cod_espe int NOT NULL FOREIGN KEY REFERENCES NADADxESPE(cod_espec),
+cod_nad int NOT NULL FOREIGN KEY REFERENCES NADADxESPE(cod_nad),
+posicion int,
+tiempo time,
+PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
+);
