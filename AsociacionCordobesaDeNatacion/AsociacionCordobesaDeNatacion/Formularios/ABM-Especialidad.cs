@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AsociacionCordobesaDeNatacion
+namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class Form1 : Form
+    public partial class ABM_Especialidad : Form
     {
-        public Form1()
+        public ABM_Especialidad()
         {
             InitializeComponent();
         }

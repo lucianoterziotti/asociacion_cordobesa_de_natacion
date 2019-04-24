@@ -46,17 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clases\Class1.cs" />
-    <Compile Include="forms\Form1.cs">
+    <Compile Include="Clases\Class1.cs" />
+    <Compile Include="Formularios\ABM-Clubes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\ABM-Clubes.Designer.cs">
+      <DependentUpon>ABM-Clubes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ABM-Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ABM-Especialidad.Designer.cs">
+      <DependentUpon>ABM-Especialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ABM-Inscriptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ABM-Inscriptos.Designer.cs">
+      <DependentUpon>ABM-Inscriptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ABM-Nadadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ABM-Nadadores.Designer.cs">
+      <DependentUpon>ABM-Nadadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ABM-Profesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ABM-Profesores.Designer.cs">
+      <DependentUpon>ABM-Profesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ABM-Torneos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ABM-Torneos.Designer.cs">
+      <DependentUpon>ABM-Torneos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Escritorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Escritorio.Designer.cs">
+      <DependentUpon>Escritorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\ABM-Clubes.resx">
+      <DependentUpon>ABM-Clubes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ABM-Especialidad.resx">
+      <DependentUpon>ABM-Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ABM-Inscriptos.resx">
+      <DependentUpon>ABM-Inscriptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ABM-Nadadores.resx">
+      <DependentUpon>ABM-Nadadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ABM-Profesores.resx">
+      <DependentUpon>ABM-Profesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ABM-Torneos.resx">
+      <DependentUpon>ABM-Torneos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Escritorio.resx">
+      <DependentUpon>Escritorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
