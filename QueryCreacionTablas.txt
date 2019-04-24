@@ -51,20 +51,46 @@ PRIMARY KEY(cod_nacional)
 CREATE TABLE NadadxEspe(
 cod_nad int FOREIGN KEY REFERENCES Nadadores(cod_nacional),
 cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
+PRIMARY KEY(cod_nad, cod_espe)
 );
 
 CREATE TABLE TorneosxAnio(
 cod_torneo int FOREIGN KEY REFERENCES Torneos(cod_torneo) NOT NULL,
 anio int NOT NULL,
 cod_club int FOREIGN KEY REFERENCES Clubes(cod_club),
-PRIMARY KEY(cod_torneo, anio)
+PRIMARY KEY(anio,cod_torneo)
 );
+
+
+
+CREATE TABLE ProfxClub(
+cod_prof int FOREIGN KEY REFERENCES Profesores(cod_prof),
+cod_club int FOREIGN KEY REFERENCES Clubes(cod_club),
+PRIMARY KEY(cod_prof, cod_club) 
+);
+CREATE TABLE ProfxEspe(
+cod_prof int FOREIGN KEY REFERENCES Profesores(cod_prof),
+cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
+PRIMARY KEY(cod_prof, cod_espe) 
+);
+CREATE TABLE EspexTorneo(
+cod_torneo int NOT NULL FOREIGN KEY REFERENCES Profesores(cod_prof),
+anio int NOT NULL,
+cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
+fecha date ,
+PRIMARY KEY(cod_torneo, cod_espe, anio) 
+);
+
 CREATE TABLE Inscriptos(
-cod_torneo int NOT NULL FOREIGN KEY REFERENCES TorneosxAnio(cod_torneo),
-anio int NOT NULL FOREIGN KEY REFERENCES TorneosxAnio(anio),
-cod_espe int NOT NULL FOREIGN KEY REFERENCES NADADxESPE(cod_espec),
-cod_nad int NOT NULL FOREIGN KEY REFERENCES NADADxESPE(cod_nad),
+cod_torneo int NOT NULL FOREIGN KEY REFERENCES Torneos(cod_torneo),
+anio int NOT NULL ,
+cod_espe int NOT NULL ,
+cod_nad int NOT NULL ,
 posicion int,
 tiempo time,
-PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
+PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad),
+ CONSTRAINT FK_ FOREIGN KEY (anio,cod_torneo)
+    REFERENCES TorneosxAnio(anio,cod_torneo),
+	CONSTRAINT FK_ FOREIGN KEY (cod_nad,cod_espe)
+    REFERENCES NadadxEspe(cod_nad,cod_espe)
 );
