@@ -112,6 +112,9 @@
     <EmbeddedResource Include="Formularios\ABM-Clubes.resx">
       <DependentUpon>ABM-Clubes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ABM-Especialidad.resx">
+      <DependentUpon>ABM-Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ABM-Inscriptos.resx">
       <DependentUpon>ABM-Inscriptos.cs</DependentUpon>
     </EmbeddedResource>

@@ -44,6 +44,7 @@ namespace AsociacionCordobesaDeNatacion
                 frm_menu.ShowDialog();
 
                 frm_menu.Dispose();
+                
             }
             else
             {
