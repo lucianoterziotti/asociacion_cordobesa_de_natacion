@@ -16,25 +16,7 @@ namespace AsociacionCordobesaDeNatacion
         public partial class Login : Form
         {
 
-        int _id = 0;
-        public int id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
-        public string usuario
-        {
-            get { return this.BoxUsuario.Text; }
-            set { this.BoxUsuario.Text = value; }
-        }
-        public string password
-        {
-            get { return this.BoxPassword.Text; }
-            set { this.BoxPassword.Text = value; }
-
-        }
-
+        
         public Login()
         {
             InitializeComponent();
