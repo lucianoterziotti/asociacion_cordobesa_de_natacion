@@ -18,21 +18,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             InitializeComponent();
         }
 
-        string _cod_torneo;
-        int _id;
-
-        public int id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
-        public string cod_torneo
-        {
-            get { return this.txt_cod_torneo.Text; }
-            set { this.txt_cod_torneo.Text = value; }
-        }
-
 
         private void cmd_buscar_1_Click(object sender, EventArgs e)
         {
@@ -55,7 +40,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             if (tabla.Rows.Count == 1)
             {
 
-                this._id = int.Parse(tabla.Rows[0][0].ToString());
+                buscar_torneo.id = int.Parse(tabla.Rows[0][0].ToString());
 
                 this.Close();
             }

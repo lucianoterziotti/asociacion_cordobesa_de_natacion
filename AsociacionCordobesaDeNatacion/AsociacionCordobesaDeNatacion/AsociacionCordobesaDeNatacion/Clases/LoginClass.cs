@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,16 @@ namespace AsociacionCordobesaDeNatacion.Clases
             get { return _password; }
             set { _password = value; }
 
+        }
+
+        AccesoBD _BD = new AccesoBD();
+
+        public DataTable buscar_usuario(string usuario)
+        {
+            string sqltxt = @"SELECT * FROM usuarios 
+                             WHERE usuario = '" + usuario;
+
+            return _BD.consulta(sqltxt);
         }
     }
 }

@@ -13,17 +13,12 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 {
     public partial class ABM_Clubes : Form
     {
-        int _id;
+
         public ABM_Clubes()
         {
             InitializeComponent();
         }
-        public int id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
+  
         private void btn_buscar_Click(object sender, EventArgs e)
         {
 
@@ -48,7 +43,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 if (tabla.Rows.Count == 1)
                 {
 
-                    this.id = int.Parse(tabla.Rows[0][0].ToString());
+                    buscar_club.id = int.Parse(tabla.Rows[0][0].ToString());
 
                     this.Close();
                 }

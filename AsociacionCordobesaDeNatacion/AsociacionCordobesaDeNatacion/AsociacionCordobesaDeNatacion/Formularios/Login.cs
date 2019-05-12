@@ -24,19 +24,40 @@ namespace AsociacionCordobesaDeNatacion
 
         private void cmd_ingresar_Click(object sender, EventArgs e)
         {
-            if (this.BoxUsuario.Text == "")
+
+
+            if (this.txt_usuario.Text == "")
             {
                 MessageBox.Show("El campo 'Usuario' está vacío.");
-                this.BoxUsuario.Focus();
+                this.txt_usuario.Focus();
                 return;
             }
-            if (this.BoxPassword.Text == "")
+            if (this.txt_pssw.Text == "")
             {
                 MessageBox.Show("El campo 'Password' está vacío");
-                this.BoxPassword.Focus();
+                this.txt_pssw.Focus();
                 return;
             }
-            if(this.BoxUsuario.Text == "mati" && this.BoxPassword.Text == "1234")
+
+            LoginClass buscar_usuario_log = new LoginClass();
+
+            DataTable tabla = new DataTable();
+
+            tabla = buscar_usuario_log.buscar_usuario(this.txt_usuario.Text.Trim());
+
+            if (tabla.Rows.Count == 1)
+            {
+
+                buscar_usuario_log.id = int.Parse(tabla.Rows[0][0].ToString());
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No se encontro club con codigo especificado");
+            }
+
+            if (this.txt_usuario.Text == "mati" && this.txt_pssw.Text == "1234")
             {
             
                 Menus frm_menu = new Menus();
