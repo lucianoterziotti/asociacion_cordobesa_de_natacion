@@ -37,11 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmd_nuevo = new System.Windows.Forms.Button();
             this.cmd_grabar = new System.Windows.Forms.Button();
             this.cmd_actualizar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -143,40 +143,6 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Calle";
             // 
-            // cmd_nuevo
-            // 
-            this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.nuevo1;
-            this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_nuevo.Location = new System.Drawing.Point(490, 11);
-            this.cmd_nuevo.Name = "cmd_nuevo";
-            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
-            this.cmd_nuevo.TabIndex = 25;
-            this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
-            this.cmd_nuevo.UseVisualStyleBackColor = true;
-            this.cmd_nuevo.Click += new System.EventHandler(this.cmd_nuevo_Click);
-            // 
-            // cmd_grabar
-            // 
-            this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.grabar1;
-            this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Enabled = false;
-            this.cmd_grabar.Location = new System.Drawing.Point(533, 11);
-            this.cmd_grabar.Name = "cmd_grabar";
-            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
-            this.cmd_grabar.TabIndex = 26;
-            this.cmd_grabar.UseVisualStyleBackColor = true;
-            // 
-            // cmd_actualizar
-            // 
-            this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.icons8_actualizar_48;
-            this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Enabled = false;
-            this.cmd_actualizar.Location = new System.Drawing.Point(576, 11);
-            this.cmd_actualizar.Name = "cmd_actualizar";
-            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
-            this.cmd_actualizar.TabIndex = 27;
-            this.cmd_actualizar.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -196,6 +162,40 @@
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombre";
+            // 
+            // cmd_nuevo
+            // 
+            this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.nuevo1;
+            this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_nuevo.Location = new System.Drawing.Point(542, 0);
+            this.cmd_nuevo.Name = "cmd_nuevo";
+            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
+            this.cmd_nuevo.TabIndex = 25;
+            this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
+            this.cmd_nuevo.UseVisualStyleBackColor = true;
+            this.cmd_nuevo.Click += new System.EventHandler(this.cmd_nuevo_Click);
+            // 
+            // cmd_grabar
+            // 
+            this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.grabar1;
+            this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_grabar.Enabled = false;
+            this.cmd_grabar.Location = new System.Drawing.Point(585, 0);
+            this.cmd_grabar.Name = "cmd_grabar";
+            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
+            this.cmd_grabar.TabIndex = 26;
+            this.cmd_grabar.UseVisualStyleBackColor = true;
+            // 
+            // cmd_actualizar
+            // 
+            this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.icons8_actualizar_48;
+            this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_actualizar.Enabled = false;
+            this.cmd_actualizar.Location = new System.Drawing.Point(628, 0);
+            this.cmd_actualizar.Name = "cmd_actualizar";
+            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
+            this.cmd_actualizar.TabIndex = 27;
+            this.cmd_actualizar.UseVisualStyleBackColor = true;
             // 
             // ABM_Clubes
             // 

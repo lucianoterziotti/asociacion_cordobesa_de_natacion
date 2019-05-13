@@ -41,7 +41,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             if (tabla.Rows.Count == 1)
             {
               
-                this._id = int.Parse(tabla.Rows[0][0].ToString());
+            
+                buscar_nadador.id = int.Parse(tabla.Rows[0][0].ToString());
                 
                 this.Close();
             }
