@@ -51,7 +51,8 @@ namespace AsociacionCordobesaDeNatacion.Clases
         public DataTable buscar_club(string cod_club)
         {
             string sqltxt = @"SELECT * FROM clubes 
-                             WHERE cod_club = '" + cod_club;
+                             WHERE cod_club = '" + cod_club
+                             +"'";
 
             return _BD.consulta(sqltxt);
         }

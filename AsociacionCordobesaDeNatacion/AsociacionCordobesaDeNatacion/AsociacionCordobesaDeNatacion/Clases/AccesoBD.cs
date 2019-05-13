@@ -46,7 +46,9 @@ namespace AsociacionCordobesaDeNatacion.Clases
             cmd.ExecuteNonQuery();
             cerrar();
         }
-        
-        
+
+       
+
+
     }
 }

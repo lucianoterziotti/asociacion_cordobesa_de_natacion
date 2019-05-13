@@ -41,11 +41,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 tabla = buscar_club.buscar_club(this.txt_id.Text.Trim());
 
                 if (tabla.Rows.Count == 1)
-                {
+                {   
 
-                    buscar_club.id = int.Parse(tabla.Rows[0][0].ToString());
-
-                    this.Close();
+                    dgv_clubes.DataSource = tabla;
+                //  buscar_club.id = int.Parse(tabla.Rows[0][0].ToString());
+                //this.Close();
                 }
                 else
                 {
