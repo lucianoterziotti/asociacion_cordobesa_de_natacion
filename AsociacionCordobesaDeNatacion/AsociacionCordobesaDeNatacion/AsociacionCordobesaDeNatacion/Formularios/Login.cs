@@ -63,7 +63,6 @@ namespace AsociacionCordobesaDeNatacion
            
         }
 
-
         private void login_formclosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("está seguro de abandonar el formulario?"
