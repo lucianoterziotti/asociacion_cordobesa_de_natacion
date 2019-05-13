@@ -39,63 +39,41 @@ namespace AsociacionCordobesaDeNatacion
                 return;
             }
 
-            LoginClass buscar_usuario_log = new LoginClass();
+            Users buscar_usuario_log = new Users();
 
             DataTable tabla = new DataTable();
 
-            tabla = buscar_usuario_log.buscar_usuario(this.txt_usuario.Text.Trim());
+            tabla = buscar_usuario_log.consulta_login(this.txt_usuario.Text.Trim(),this.txt_pssw.Text.Trim());
 
             if (tabla.Rows.Count == 1)
             {
 
                 buscar_usuario_log.id = int.Parse(tabla.Rows[0][0].ToString());
+                MessageBox.Show("El Login ha sido exitoso.");
+                
+                Menus frm_menu = new Menus();
 
-                this.Close();
+                frm_menu.ShowDialog();
+                  
             }
             else
             {
                 MessageBox.Show("No se encontro club con codigo especificado");
             }
-
-            if (this.txt_usuario.Text == "mati" && this.txt_pssw.Text == "1234")
-            {
-            
-                Menus frm_menu = new Menus();
-
-                frm_menu.ShowDialog();
-
-                frm_menu.Dispose();
-                
-            }
-            else
-            {
-                MessageBox.Show("El Login ha fallado.");
-                
-            }
-            //Users validar_usuario = new Users();
-
-            //DataTable tabla = new DataTable();
-
-            ////tabla = validar_usuario.consulta_login(this.BoxUsuario.Text.Trim(), this.BoxPassword.Text.Trim());
-
-            ////if (tabla.rows.count == 1)
-            ////{
-            ////    this._id = int.parse(tabla.rows[0][0].tostring());
-            ////    this.close();
-            ////}
-
-
+           
         }
 
-        ////private void login_formclosing(object sender, formclosingeventargs e)
-        ////{
-        ////    if (messagebox.show("está seguro de abandonar el formulario?"
-        ////        , "importante", messageboxbuttons.yesno
-        ////        , messageboxicon.question) == system.windows.forms.dialogresult.yes)
-        ////    {
-        ////        e.cancel = false;
-        ////    }
-        ////}
+
+        private void login_formclosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("está seguro de abandonar el formulario?"
+                , "importante", MessageBoxButtons.YesNo
+                , MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+        }
 
     }
+
 }

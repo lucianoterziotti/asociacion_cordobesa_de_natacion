@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Clases\AccesoBD.cs" />
     <Compile Include="Clases\Clubes.cs" />
-    <Compile Include="Clases\LoginClass.cs" />
     <Compile Include="Clases\Nadadores.cs" />
     <Compile Include="Clases\Profesores.cs" />
     <Compile Include="Clases\Torneos.cs" />
