@@ -185,12 +185,12 @@
             // 
             this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.icons8_actualizar_48;
             this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Enabled = false;
             this.cmd_actualizar.Location = new System.Drawing.Point(665, 0);
             this.cmd_actualizar.Name = "cmd_actualizar";
             this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
             this.cmd_actualizar.TabIndex = 27;
             this.cmd_actualizar.UseVisualStyleBackColor = true;
+            this.cmd_actualizar.Click += new System.EventHandler(this.cmd_actualizar_Click);
             // 
             // label2
             // 

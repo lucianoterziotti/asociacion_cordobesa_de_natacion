@@ -15,7 +15,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _nombre_club;
         string _calle_club;
         string _numero_club;
-        int _id;
+       
 
 
         public string nombre_club
@@ -33,11 +33,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             get { return _numero_club; }
             set { _numero_club = value; }
         }
-        public int id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        
 
         public string cod_club
         {
@@ -62,8 +58,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int _cod_club = Int32.Parse(this.cod_club);
             int _numero_club = Int32.Parse(this._numero_club);
             string SqlInsert = @" INSERT INTO Clubes 
-                         (
-                         cod_club, nombre , calle, numero) VALUES (" +
+                         (cod_club, nombre , calle, numero) VALUES (" +
                          _cod_club + ", '" +
                          this._nombre_club + "', '" +
                          this._calle_club + "', " +
@@ -73,15 +68,17 @@ namespace AsociacionCordobesaDeNatacion.Clases
             this._BD.grabar_modificar(SqlInsert);
         }
         
-        public void modificar_club(string _id)
+        public void modificar_club(string _cod_club)
         {
-            string sqlupdate = @"UPDATE clubes 
-                         SET( nombre_club, calle_club, numero_club) VALUES ('" +
-                         this._nombre_club + "', '" +
-                         this._calle_club + "', " +
-                         this._numero_club + ")" +
-                         " WHERE cod_club = " + _cod_club;
-                         
+            int cod_club_aux = Int32.Parse(_cod_club);
+            int _numero_club = Int32.Parse(this._numero_club);
+            string sqlupdate = @"UPDATE Clubes 
+                         SET cod_club =" + cod_club_aux + "," +
+                         "nombre ='" +this._nombre_club+ "'," +
+                         "calle ='"+ this.calle_club + "'," +
+                         "numero ="+_numero_club  +
+                         " WHERE cod_club =" + cod_club_aux;
+
             this._BD.grabar_modificar(sqlupdate);
         }
 

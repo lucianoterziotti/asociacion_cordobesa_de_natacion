@@ -69,6 +69,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         }
 
-
+        private void cmd_actualizar_Click(object sender, EventArgs e)
+        {
+            clubes.calle_club = this.txt_calle.Text;
+            clubes.cod_club = this.txt_cod_club.Text;
+            clubes.numero_club = this.txt_numero.Text;
+            clubes.nombre_club = this.txt_nombre_club.Text;
+            this.clubes.modificar_club(this.txt_cod_club.Text);
+            MessageBox.Show("La modificacion fue correcta");
+        }
     }
 }
