@@ -20,6 +20,7 @@ namespace AsociacionCordobesaDeNatacion
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void cmd_ingresar_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace AsociacionCordobesaDeNatacion
             }
             else
             {
-                MessageBox.Show("No se encontro club con codigo especificado");
+                MessageBox.Show("La contrasenia o el usuario es invalido");
             }
            
         }

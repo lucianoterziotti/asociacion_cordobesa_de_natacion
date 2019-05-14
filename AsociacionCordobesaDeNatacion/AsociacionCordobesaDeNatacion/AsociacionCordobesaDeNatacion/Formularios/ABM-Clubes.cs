@@ -13,49 +13,62 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 {
     public partial class ABM_Clubes : Form
     {
+        Clubes clubes = new Clubes();
 
         public ABM_Clubes()
         {
             InitializeComponent();
         }
-  
+
         private void btn_buscar_Click(object sender, EventArgs e)
         {
 
 
-            
-                if (this.txt_id.Text == "")
-                {
 
-                    MessageBox.Show("El codigo no está cargado");
+            if (this.txt_cod_club.Text == "")
+            {
 
-                    this.txt_id.Focus();
+                MessageBox.Show("El codigo no está cargado");
 
-                    return;
-                }
+                this.txt_cod_club.Focus();
 
-                Clubes buscar_club = new Clubes();
+                return;
+            }
 
-                DataTable tabla = new DataTable();
+            DataTable tabla = new DataTable();
 
-                tabla = buscar_club.buscar_club(this.txt_id.Text.Trim());
+            tabla = clubes.buscar_club(this.txt_cod_club.Text.Trim());
 
-                if (tabla.Rows.Count == 1)
-                {   
+            if (tabla.Rows.Count == 1)
+            {
 
-                    dgv_clubes.DataSource = tabla;
+                dgv_clubes.DataSource = tabla;
                 //  buscar_club.id = int.Parse(tabla.Rows[0][0].ToString());
                 //this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("No se encontro club con codigo especificado");
-                }
             }
+            else
+            {
+                MessageBox.Show("No se encontro club con codigo especificado");
+            }
+        }
 
         private void cmd_nuevo_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void cmd_grabar_Click(object sender, EventArgs e)
+        {
+
+            clubes.calle_club = this.txt_calle.Text;
+            clubes.cod_club = this.txt_cod_club.Text;
+            clubes.numero_club = this.txt_numero.Text;
+            clubes.nombre_club = this.txt_nombre_club.Text;
+            this.clubes.grabar_club();
+            MessageBox.Show("La grabación fue correcta");
+
+        }
+
+
     }
 }

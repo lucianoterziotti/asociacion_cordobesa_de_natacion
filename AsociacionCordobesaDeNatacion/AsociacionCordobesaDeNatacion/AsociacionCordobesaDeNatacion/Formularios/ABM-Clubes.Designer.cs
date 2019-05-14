@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_nombre_usuario = new System.Windows.Forms.TextBox();
-            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_nombre_club = new System.Windows.Forms.TextBox();
+            this.txt_cod_club = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_clubes = new System.Windows.Forms.DataGridView();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_numero = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_calle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmd_nuevo = new System.Windows.Forms.Button();
             this.cmd_grabar = new System.Windows.Forms.Button();
@@ -48,28 +48,28 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_nombre_usuario
+            // txt_nombre_club
             // 
-            this.txt_nombre_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_usuario.Location = new System.Drawing.Point(86, 107);
-            this.txt_nombre_usuario.MaxLength = 50;
-            this.txt_nombre_usuario.Name = "txt_nombre_usuario";
-            this.txt_nombre_usuario.Size = new System.Drawing.Size(243, 26);
-            this.txt_nombre_usuario.TabIndex = 37;
+            this.txt_nombre_club.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_club.Location = new System.Drawing.Point(86, 107);
+            this.txt_nombre_club.MaxLength = 50;
+            this.txt_nombre_club.Name = "txt_nombre_club";
+            this.txt_nombre_club.Size = new System.Drawing.Size(243, 26);
+            this.txt_nombre_club.TabIndex = 37;
             // 
-            // txt_id
+            // txt_cod_club
             // 
-            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.Location = new System.Drawing.Point(86, 70);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(51, 26);
-            this.txt_id.TabIndex = 36;
+            this.txt_cod_club.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cod_club.Location = new System.Drawing.Point(86, 70);
+            this.txt_cod_club.Name = "txt_cod_club";
+            this.txt_cod_club.Size = new System.Drawing.Size(51, 26);
+            this.txt_cod_club.TabIndex = 36;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_nombre_usuario);
+            this.groupBox1.Controls.Add(this.txt_nombre_club);
             this.groupBox1.Controls.Add(this.dgv_clubes);
-            this.groupBox1.Controls.Add(this.txt_id);
+            this.groupBox1.Controls.Add(this.txt_cod_club);
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.cmd_nuevo);
@@ -89,7 +89,7 @@
             // 
             this.dgv_clubes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_clubes.Location = new System.Drawing.Point(368, 70);
-            this.dgv_clubes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_clubes.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_clubes.Name = "dgv_clubes";
             this.dgv_clubes.RowTemplate.Height = 24;
             this.dgv_clubes.Size = new System.Drawing.Size(328, 160);
@@ -108,9 +108,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txt_numero);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_calle);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(4, 133);
@@ -120,14 +120,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Domicilio";
             // 
-            // textBox2
+            // txt_numero
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(282, 40);
-            this.textBox2.MaxLength = 50;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(43, 26);
-            this.textBox2.TabIndex = 14;
+            this.txt_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numero.Location = new System.Drawing.Point(282, 40);
+            this.txt_numero.MaxLength = 50;
+            this.txt_numero.Name = "txt_numero";
+            this.txt_numero.Size = new System.Drawing.Size(43, 26);
+            this.txt_numero.TabIndex = 14;
             // 
             // label4
             // 
@@ -139,14 +139,14 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Número";
             // 
-            // textBox1
+            // txt_calle
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(82, 40);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 26);
-            this.textBox1.TabIndex = 14;
+            this.txt_calle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_calle.Location = new System.Drawing.Point(82, 40);
+            this.txt_calle.MaxLength = 50;
+            this.txt_calle.Name = "txt_calle";
+            this.txt_calle.Size = new System.Drawing.Size(130, 26);
+            this.txt_calle.TabIndex = 14;
             // 
             // label1
             // 
@@ -174,12 +174,12 @@
             // 
             this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.grabar1;
             this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Enabled = false;
             this.cmd_grabar.Location = new System.Drawing.Point(622, 0);
             this.cmd_grabar.Name = "cmd_grabar";
             this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
             this.cmd_grabar.TabIndex = 26;
             this.cmd_grabar.UseVisualStyleBackColor = true;
+            this.cmd_grabar.Click += new System.EventHandler(this.cmd_grabar_Click);
             // 
             // cmd_actualizar
             // 
@@ -230,8 +230,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_nombre_usuario;
-        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_nombre_club;
+        private System.Windows.Forms.TextBox txt_cod_club;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button cmd_nuevo;
         private System.Windows.Forms.Button cmd_grabar;
@@ -239,9 +239,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_numero;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_calle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.DataGridView dgv_clubes;

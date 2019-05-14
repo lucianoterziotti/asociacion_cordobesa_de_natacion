@@ -56,18 +56,18 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
             return _BD.consulta(sqltxt);
         }
-
-
+        
         public void grabar_club()
         {
-
-            string SqlInsert = @" INSERT INTO clubes 
+            int _cod_club = Int32.Parse(this.cod_club);
+            int _numero_club = Int32.Parse(this._numero_club);
+            string SqlInsert = @" INSERT INTO Clubes 
                          (
-                         cod_club,nombre_club, calle_club, numero_club) VALUES ('" +
-                         this._cod_club + "', '" +
+                         cod_club, nombre , calle, numero) VALUES (" +
+                         _cod_club + ", '" +
                          this._nombre_club + "', '" +
                          this._calle_club + "', " +
-                         this._numero_club + ")";
+                         _numero_club + ")";
             MessageBox.Show(SqlInsert);
              
             this._BD.grabar_modificar(SqlInsert);
@@ -84,5 +84,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          
             this._BD.grabar_modificar(sqlupdate);
         }
+
+        
     }
 }

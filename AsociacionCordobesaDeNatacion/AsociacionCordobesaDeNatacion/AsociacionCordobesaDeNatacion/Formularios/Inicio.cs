@@ -15,15 +15,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
        public Inicio()
         {
             InitializeComponent();
-        }
-        
-        private void Escritorio_Load(object sender, EventArgs e)
-        {
-            
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
-
+      
         private void btn_comenzar_click(object sender, EventArgs e)
         {
             

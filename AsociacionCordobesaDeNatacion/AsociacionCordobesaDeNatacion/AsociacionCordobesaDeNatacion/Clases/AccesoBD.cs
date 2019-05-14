@@ -47,8 +47,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
             cerrar();
         }
 
-       
-
 
     }
 }
