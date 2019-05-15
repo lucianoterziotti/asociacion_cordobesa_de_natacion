@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\AccesoBD.cs" />
+    <Compile Include="Clases\Especialidades.cs" />
+    <Compile Include="Clases\Inscriptos.cs" />
     <Compile Include="Clases\Clubes.cs" />
     <Compile Include="Clases\Nadadores.cs" />
     <Compile Include="Clases\Profesores.cs" />

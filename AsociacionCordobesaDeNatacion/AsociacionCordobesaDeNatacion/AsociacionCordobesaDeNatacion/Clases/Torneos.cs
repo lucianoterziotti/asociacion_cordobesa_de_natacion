@@ -36,8 +36,9 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         public DataTable buscar_torneo(string cod_torneo)
         {
+            int cod_torneo_aux = Int32.Parse(cod_torneo);
             string sqltxt = @"SELECT * FROM torneos 
-                             WHERE cod_torneo = '" + _cod_torneo;
+                             WHERE cod_torneo =" + cod_torneo_aux;
 
             return _BD.consulta(sqltxt);
         }
@@ -45,7 +46,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         public DataTable buscar_prof(string dni)
         {
             string sqltxt = @"SELECT * FROM profesores 
-                             WHERE cod_torneo = '" + _cod_torneo;
+                             WHERE cod_torneo =" + _cod_torneo;
 
             return _BD.consulta(sqltxt);
         }
@@ -55,9 +56,9 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
             string SqlInsert = @" INSERT INTO clubes 
                          (
-                         _cod_torneo; _descripcion_torneo) VALUES ('" +
-                         this._cod_torneo + "', '" +
-                         this._descripcion_torneo + "', '" ;
+                         _cod_torneo; _descripcion_torneo) VALUES (" +
+                         this._cod_torneo + ", '" +
+                         this._descripcion_torneo + "')" ;
             MessageBox.Show(SqlInsert);
 
             this._BD.grabar_modificar(SqlInsert);

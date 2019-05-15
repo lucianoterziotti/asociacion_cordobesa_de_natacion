@@ -32,17 +32,17 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 return;
             }
             
-            Nadadores buscar_nadador = new Nadadores();
+            Nadadores nadadores = new Nadadores();
             
             DataTable tabla = new DataTable();
             
-            tabla = buscar_nadador.buscar_nadador(this.txt_nombre_nadador.Text.Trim(), this.txt_nombre_nadador.Text.Trim());
+            tabla = nadadores.buscar_nadador(this.txt_nombre_nadador.Text.Trim());
             
             if (tabla.Rows.Count == 1)
             {
-              
-            
-                buscar_nadador.id = int.Parse(tabla.Rows[0][0].ToString());
+
+
+                nadadores.id = int.Parse(tabla.Rows[0][0].ToString());
                 
                 this.Close();
             }

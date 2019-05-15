@@ -82,6 +82,13 @@ namespace AsociacionCordobesaDeNatacion.Clases
             this._BD.grabar_modificar(sqlupdate);
         }
 
-        
+        public void eliminar_club()
+        {
+            int cod_club_aux = Int32.Parse(cod_club);
+            string sqlDelete = @"DELETE FROM Clubes WHERE cod_club ="+ cod_club_aux;
+
+            this._BD.grabar_modificar(sqlDelete);
+
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace AsociacionCordobesaDeNatacion
         public string password
         {
             get { return _password; }
-            set { _password = value; }
+            set { _password = value; }  
 
         }
         AccesoBD _BD = new AccesoBD();

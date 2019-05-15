@@ -43,6 +43,7 @@
             this.cmd_actualizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clubes)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_eliminar);
             this.groupBox1.Controls.Add(this.txt_nombre_club);
             this.groupBox1.Controls.Add(this.dgv_clubes);
             this.groupBox1.Controls.Add(this.txt_cod_club);
@@ -212,6 +214,18 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombre";
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.ACN2;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Location = new System.Drawing.Point(536, 0);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
+            this.btn_eliminar.TabIndex = 41;
+            this.btn_eliminar.Text = "button1";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // ABM_Clubes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +259,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.DataGridView dgv_clubes;
+        private System.Windows.Forms.Button btn_eliminar;
     }
 }

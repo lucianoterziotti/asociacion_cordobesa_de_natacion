@@ -49,7 +49,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         AccesoBD _BD = new AccesoBD();
   
-        public DataTable buscar_nadador(string cod_nacional, string pssw)
+        public DataTable buscar_nadador(string cod_nacional)
         {
             
             string sqltxt = @"SELECT * FROM nadadores 

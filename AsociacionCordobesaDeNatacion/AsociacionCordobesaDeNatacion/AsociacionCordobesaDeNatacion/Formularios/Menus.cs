@@ -16,6 +16,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         ABM_Nadadores frm_nadadores;
         ABM_Profesores   frm_profesores;
         ABM_Torneos frm_torneos;
+        ABM_Inscriptos frm_inscriptos;
+        ABM_Especialidad frm_especialidad;
 
         public Menus()
         {
@@ -54,6 +56,21 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             frm_torneos = new ABM_Torneos();
             frm_torneos.ShowDialog();
             frm_torneos.Dispose();
+        }
+
+        private void btn_inscriptos_Click(object sender, EventArgs e)
+        {
+            frm_inscriptos = new ABM_Inscriptos();
+            frm_inscriptos.ShowDialog();
+            frm_inscriptos.Dispose();
+
+        }
+
+        private void btn_especialidad_Click(object sender, EventArgs e)
+        {
+            frm_especialidad = new ABM_Especialidad();
+            frm_especialidad.ShowDialog();
+            frm_especialidad.Dispose();
         }
     }
 }

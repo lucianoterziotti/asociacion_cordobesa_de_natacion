@@ -33,6 +33,8 @@
             this.btn_profesores = new System.Windows.Forms.Button();
             this.btn_torneos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_inscriptos = new System.Windows.Forms.Button();
+            this.btn_especialidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_clubes
@@ -89,11 +91,33 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Seleccione una opción:";
             // 
+            // btn_inscriptos
+            // 
+            this.btn_inscriptos.Location = new System.Drawing.Point(160, 75);
+            this.btn_inscriptos.Name = "btn_inscriptos";
+            this.btn_inscriptos.Size = new System.Drawing.Size(75, 23);
+            this.btn_inscriptos.TabIndex = 5;
+            this.btn_inscriptos.Text = "INSCRIPTOS";
+            this.btn_inscriptos.UseVisualStyleBackColor = true;
+            this.btn_inscriptos.Click += new System.EventHandler(this.btn_inscriptos_Click);
+            // 
+            // btn_especialidad
+            // 
+            this.btn_especialidad.Location = new System.Drawing.Point(566, 72);
+            this.btn_especialidad.Name = "btn_especialidad";
+            this.btn_especialidad.Size = new System.Drawing.Size(115, 23);
+            this.btn_especialidad.TabIndex = 6;
+            this.btn_especialidad.Text = "ESPECIALIDAD";
+            this.btn_especialidad.UseVisualStyleBackColor = true;
+            this.btn_especialidad.Click += new System.EventHandler(this.btn_especialidad_Click);
+            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 250);
+            this.Controls.Add(this.btn_especialidad);
+            this.Controls.Add(this.btn_inscriptos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_torneos);
             this.Controls.Add(this.btn_profesores);
@@ -112,5 +136,7 @@
         private System.Windows.Forms.Button btn_profesores;
         private System.Windows.Forms.Button btn_torneos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_inscriptos;
+        public System.Windows.Forms.Button btn_especialidad;
     }
 }

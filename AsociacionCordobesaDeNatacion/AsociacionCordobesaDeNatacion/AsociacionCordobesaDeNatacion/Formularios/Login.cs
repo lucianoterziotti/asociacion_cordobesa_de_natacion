@@ -40,20 +40,18 @@ namespace AsociacionCordobesaDeNatacion
                 return;
             }
 
-            Users buscar_usuario_log = new Users();
+            Users usuario = new Users();
 
             DataTable tabla = new DataTable();
 
-            tabla = buscar_usuario_log.consulta_login(this.txt_usuario.Text.Trim(),this.txt_pssw.Text.Trim());
+            tabla = usuario.consulta_login(this.txt_usuario.Text.Trim(),this.txt_pssw.Text.Trim());
 
             if (tabla.Rows.Count == 1)
             {
 
-                buscar_usuario_log.id = int.Parse(tabla.Rows[0][0].ToString());
-                MessageBox.Show("El Login ha sido exitoso.");
+                usuario.id = int.Parse(tabla.Rows[0][0].ToString());
                 
                 Menus frm_menu = new Menus();
-
                 frm_menu.ShowDialog();
                   
             }

@@ -41,10 +41,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
             if (tabla.Rows.Count == 1)
             {
-
                 dgv_clubes.DataSource = tabla;
-                //  buscar_club.id = int.Parse(tabla.Rows[0][0].ToString());
-                //this.Close();
             }
             else
             {
@@ -54,7 +51,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_nuevo_Click(object sender, EventArgs e)
         {
-
+            this.blanquear_objetos();
         }
 
         private void cmd_grabar_Click(object sender, EventArgs e)
@@ -66,6 +63,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             clubes.nombre_club = this.txt_nombre_club.Text;
             this.clubes.grabar_club();
             MessageBox.Show("La grabación fue correcta");
+            this.blanquear_objetos();
 
         }
 
@@ -77,6 +75,31 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             clubes.nombre_club = this.txt_nombre_club.Text;
             this.clubes.modificar_club(this.txt_cod_club.Text);
             MessageBox.Show("La modificacion fue correcta");
+            this.blanquear_objetos();
+        }
+
+        private void blanquear_objetos()
+        {
+            
+            this.txt_calle.Text = "";
+            this.txt_cod_club.Text = "";
+            this.txt_nombre_club.Text = "";
+            this.txt_numero.Text = "";
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            clubes.cod_club = this.txt_cod_club.Text;
+            DialogResult dialogResult = MessageBox.Show("está seguro que desea eliminar el club? Con codigo:" + clubes.cod_club
+                , "importante", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                clubes.eliminar_club();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                dialogResult = DialogResult.Cancel;
+            }
         }
     }
 }

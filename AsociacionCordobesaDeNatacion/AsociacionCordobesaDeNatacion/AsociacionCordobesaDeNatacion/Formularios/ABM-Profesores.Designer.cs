@@ -32,11 +32,13 @@
             this.txt_nombre_profesor = new System.Windows.Forms.TextBox();
             this.txt_dni = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmd_nuevo = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cmb_perfil = new System.Windows.Forms.ComboBox();
+            this.cmd_grabar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,11 +46,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmd_actualizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmd_nuevo = new System.Windows.Forms.Button();
-            this.cmd_grabar = new System.Windows.Forms.Button();
-            this.cmd_actualizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,13 +92,25 @@
             this.groupBox1.Controls.Add(this.cmd_actualizar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(66, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(662, 355);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PROFESORES";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmd_nuevo
+            // 
+            this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.nuevo1;
+            this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_nuevo.Location = new System.Drawing.Point(533, 0);
+            this.cmd_nuevo.Name = "cmd_nuevo";
+            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
+            this.cmd_nuevo.TabIndex = 28;
+            this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
+            this.cmd_nuevo.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -152,6 +164,17 @@
             this.cmb_perfil.Name = "cmb_perfil";
             this.cmb_perfil.Size = new System.Drawing.Size(51, 24);
             this.cmb_perfil.TabIndex = 18;
+            // 
+            // cmd_grabar
+            // 
+            this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.grabar1;
+            this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_grabar.Enabled = false;
+            this.cmd_grabar.Location = new System.Drawing.Point(576, 0);
+            this.cmd_grabar.Name = "cmd_grabar";
+            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
+            this.cmd_grabar.TabIndex = 29;
+            this.cmd_grabar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -226,6 +249,17 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Calle";
             // 
+            // cmd_actualizar
+            // 
+            this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.icons8_actualizar_48;
+            this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_actualizar.Enabled = false;
+            this.cmd_actualizar.Location = new System.Drawing.Point(619, 0);
+            this.cmd_actualizar.Name = "cmd_actualizar";
+            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
+            this.cmd_actualizar.TabIndex = 30;
+            this.cmd_actualizar.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -245,39 +279,6 @@
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombre";
-            // 
-            // cmd_nuevo
-            // 
-            this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.nuevo1;
-            this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_nuevo.Location = new System.Drawing.Point(533, 0);
-            this.cmd_nuevo.Name = "cmd_nuevo";
-            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
-            this.cmd_nuevo.TabIndex = 28;
-            this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
-            this.cmd_nuevo.UseVisualStyleBackColor = true;
-            // 
-            // cmd_grabar
-            // 
-            this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.grabar1;
-            this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Enabled = false;
-            this.cmd_grabar.Location = new System.Drawing.Point(576, 0);
-            this.cmd_grabar.Name = "cmd_grabar";
-            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
-            this.cmd_grabar.TabIndex = 29;
-            this.cmd_grabar.UseVisualStyleBackColor = true;
-            // 
-            // cmd_actualizar
-            // 
-            this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.icons8_actualizar_48;
-            this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Enabled = false;
-            this.cmd_actualizar.Location = new System.Drawing.Point(619, 0);
-            this.cmd_actualizar.Name = "cmd_actualizar";
-            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
-            this.cmd_actualizar.TabIndex = 30;
-            this.cmd_actualizar.UseVisualStyleBackColor = true;
             // 
             // ABM_Profesores
             // 
