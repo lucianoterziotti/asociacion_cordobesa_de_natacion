@@ -36,7 +36,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             
             DataTable tabla = new DataTable();
             
-            tabla = nadadores.buscar_nadador(this.txt_nombre_nadador.Text.Trim());
+            tabla = nadadores.buscar_nadador(this.txt_dni.Text.Trim());
             
             if (tabla.Rows.Count == 1)
             {

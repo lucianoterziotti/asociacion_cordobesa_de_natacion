@@ -86,16 +86,14 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_esp_aux = Int32.Parse(this.cod_especialidad);
             int cod_torneo_aux = Int32.Parse(this.cod_torneo);
             int anio_aux = Int32.Parse(this.anio);
-            int posicion_aux = Int32.Parse(this.posicion);
+        //    int posicion_aux = Int32.Parse(this.posicion);
             
-            string SqlInsert = @" INSERT INTO Inscriptos 
-                         (cod_espe, cod_torneo , cod_nad, anio, posicion, tiempo) VALUES (" +
+            string SqlInsert = @"INSERT INTO Inscriptos 
+                         (cod_espe, cod_torneo, cod_nad, anio) VALUES (" +
                          cod_esp_aux + "," +
                          cod_torneo_aux + "," +
                           cod_nad_aux + "," +
-                         anio_aux +
-                         null + "," +
-                         null + ")";
+                         anio_aux +")";
                    MessageBox.Show(SqlInsert);
 
             this._BD.grabar_modificar(SqlInsert);

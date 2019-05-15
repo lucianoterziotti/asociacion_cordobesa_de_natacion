@@ -49,11 +49,20 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         AccesoBD _BD = new AccesoBD();
   
-        public DataTable buscar_nadador(string cod_nacional)
+        public DataTable buscar_nadador(string dni_nadador)
         {
-            
+            int dni_nadador_aux = Int32.Parse(_dni_nadador);
             string sqltxt = @"SELECT * FROM nadadores 
-                             WHERE _cod_nadador = '" + _dni_nadador;
+                             WHERE cod_nacional =" + dni_nadador;
+
+            return _BD.consulta(sqltxt);
+        }
+
+        public DataTable buscar_nadador()
+        {
+            int dni_nadador_aux = Int32.Parse(_dni_nadador);
+            string sqltxt = @"SELECT * FROM nadadores 
+                             WHERE cod_nacional =" + dni_nadador;
 
             return _BD.consulta(sqltxt);
         }
@@ -63,7 +72,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
             string SqlInsert = @" INSERT INTO clubes 
                          (
-                         _nombre_nadador,_cod_nadador, calle_nadador, numero_nadador) VALUES ('" +
+                         _nombre_nadador,cod_nacional, calle_nadador, numero_nadador) VALUES ('" +
                          this._nombre_nadador + "', '" +
                          this._dni_nadador + "', '" +
                          this.calle_nadador + "', " +
@@ -76,12 +85,12 @@ namespace AsociacionCordobesaDeNatacion.Clases
         public void modificar_nadador(string _id)
         {
             string sqlupdate = @"UPDATE clubes 
-                         SET( _nombre_nadador,_cod_nadador, calle_nadador, numero_nadador VALUES ('" +
+                         SET( _nombre_nadador,cod_nacional, calle_nadador, numero_nadador VALUES ('" +
                          this._nombre_nadador + "', '" +
                          this._dni_nadador + "', '" +
                          this.calle_nadador + "', " +
                          this.numero_nadador + ")" +
-                         " WHERE _cod_nadador = " + _dni_nadador;
+                         " WHERE cod_nacional = " + _dni_nadador;
 
             this._BD.grabar_modificar(sqlupdate);
         }

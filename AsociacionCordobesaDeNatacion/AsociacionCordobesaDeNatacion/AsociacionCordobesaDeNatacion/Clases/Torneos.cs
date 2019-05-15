@@ -43,7 +43,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             return _BD.consulta(sqltxt);
         }
 
-        public DataTable buscar_prof(string dni)
+        public DataTable buscar_prof()
         {
             string sqltxt = @"SELECT * FROM profesores 
                              WHERE cod_torneo =" + _cod_torneo;

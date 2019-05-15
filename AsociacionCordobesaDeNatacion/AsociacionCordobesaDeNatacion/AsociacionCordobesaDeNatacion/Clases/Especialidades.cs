@@ -32,11 +32,11 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         AccesoBD _BD = new AccesoBD();
 
-        public DataTable buscar_especialiad(string cod_esp)
+        public DataTable buscar_especialidad()
         {
             int cod_esp_aux = Int32.Parse(cod_esp);
             string sqltxt = @"SELECT * FROM Especialidad 
-                             WHERE cod_espec = '" + cod_esp;
+                             WHERE cod_espec =" + cod_esp_aux;
 
             return _BD.consulta(sqltxt);
         }

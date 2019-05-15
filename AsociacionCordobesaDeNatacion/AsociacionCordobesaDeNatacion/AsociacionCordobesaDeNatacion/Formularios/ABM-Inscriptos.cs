@@ -43,9 +43,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
             inscriptos.anio = txt_anio.Text;
-            inscriptos.cod_especialidad = txt_cod_especialidad.Text;
-            inscriptos.cod_nadador = txt_cod_nadador.Text;
-            inscriptos.cod_torneo = txt_cod_torneo.Text;
+            especialidades.cod_esp = txt_cod_especialidad.Text;
+            nadadores.dni_nadador = txt_cod_nadador.Text;
+            torneos.cod_torneo = txt_cod_torneo.Text;
             inscriptos.posicion = txt_posicion.Text;
             inscriptos.tiempo = txt_tiempo.Text;
             if (validarTorneo())
@@ -54,6 +54,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 {
                     if (validarNadador())
                     {
+                        inscriptos.cod_especialidad = txt_cod_especialidad.Text;
+                        inscriptos.cod_nadador = txt_cod_nadador.Text;
+                        inscriptos.cod_torneo = txt_cod_torneo.Text;
                         inscriptos.grabar_inscripto();
                     }
                     else
@@ -85,7 +88,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
             bool validarEspecialidad()
             {
-                tabla = especialidades.buscar_especialiad(this.txt_cod_especialidad.Text);
+                tabla = especialidades.buscar_especialidad();
                 if (tabla.Rows.Count == 1)
                 {
                     return true;
@@ -95,7 +98,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
             bool validarNadador()
             {
-                tabla = nadadores.buscar_nadador(this.txt_cod_nadador.Text);
+                tabla = nadadores.buscar_nadador();
                 if (tabla.Rows.Count == 1)
                 {
                     return true;
