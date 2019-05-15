@@ -15,7 +15,7 @@ namespace AsociacionCordobesaDeNatacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menus());
+            Application.Run(new Inicio());
         }
     }
 }

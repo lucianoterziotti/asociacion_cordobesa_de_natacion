@@ -51,5 +51,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 MessageBox.Show("No se encontro nadador con dni especificado");
             }
         }
+
+        private void txt_dni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

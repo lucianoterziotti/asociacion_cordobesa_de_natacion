@@ -169,6 +169,13 @@
     <Content Include="Images\grabar1.png" />
     <Content Include="Images\icons8-actualizar-48.png" />
     <Content Include="Images\nuevo1.png" />
+    <None Include="Resources\archive %283%29.png" />
+    <None Include="Resources\basket.png" />
+    <None Include="Resources\archive.png" />
+    <None Include="Resources\archive %282%29.png" />
+    <None Include="Resources\archive %281%29.png" />
+    <None Include="Resources\ACN.png" />
+    <None Include="Resources\ACN.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -55,5 +55,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
 
         }
+
+        private void cmd_actualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
