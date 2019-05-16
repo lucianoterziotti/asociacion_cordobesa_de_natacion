@@ -17,10 +17,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             InitializeComponent();
         }
+        Profesores profesores = new Profesores();
 
-       
-
-        private void cmd_buscar_1_Click(object sender, EventArgs e)
+        private void cmd_buscar01_Click(object sender, EventArgs e)
         {
             if(this.txt_dni.Text == "")
             {
@@ -31,18 +30,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 return;
             }
 
-            Profesores buscar_profesor = new Profesores();
-
             DataTable tabla = new DataTable();
-
-            tabla = buscar_profesor.buscar_prof(this.txt_dni.Text.Trim());
+            profesores.dni_profesor = this.txt_dni.Text;
+            tabla = profesores.buscar_prof();
 
             if (tabla.Rows.Count == 1)
             {
-
-                buscar_profesor.id = int.Parse(tabla.Rows[0][0].ToString());
-
-                this.Close();
+                MessageBox.Show("El Profesor con DNI: " + this.txt_dni.Text + " su nombre es: "
+                    + tabla.Rows[0]["nombre"].ToString() + " y su domicilio es: "
+                    + tabla.Rows[0]["calle"].ToString());
             }
             else
             {
@@ -50,15 +46,55 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
 
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        
+        private void blanquear_objetos()
         {
 
+            this.txt_nombre_profesor.Text = "";
+            this.txt_dni.Text = "";
+            this.txt_calle.Text = "";
+        }
+
+        private void cmd_nuevo_Click(object sender, EventArgs e)
+        {
+            blanquear_objetos();
+        }
+
+        private void cmd_grabar_Click(object sender, EventArgs e)
+        {
+            profesores.calle_profesor = this.txt_calle.Text;
+            profesores.dni_profesor = this.txt_dni.Text;
+            profesores.nombre_profesor = this.txt_nombre_profesor.Text;
+            this.profesores.grabar_profesor();
+            MessageBox.Show("La grabacion fue correcta");
+            this.blanquear_objetos();
         }
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
+            profesores.calle_profesor = this.txt_calle.Text;
+            profesores.dni_profesor = this.txt_dni.Text;
+            profesores.nombre_profesor = this.txt_nombre_profesor.Text;
+            this.profesores.modificar_profesor();
+            MessageBox.Show("La modificacion fue correcta");
+            this.blanquear_objetos();
+        }
 
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            profesores.dni_profesor = txt_dni.Text;
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el profesor con DNI:" + profesores.dni_profesor + " ?"
+                , "importante", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                profesores.eliminar_profesor();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                dialogResult = DialogResult.Cancel;
+            }
+            MessageBox.Show("La eliminacion del profesor elegido ha sido correcta");
+            this.blanquear_objetos();
         }
     }
 }

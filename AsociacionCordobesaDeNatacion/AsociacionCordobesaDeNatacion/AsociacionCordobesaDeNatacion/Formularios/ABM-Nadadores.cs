@@ -17,9 +17,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             InitializeComponent();
         }
+        Nadadores nadadores = new Nadadores();
 
-       
-        private void cmd_buscar_1_Click(object sender, EventArgs e)
+        private void btn_buscar_nad_Click(object sender, EventArgs e)
         {
             
             if (this.txt_dni.Text == "")
@@ -31,30 +31,73 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 
                 return;
             }
-            
-            Nadadores nadadores = new Nadadores();
+           
             
             DataTable tabla = new DataTable();
-            
-            tabla = nadadores.buscar_nadador(this.txt_dni.Text.Trim());
+            nadadores.dni_nadador = txt_dni.Text;
+            tabla = nadadores.buscar_nadador();
             
             if (tabla.Rows.Count == 1)
             {
-
-
-                nadadores.id = int.Parse(tabla.Rows[0][0].ToString());
-                
-                this.Close();
+                MessageBox.Show("El Nadador con DNI: " + this.txt_dni.Text + " su nombre es: "
+                    + tabla.Rows[0]["nombre"].ToString() + " y su domicilio es: "
+                    + tabla.Rows[0]["calle"].ToString());
             }
             else
             {
                 MessageBox.Show("No se encontro nadador con dni especificado");
             }
         }
+ 
 
-        private void txt_dni_TextChanged(object sender, EventArgs e)
+        private void blanquear_objetos()
         {
 
+            this.txt_calle.Text = "";
+            this.txt_dni.Text = "";
+            this.txt_nombre_nadador.Text = "";
+        }
+
+        private void cmd_nuevo_Click(object sender, EventArgs e)
+        {
+            blanquear_objetos();
+        }
+
+        private void cmd_grabar_Click(object sender, EventArgs e)
+        {
+            nadadores.calle_nadador = this.txt_calle.Text;
+            nadadores.dni_nadador = this.txt_dni.Text;
+            nadadores.nombre_nadador = this.txt_nombre_nadador.Text;
+            this.nadadores.grabar_nadador();
+            MessageBox.Show("La grabacion fue correcta");
+            this.blanquear_objetos();
+        }
+
+        private void cmd_actualizar_Click(object sender, EventArgs e)
+        {
+            nadadores.dni_nadador = txt_dni.Text;
+            nadadores.nombre_nadador = txt_nombre_nadador.Text;
+            nadadores.calle_nadador = txt_calle.Text;
+            this.nadadores.modificar_nadador();
+            MessageBox.Show("La modificacion fue correcta");
+            this.blanquear_objetos();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            nadadores.dni_nadador = txt_dni.Text;
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el nadador de DNI:" + nadadores.dni_nadador + " ?"
+                , "importante", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                nadadores.eliminar_nadador();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                dialogResult = DialogResult.Cancel;
+            }
+            MessageBox.Show("La eliminacion del nadador elegido ha sido correcta");
+            this.blanquear_objetos();
         }
     }
 }

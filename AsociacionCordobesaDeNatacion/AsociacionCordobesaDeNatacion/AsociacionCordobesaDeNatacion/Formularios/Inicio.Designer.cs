@@ -41,7 +41,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(573, 350);
+            this.button1.Location = new System.Drawing.Point(566, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(239, 63);
             this.button1.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.ACN1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1384, 763);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

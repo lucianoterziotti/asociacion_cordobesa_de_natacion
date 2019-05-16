@@ -51,28 +51,35 @@ namespace AsociacionCordobesaDeNatacion.Clases
             return _BD.consulta(sqltxt);
         }
 
-        public void grabar_profesor()
+        public void grabar_torneo()
         {
-
-            string SqlInsert = @" INSERT INTO clubes 
-                         (
-                         _cod_torneo; _descripcion_torneo) VALUES (" +
-                         this._cod_torneo + ", '" +
+            int cod_torneo_aux = Int32.Parse(cod_torneo);
+            string SqlInsert = @" INSERT INTO torneos 
+                         (cod_torneo, descripccion) VALUES (" +
+                         cod_torneo_aux + ", '" +
                          this._descripcion_torneo + "')" ;
             MessageBox.Show(SqlInsert);
 
             this._BD.grabar_modificar(SqlInsert);
         }
 
-        public void modificar_nadador(string _id)
+        public void modificar_torneo()
         {
-            string sqlupdate = @"UPDATE clubes 
-                         SET(  _cod_torneo; _descripcion_torneo VALUES ('" +
-                         this._cod_torneo + "', '" +
-                         this._descripcion_torneo + "', '" +
-                         " WHERE _cod_torneo = " + _cod_torneo;
+            int cod_torneo_aux = Int32.Parse(cod_torneo);
+            string sqlupdate = @"UPDATE Torneos 
+                         SET cod_torneo = " + cod_torneo_aux + "," +
+                         "descripccion ='" + this._descripcion_torneo + "'" +
+                         "WHERE cod_torneo ="+ cod_torneo_aux;
 
             this._BD.grabar_modificar(sqlupdate);
+        }
+        public void eliminar_torneo()
+        {
+            int cod_torneo_aux = Int32.Parse(cod_torneo);
+            string sqlDelete = @"DELETE FROM torneos WHERE cod_torneo =" + cod_torneo_aux;
+
+            this._BD.grabar_modificar(sqlDelete);
+
         }
     }
 }

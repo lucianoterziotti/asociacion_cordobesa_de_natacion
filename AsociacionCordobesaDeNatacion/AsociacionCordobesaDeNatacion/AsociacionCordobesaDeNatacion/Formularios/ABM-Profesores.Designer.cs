@@ -34,13 +34,14 @@
             this.txt_dni = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_calle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmd_nuevo = new System.Windows.Forms.Button();
             this.cmd_grabar = new System.Windows.Forms.Button();
             this.cmd_actualizar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +55,8 @@
             this.cmd_buscar01.Size = new System.Drawing.Size(75, 26);
             this.cmd_buscar01.TabIndex = 34;
             this.cmd_buscar01.Text = "Buscar";
-            this.cmd_buscar01.UseVisualStyleBackColor = false;
-            this.cmd_buscar01.Visible = false;
+            this.cmd_buscar01.UseVisualStyleBackColor = true;
+            this.cmd_buscar01.Click += new System.EventHandler(this.cmd_buscar01_Click);
             // 
             // txt_nombre_profesor
             // 
@@ -70,7 +71,6 @@
             // txt_dni
             // 
             this.txt_dni.BackColor = System.Drawing.Color.White;
-            this.txt_dni.Enabled = false;
             this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dni.Location = new System.Drawing.Point(113, 61);
             this.txt_dni.Name = "txt_dni";
@@ -92,11 +92,10 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PROFESORES";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_calle);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(113, 144);
@@ -106,15 +105,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Domicilio";
             // 
-            // textBox1
+            // txt_calle
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(63, 28);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 26);
-            this.textBox1.TabIndex = 14;
+            this.txt_calle.BackColor = System.Drawing.Color.White;
+            this.txt_calle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_calle.Location = new System.Drawing.Point(63, 28);
+            this.txt_calle.MaxLength = 50;
+            this.txt_calle.Name = "txt_calle";
+            this.txt_calle.Size = new System.Drawing.Size(147, 26);
+            this.txt_calle.TabIndex = 14;
             // 
             // label1
             // 
@@ -132,9 +131,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(109, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 19);
+            this.label2.Size = new System.Drawing.Size(34, 19);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Código";
+            this.label2.Text = "DNI";
             // 
             // label3
             // 
@@ -157,25 +156,25 @@
             this.cmd_nuevo.TabIndex = 28;
             this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
             this.cmd_nuevo.UseVisualStyleBackColor = false;
+            this.cmd_nuevo.Click += new System.EventHandler(this.cmd_nuevo_Click);
             // 
             // cmd_grabar
             // 
             this.cmd_grabar.BackColor = System.Drawing.Color.White;
             this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
             this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Enabled = false;
             this.cmd_grabar.Location = new System.Drawing.Point(450, 119);
             this.cmd_grabar.Name = "cmd_grabar";
             this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
             this.cmd_grabar.TabIndex = 29;
             this.cmd_grabar.UseVisualStyleBackColor = false;
+            this.cmd_grabar.Click += new System.EventHandler(this.cmd_grabar_Click);
             // 
             // cmd_actualizar
             // 
             this.cmd_actualizar.BackColor = System.Drawing.Color.White;
             this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
             this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Enabled = false;
             this.cmd_actualizar.Location = new System.Drawing.Point(450, 160);
             this.cmd_actualizar.Name = "cmd_actualizar";
             this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
@@ -183,12 +182,25 @@
             this.cmd_actualizar.UseVisualStyleBackColor = false;
             this.cmd_actualizar.Click += new System.EventHandler(this.cmd_actualizar_Click);
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackColor = System.Drawing.Color.White;
+            this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Location = new System.Drawing.Point(449, 201);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
+            this.btn_eliminar.TabIndex = 46;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // ABM_Profesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(556, 316);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.cmd_actualizar);
             this.Controls.Add(this.cmd_grabar);
             this.Controls.Add(this.cmd_nuevo);
@@ -213,12 +225,13 @@
         private System.Windows.Forms.TextBox txt_dni;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_calle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button cmd_nuevo;
         private System.Windows.Forms.Button cmd_grabar;
         private System.Windows.Forms.Button cmd_actualizar;
+        private System.Windows.Forms.Button btn_eliminar;
     }
 }

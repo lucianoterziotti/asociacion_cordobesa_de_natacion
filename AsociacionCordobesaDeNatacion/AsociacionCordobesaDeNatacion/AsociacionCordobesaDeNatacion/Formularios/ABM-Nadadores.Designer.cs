@@ -32,6 +32,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombre_nadador = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_buscar_nad = new System.Windows.Forms.Button();
+            this.txt_dni = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -43,11 +45,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_calle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmd_nuevo = new System.Windows.Forms.Button();
             this.cmd_grabar = new System.Windows.Forms.Button();
             this.cmd_actualizar = new System.Windows.Forms.Button();
-            this.txt_dni = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -75,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_buscar_nad);
             this.groupBox1.Controls.Add(this.txt_dni);
             this.groupBox1.Controls.Add(this.txt_nombre_nadador);
             this.groupBox1.Controls.Add(this.groupBox5);
@@ -90,6 +93,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "NADADORES";
             // 
+            // btn_buscar_nad
+            // 
+            this.btn_buscar_nad.BackColor = System.Drawing.Color.White;
+            this.btn_buscar_nad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_nad.Location = new System.Drawing.Point(173, 61);
+            this.btn_buscar_nad.Name = "btn_buscar_nad";
+            this.btn_buscar_nad.Size = new System.Drawing.Size(75, 26);
+            this.btn_buscar_nad.TabIndex = 31;
+            this.btn_buscar_nad.Text = "Buscar";
+            this.btn_buscar_nad.UseVisualStyleBackColor = false;
+            this.btn_buscar_nad.Click += new System.EventHandler(this.btn_buscar_nad_Click);
+            // 
+            // txt_dni
+            // 
+            this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dni.Location = new System.Drawing.Point(109, 61);
+            this.txt_dni.MaxLength = 50;
+            this.txt_dni.Name = "txt_dni";
+            this.txt_dni.Size = new System.Drawing.Size(56, 26);
+            this.txt_dni.TabIndex = 14;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button2);
@@ -102,6 +126,7 @@
             this.groupBox5.TabIndex = 30;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Club";
+            this.groupBox5.Visible = false;
             // 
             // button2
             // 
@@ -146,6 +171,7 @@
             this.groupBox4.TabIndex = 30;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Profesor";
+            this.groupBox4.Visible = false;
             // 
             // button1
             // 
@@ -209,6 +235,16 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Calle";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(105, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 19);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "DNI";
+            // 
             // cmd_nuevo
             // 
             this.cmd_nuevo.BackColor = System.Drawing.Color.White;
@@ -220,50 +256,43 @@
             this.cmd_nuevo.TabIndex = 31;
             this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
             this.cmd_nuevo.UseVisualStyleBackColor = false;
+            this.cmd_nuevo.Click += new System.EventHandler(this.cmd_nuevo_Click);
             // 
             // cmd_grabar
             // 
             this.cmd_grabar.BackColor = System.Drawing.Color.White;
             this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
             this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Enabled = false;
             this.cmd_grabar.Location = new System.Drawing.Point(547, 117);
             this.cmd_grabar.Name = "cmd_grabar";
             this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
             this.cmd_grabar.TabIndex = 32;
             this.cmd_grabar.UseVisualStyleBackColor = false;
+            this.cmd_grabar.Click += new System.EventHandler(this.cmd_grabar_Click);
             // 
             // cmd_actualizar
             // 
             this.cmd_actualizar.BackColor = System.Drawing.Color.White;
             this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
             this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Enabled = false;
             this.cmd_actualizar.Location = new System.Drawing.Point(547, 158);
             this.cmd_actualizar.Name = "cmd_actualizar";
             this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
             this.cmd_actualizar.TabIndex = 33;
             this.cmd_actualizar.UseVisualStyleBackColor = false;
+            this.cmd_actualizar.Click += new System.EventHandler(this.cmd_actualizar_Click);
             // 
-            // txt_dni
+            // btn_eliminar
             // 
-            this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_dni.Location = new System.Drawing.Point(109, 61);
-            this.txt_dni.MaxLength = 50;
-            this.txt_dni.Name = "txt_dni";
-            this.txt_dni.Size = new System.Drawing.Size(56, 26);
-            this.txt_dni.TabIndex = 14;
-            this.txt_dni.TextChanged += new System.EventHandler(this.txt_dni_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 19);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Código";
+            this.btn_eliminar.BackColor = System.Drawing.Color.White;
+            this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Location = new System.Drawing.Point(546, 206);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
+            this.btn_eliminar.TabIndex = 46;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // ABM_Nadadores
             // 
@@ -271,6 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(617, 506);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.cmd_nuevo);
             this.Controls.Add(this.cmd_actualizar);
             this.Controls.Add(this.cmd_grabar);
@@ -312,5 +342,7 @@
         private System.Windows.Forms.Button cmd_actualizar;
         private System.Windows.Forms.TextBox txt_dni;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_buscar_nad;
     }
 }

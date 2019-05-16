@@ -16,14 +16,8 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _nombre_profesor;
         string _dni_profesor;
         string _calle_profesor;
-        string _numero_profesor;
-        int _id;
 
-        public int id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+
 
         public string dni_profesor
         {
@@ -43,47 +37,46 @@ namespace AsociacionCordobesaDeNatacion.Clases
             set { _calle_profesor = value; }
         }
 
-        public string numero_profesor
+        public DataTable buscar_prof()
         {
-            get { return _numero_profesor; }
-            set { _numero_profesor = value; }
-        }
-
-
-        public DataTable buscar_prof(string dni)
-        {
-            string sqltxt = @"SELECT * FROM profesores 
-                             WHERE cod_prof = '" + dni_profesor;
+            int dni_profesor_aux = Int32.Parse(dni_profesor);
+            string sqltxt = @"SELECT * FROM Profesores 
+                             WHERE cod_prof =" + dni_profesor_aux;
 
             return _BD.consulta(sqltxt);
         }
 
         public void grabar_profesor()
         {
-
-            string SqlInsert = @" INSERT INTO clubes 
-                         (
-                         _nombre_profesor,_cod_profesor, _calle_profesor, _numero_profesor) VALUES ('" +
-                         this._nombre_profesor + "', '" +
-                         this._dni_profesor + "', '" +
-                         this._calle_profesor + "', " +
-                         this._numero_profesor + ")";
+            int dni_profesor_aux = Int32.Parse(dni_profesor);
+            string SqlInsert = @" INSERT INTO Profesores 
+                         (cod_prof, nombre, calle) VALUES (" +
+                         dni_profesor_aux + ", '" +
+                         this.nombre_profesor + "', '" +
+                         this.calle_profesor + "')";
             MessageBox.Show(SqlInsert);
 
             this._BD.grabar_modificar(SqlInsert);
         }
 
-        public void modificar_nadador(string _id)
+        public void modificar_profesor()
         {
-            string sqlupdate = @"UPDATE clubes 
-                         SET(  _nombre_profesor,_cod_profesor, _calle_profesor, _numero_profesor VALUES ('" +
-                         this._nombre_profesor + "', '" +
-                         this._dni_profesor + "', '" +
-                         this._calle_profesor + "', " +
-                         this._numero_profesor + ")" +
-                         " WHERE _cod_nadador = " + _dni_profesor;
+            int dni_profesor_aux = Int32.Parse(dni_profesor);
+            string sqlupdate = @"UPDATE Profesores 
+                         SET cod_prof =" + dni_profesor_aux + "," +
+                         "nombre ='" + this.nombre_profesor + "'," +
+                         "calle ='" + this.calle_profesor + "'" +
+                         "WHERE cod_prof =" + dni_profesor_aux;
 
             this._BD.grabar_modificar(sqlupdate);
+        }
+        public void eliminar_profesor()
+        {
+            int dni_profesor_aux = Int32.Parse(dni_profesor);
+            string sqlDelete = @"DELETE FROM Profesores WHERE cod_prof =" + dni_profesor_aux;
+
+            this._BD.grabar_modificar(sqlDelete);
+
         }
 
     }

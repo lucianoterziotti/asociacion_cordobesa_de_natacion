@@ -17,37 +17,81 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             InitializeComponent();
         }
+        Torneos torneos = new Torneos();
 
-
-        private void cmd_buscar_1_Click(object sender, EventArgs e)
+        private void cmd_buscar01_Click(object sender, EventArgs e)
         {
             if (this.txt_cod_torneo.Text == "")
             {
 
-                MessageBox.Show("El nombre no está cargado");
+                MessageBox.Show("El codigo no está cargado");
 
                 this.txt_cod_torneo.Focus();
 
                 return;
             }
 
-            Torneos buscar_torneo = new Torneos();
-
             DataTable tabla = new DataTable();
-
-            tabla = buscar_torneo.buscar_torneo(this.txt_cod_torneo.Text.Trim());
+            tabla = torneos.buscar_torneo(this.txt_cod_torneo.Text.Trim());
 
             if (tabla.Rows.Count == 1)
             {
-
-                buscar_torneo.id = int.Parse(tabla.Rows[0][0].ToString());
-
-                this.Close();
+                MessageBox.Show("El torneo con codigo: " + this.txt_cod_torneo.Text + " tiene la siguiente descripcion: "
+                    + tabla.Rows[0]["descripccion"].ToString());
+        
             }
             else
             {
                 MessageBox.Show("No se encontro torneo con codigo especificado");
             }
+        }
+
+        private void cmd_grabar_Click(object sender, EventArgs e)
+        {
+            torneos.cod_torneo = txt_cod_torneo.Text;
+            torneos.descripcion_torneo = txt_descripcion.Text;
+            this.torneos.grabar_torneo();
+            MessageBox.Show("La grabación fue correcta");
+            this.blanquear_objetos();
+
+        }
+
+        private void blanquear_objetos()
+        {
+
+            this.txt_cod_torneo.Text = "";
+            this.txt_cod_torneo.Text = "";
+        }
+
+        private void cmd_nuevo_Click(object sender, EventArgs e)
+        {
+            blanquear_objetos();
+        }
+
+        private void cmd_actualizar_Click(object sender, EventArgs e)
+        {
+            torneos.cod_torneo = txt_cod_torneo.Text;
+            torneos.descripcion_torneo = txt_descripcion.Text;
+            this.torneos.modificar_torneo();
+            MessageBox.Show("La modificacion fue correcta");
+            this.blanquear_objetos();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            torneos.cod_torneo = txt_cod_torneo.Text;
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el torneo Con codigo:" + torneos.cod_torneo+" ?"
+                , "importante", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                torneos.eliminar_torneo();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                dialogResult = DialogResult.Cancel;
+            }
+            MessageBox.Show("La eliminacion del torneo ha sido correcta");
+            this.blanquear_objetos();
         }
     }
 }
