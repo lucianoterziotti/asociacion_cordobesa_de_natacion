@@ -61,7 +61,7 @@
             // 
             this.cmd_buscar01.BackColor = System.Drawing.Color.White;
             this.cmd_buscar01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmd_buscar01.Location = new System.Drawing.Point(129, 82);
+            this.cmd_buscar01.Location = new System.Drawing.Point(155, 82);
             this.cmd_buscar01.Name = "cmd_buscar01";
             this.cmd_buscar01.Size = new System.Drawing.Size(75, 26);
             this.cmd_buscar01.TabIndex = 36;
@@ -74,7 +74,7 @@
             this.txt_cod_torneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cod_torneo.Location = new System.Drawing.Point(67, 82);
             this.txt_cod_torneo.Name = "txt_cod_torneo";
-            this.txt_cod_torneo.Size = new System.Drawing.Size(56, 26);
+            this.txt_cod_torneo.Size = new System.Drawing.Size(77, 26);
             this.txt_cod_torneo.TabIndex = 35;
             // 
             // txt_descripcion

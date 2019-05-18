@@ -36,12 +36,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
 
             DataTable tabla = new DataTable();
-
+            clubes.cod_club = this.txt_cod_club.Text;
             tabla = clubes.buscar_club(this.txt_cod_club.Text.Trim());
 
             if (tabla.Rows.Count == 1)
             {
-                dgv_clubes.DataSource = tabla;
+                MessageBox.Show("El Club con codigo: " + clubes.cod_club + " su nombre es: "
+                    + tabla.Rows[0]["nombre"].ToString());
             }
             else
             {
@@ -79,8 +80,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         }
 
         private void blanquear_objetos()
-        {
-            
+        {  
             this.txt_calle.Text = "";
             this.txt_cod_club.Text = "";
             this.txt_nombre_club.Text = "";
@@ -101,5 +101,61 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 dialogResult = DialogResult.Cancel;
             }
         }
+        private void restriccionDeLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void restriccionDeNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_cod_club_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            restriccionDeLetras_KeyPress(sender,e);
+            
+            //no se encuentra en buen funcionamiento
+            btn_buscar.Enabled = true;
+        }
+
+        private void txt_numero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            restriccionDeLetras_KeyPress(sender, e);
+        }
+
+        private void txt_nombre_club_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            restriccionDeNumeros_KeyPress(sender, e);
+        }
+
+        
     }
+    
 }

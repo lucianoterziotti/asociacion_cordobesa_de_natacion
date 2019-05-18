@@ -50,7 +50,7 @@
             // 
             this.cmd_buscar01.BackColor = System.Drawing.Color.White;
             this.cmd_buscar01.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmd_buscar01.Location = new System.Drawing.Point(176, 61);
+            this.cmd_buscar01.Location = new System.Drawing.Point(219, 64);
             this.cmd_buscar01.Name = "cmd_buscar01";
             this.cmd_buscar01.Size = new System.Drawing.Size(75, 26);
             this.cmd_buscar01.TabIndex = 34;
@@ -62,7 +62,7 @@
             // 
             this.txt_nombre_profesor.BackColor = System.Drawing.Color.White;
             this.txt_nombre_profesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_profesor.Location = new System.Drawing.Point(113, 112);
+            this.txt_nombre_profesor.Location = new System.Drawing.Point(67, 115);
             this.txt_nombre_profesor.MaxLength = 50;
             this.txt_nombre_profesor.Name = "txt_nombre_profesor";
             this.txt_nombre_profesor.Size = new System.Drawing.Size(147, 26);
@@ -72,10 +72,11 @@
             // 
             this.txt_dni.BackColor = System.Drawing.Color.White;
             this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_dni.Location = new System.Drawing.Point(113, 61);
+            this.txt_dni.Location = new System.Drawing.Point(67, 64);
             this.txt_dni.Name = "txt_dni";
-            this.txt_dni.Size = new System.Drawing.Size(56, 26);
+            this.txt_dni.Size = new System.Drawing.Size(134, 26);
             this.txt_dni.TabIndex = 32;
+            this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
             // 
             // groupBox1
             // 
@@ -98,7 +99,7 @@
             this.groupBox2.Controls.Add(this.txt_calle);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(113, 144);
+            this.groupBox2.Location = new System.Drawing.Point(67, 147);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(227, 68);
             this.groupBox2.TabIndex = 30;
@@ -129,7 +130,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(109, 39);
+            this.label2.Location = new System.Drawing.Point(63, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 19);
             this.label2.TabIndex = 17;
@@ -139,7 +140,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(109, 90);
+            this.label3.Location = new System.Drawing.Point(63, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 23;

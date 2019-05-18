@@ -97,7 +97,7 @@
             // 
             this.btn_buscar_nad.BackColor = System.Drawing.Color.White;
             this.btn_buscar_nad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_nad.Location = new System.Drawing.Point(173, 61);
+            this.btn_buscar_nad.Location = new System.Drawing.Point(263, 61);
             this.btn_buscar_nad.Name = "btn_buscar_nad";
             this.btn_buscar_nad.Size = new System.Drawing.Size(75, 26);
             this.btn_buscar_nad.TabIndex = 31;
@@ -111,7 +111,7 @@
             this.txt_dni.Location = new System.Drawing.Point(109, 61);
             this.txt_dni.MaxLength = 50;
             this.txt_dni.Name = "txt_dni";
-            this.txt_dni.Size = new System.Drawing.Size(56, 26);
+            this.txt_dni.Size = new System.Drawing.Size(133, 26);
             this.txt_dni.TabIndex = 14;
             // 
             // groupBox5

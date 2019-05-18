@@ -32,7 +32,6 @@
             this.txt_nombre_club = new System.Windows.Forms.TextBox();
             this.txt_cod_club = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgv_clubes = new System.Windows.Forms.DataGridView();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_numero = new System.Windows.Forms.TextBox();
@@ -46,7 +45,6 @@
             this.cmd_grabar = new System.Windows.Forms.Button();
             this.cmd_actualizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_clubes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,19 +56,20 @@
             this.txt_nombre_club.Name = "txt_nombre_club";
             this.txt_nombre_club.Size = new System.Drawing.Size(140, 26);
             this.txt_nombre_club.TabIndex = 37;
+            this.txt_nombre_club.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_club_KeyPress);
             // 
             // txt_cod_club
             // 
             this.txt_cod_club.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cod_club.Location = new System.Drawing.Point(40, 58);
             this.txt_cod_club.Name = "txt_cod_club";
-            this.txt_cod_club.Size = new System.Drawing.Size(51, 26);
+            this.txt_cod_club.Size = new System.Drawing.Size(96, 26);
             this.txt_cod_club.TabIndex = 36;
+            this.txt_cod_club.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cod_club_KeyPress);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txt_nombre_club);
-            this.groupBox1.Controls.Add(this.dgv_clubes);
             this.groupBox1.Controls.Add(this.txt_cod_club);
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -79,27 +78,17 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(62, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(765, 280);
+            this.groupBox1.Size = new System.Drawing.Size(555, 280);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CLUBES";
             // 
-            // dgv_clubes
-            // 
-            this.dgv_clubes.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_clubes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_clubes.Location = new System.Drawing.Point(405, 58);
-            this.dgv_clubes.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_clubes.Name = "dgv_clubes";
-            this.dgv_clubes.RowTemplate.Height = 24;
-            this.dgv_clubes.Size = new System.Drawing.Size(297, 178);
-            this.dgv_clubes.TabIndex = 40;
-            // 
             // btn_buscar
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.White;
+            this.btn_buscar.Enabled = false;
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.Location = new System.Drawing.Point(97, 59);
+            this.btn_buscar.Location = new System.Drawing.Point(152, 58);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(85, 25);
             this.btn_buscar.TabIndex = 32;
@@ -129,6 +118,7 @@
             this.txt_numero.Name = "txt_numero";
             this.txt_numero.Size = new System.Drawing.Size(43, 26);
             this.txt_numero.TabIndex = 14;
+            this.txt_numero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numero_KeyPress);
             // 
             // label4
             // 
@@ -184,7 +174,7 @@
             this.btn_eliminar.BackColor = System.Drawing.Color.White;
             this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
             this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar.Location = new System.Drawing.Point(810, 199);
+            this.btn_eliminar.Location = new System.Drawing.Point(598, 207);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
             this.btn_eliminar.TabIndex = 41;
@@ -196,7 +186,7 @@
             this.cmd_nuevo.BackColor = System.Drawing.Color.White;
             this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__2_;
             this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_nuevo.Location = new System.Drawing.Point(811, 78);
+            this.cmd_nuevo.Location = new System.Drawing.Point(599, 86);
             this.cmd_nuevo.Name = "cmd_nuevo";
             this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
             this.cmd_nuevo.TabIndex = 25;
@@ -209,7 +199,7 @@
             this.cmd_grabar.BackColor = System.Drawing.Color.White;
             this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
             this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Location = new System.Drawing.Point(811, 119);
+            this.cmd_grabar.Location = new System.Drawing.Point(599, 127);
             this.cmd_grabar.Name = "cmd_grabar";
             this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
             this.cmd_grabar.TabIndex = 26;
@@ -221,7 +211,7 @@
             this.cmd_actualizar.BackColor = System.Drawing.Color.White;
             this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
             this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Location = new System.Drawing.Point(811, 158);
+            this.cmd_actualizar.Location = new System.Drawing.Point(599, 166);
             this.cmd_actualizar.Name = "cmd_actualizar";
             this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
             this.cmd_actualizar.TabIndex = 27;
@@ -233,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(902, 378);
+            this.ClientSize = new System.Drawing.Size(694, 378);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.cmd_actualizar);
             this.Controls.Add(this.cmd_nuevo);
@@ -245,7 +235,6 @@
             this.Text = "Clubes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_clubes)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -267,7 +256,6 @@
         private System.Windows.Forms.TextBox txt_calle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.DataGridView dgv_clubes;
         private System.Windows.Forms.Button btn_eliminar;
     }
 }

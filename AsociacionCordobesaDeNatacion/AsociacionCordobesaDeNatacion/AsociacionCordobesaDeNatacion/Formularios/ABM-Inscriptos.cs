@@ -13,6 +13,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 {
     public partial class ABM_Inscriptos : Form
     {
+
+        
         Inscriptos inscriptos = new Inscriptos();
         Nadadores nadadores = new Nadadores();
         Torneos torneos = new Torneos();
@@ -32,7 +34,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 MessageBox.Show("El codigo de torneo no está cargado");
 
                 this.txt_cod_torneo.Focus();
-
+                
                 return;
             }
             DataTable tabla = new DataTable();
