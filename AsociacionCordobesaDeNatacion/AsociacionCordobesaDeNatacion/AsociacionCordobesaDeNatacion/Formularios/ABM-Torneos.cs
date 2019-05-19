@@ -48,12 +48,19 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
-            torneos.cod_torneo = txt_cod_torneo.Text;
-            torneos.descripcion_torneo = txt_descripcion.Text;
-            this.torneos.grabar_torneo();
-            MessageBox.Show("La grabación fue correcta");
-            this.blanquear_objetos();
-
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                torneos.cod_torneo = txt_cod_torneo.Text;
+                torneos.descripcion_torneo = txt_descripcion.Text;
+                this.torneos.grabar_torneo();
+                MessageBox.Show("La grabación fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
         }
 
         private void blanquear_objetos()
@@ -70,11 +77,20 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-            torneos.cod_torneo = txt_cod_torneo.Text;
-            torneos.descripcion_torneo = txt_descripcion.Text;
-            this.torneos.modificar_torneo();
-            MessageBox.Show("La modificacion fue correcta");
-            this.blanquear_objetos();
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                torneos.cod_torneo = txt_cod_torneo.Text;
+                torneos.descripcion_torneo = txt_descripcion.Text;
+                this.torneos.modificar_torneo();
+                MessageBox.Show("La modificacion fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -92,6 +108,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             MessageBox.Show("La eliminacion del torneo ha sido correcta");
             this.blanquear_objetos();
+        }
+
+        private List<TextBox> crearArray()
+        {
+            List<TextBox> array = new List<TextBox>();
+            array.Add(this.txt_cod_torneo);
+            array.Add(this.txt_descripcion);
+            return array;
         }
     }
 }

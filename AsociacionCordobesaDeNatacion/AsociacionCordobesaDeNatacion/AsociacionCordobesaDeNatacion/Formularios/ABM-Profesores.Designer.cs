@@ -73,6 +73,7 @@
             this.txt_dni.BackColor = System.Drawing.Color.White;
             this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dni.Location = new System.Drawing.Point(67, 64);
+            this.txt_dni.MaxLength = 10;
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(134, 26);
             this.txt_dni.TabIndex = 32;

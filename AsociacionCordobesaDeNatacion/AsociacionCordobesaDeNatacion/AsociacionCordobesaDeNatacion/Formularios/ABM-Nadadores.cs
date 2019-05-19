@@ -65,22 +65,41 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
-            nadadores.calle_nadador = this.txt_calle.Text;
-            nadadores.dni_nadador = this.txt_dni.Text;
-            nadadores.nombre_nadador = this.txt_nombre_nadador.Text;
-            this.nadadores.grabar_nadador();
-            MessageBox.Show("La grabacion fue correcta");
-            this.blanquear_objetos();
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                nadadores.calle_nadador = this.txt_calle.Text;
+                nadadores.dni_nadador = this.txt_dni.Text;
+                nadadores.nombre_nadador = this.txt_nombre_nadador.Text;
+                this.nadadores.grabar_nadador();
+                MessageBox.Show("La grabacion fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
+            
         }
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-            nadadores.dni_nadador = txt_dni.Text;
-            nadadores.nombre_nadador = txt_nombre_nadador.Text;
-            nadadores.calle_nadador = txt_calle.Text;
-            this.nadadores.modificar_nadador();
-            MessageBox.Show("La modificacion fue correcta");
-            this.blanquear_objetos();
+
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                nadadores.dni_nadador = txt_dni.Text;
+                nadadores.nombre_nadador = txt_nombre_nadador.Text;
+                nadadores.calle_nadador = txt_calle.Text;
+                this.nadadores.modificar_nadador();
+                MessageBox.Show("La modificacion fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -98,6 +117,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             MessageBox.Show("La eliminacion del nadador elegido ha sido correcta");
             this.blanquear_objetos();
+        }
+
+        private List<TextBox> crearArray()
+        {
+            List<TextBox> array = new List<TextBox>();
+            array.Add(this.txt_calle);
+            array.Add(this.txt_dni);
+            array.Add(this.txt_nombre_nadador);
+            return array;
         }
     }
 }

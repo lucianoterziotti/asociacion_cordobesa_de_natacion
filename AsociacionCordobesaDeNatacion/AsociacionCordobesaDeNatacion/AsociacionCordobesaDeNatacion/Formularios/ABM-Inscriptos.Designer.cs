@@ -199,6 +199,7 @@
             this.txt_cod_torneo.BackColor = System.Drawing.Color.White;
             this.txt_cod_torneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cod_torneo.Location = new System.Drawing.Point(26, 45);
+            this.txt_cod_torneo.MaxLength = 10;
             this.txt_cod_torneo.Name = "txt_cod_torneo";
             this.txt_cod_torneo.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_torneo.TabIndex = 31;

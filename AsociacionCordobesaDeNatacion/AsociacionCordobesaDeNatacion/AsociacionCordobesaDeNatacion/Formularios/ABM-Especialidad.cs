@@ -51,12 +51,19 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
-            especialidades.cod_esp = txt_cod_especialidad.Text;
-            especialidades.descripcion = txt_descripcion.Text;
-            this.especialidades.grabar_especialidad();
-            MessageBox.Show("La grabación fue correcta");
-            this.blanquear_objetos();
-
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                especialidades.cod_esp = txt_cod_especialidad.Text;
+                especialidades.descripcion = txt_descripcion.Text;
+                this.especialidades.grabar_especialidad();
+                MessageBox.Show("La grabación fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
         }
 
         private void blanquear_objetos()
@@ -73,11 +80,20 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-            especialidades.cod_esp = txt_cod_especialidad.Text;
-            especialidades.descripcion = txt_descripcion.Text;
-            this.especialidades.modificar_especialidad();
-            MessageBox.Show("La modificacion fue correcta");
-            this.blanquear_objetos();
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                especialidades.cod_esp = txt_cod_especialidad.Text;
+                especialidades.descripcion = txt_descripcion.Text;
+                this.especialidades.modificar_especialidad();
+                MessageBox.Show("La modificacion fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -95,6 +111,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             MessageBox.Show("La eliminacion de la especialidad ha sido correcta");
             this.blanquear_objetos();
+        }
+
+        private List<TextBox> crearArray()
+        {
+            List<TextBox> array = new List<TextBox>();
+            array.Add(this.txt_cod_especialidad);
+            array.Add(this.txt_descripcion);
+            return array;
         }
     }
 }

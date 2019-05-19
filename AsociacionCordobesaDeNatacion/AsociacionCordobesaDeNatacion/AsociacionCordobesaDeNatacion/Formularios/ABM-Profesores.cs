@@ -62,22 +62,40 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
-            profesores.calle_profesor = this.txt_calle.Text;
-            profesores.dni_profesor = this.txt_dni.Text;
-            profesores.nombre_profesor = this.txt_nombre_profesor.Text;
-            this.profesores.grabar_profesor();
-            MessageBox.Show("La grabacion fue correcta");
-            this.blanquear_objetos();
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                profesores.calle_profesor = this.txt_calle.Text;
+                profesores.dni_profesor = this.txt_dni.Text;
+                profesores.nombre_profesor = this.txt_nombre_profesor.Text;
+                this.profesores.grabar_profesor();
+                MessageBox.Show("La grabacion fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
+            
         }
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-            profesores.calle_profesor = this.txt_calle.Text;
-            profesores.dni_profesor = this.txt_dni.Text;
-            profesores.nombre_profesor = this.txt_nombre_profesor.Text;
-            this.profesores.modificar_profesor();
-            MessageBox.Show("La modificacion fue correcta");
-            this.blanquear_objetos();
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                profesores.calle_profesor = this.txt_calle.Text;
+                profesores.dni_profesor = this.txt_dni.Text;
+                profesores.nombre_profesor = this.txt_nombre_profesor.Text;
+                this.profesores.modificar_profesor();
+                MessageBox.Show("La modificacion fue correcta");
+                this.blanquear_objetos();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar algun dato");
+            }
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -96,44 +114,19 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             MessageBox.Show("La eliminacion del profesor elegido ha sido correcta");
             this.blanquear_objetos();
         }
-        private void restriccionDeLetras_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void restriccionDeNumeros_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
+        
         private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
         {
-            restriccionDeLetras_KeyPress(sender, e);
+            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+        }
+
+        private List<TextBox> crearArray()
+        {
+            List<TextBox> array = new List<TextBox>();
+            array.Add(this.txt_calle);
+            array.Add(this.txt_dni);
+            array.Add(this.txt_nombre_profesor);
+            return array;
         }
     }
 }

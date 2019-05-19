@@ -33,7 +33,7 @@
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_cod_especialidad = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_tiempoRecord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.groupBox1.Controls.Add(this.txt_descripcion);
             this.groupBox1.Controls.Add(this.cmd_buscar01);
             this.groupBox1.Controls.Add(this.txt_cod_especialidad);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_tiempoRecord);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
@@ -93,15 +93,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ESPECIALIDAD";
             // 
-            // textBox1
+            // txt_tiempoRecord
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(118, 164);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 26);
-            this.textBox1.TabIndex = 33;
+            this.txt_tiempoRecord.BackColor = System.Drawing.Color.White;
+            this.txt_tiempoRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tiempoRecord.Location = new System.Drawing.Point(118, 164);
+            this.txt_tiempoRecord.MaxLength = 50;
+            this.txt_tiempoRecord.Name = "txt_tiempoRecord";
+            this.txt_tiempoRecord.Size = new System.Drawing.Size(86, 26);
+            this.txt_tiempoRecord.TabIndex = 33;
             // 
             // label2
             // 
@@ -212,7 +212,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_tiempoRecord;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmd_nuevo;
         private System.Windows.Forms.Button cmd_grabar;

@@ -56,12 +56,12 @@
             this.txt_nombre_club.Name = "txt_nombre_club";
             this.txt_nombre_club.Size = new System.Drawing.Size(140, 26);
             this.txt_nombre_club.TabIndex = 37;
-            this.txt_nombre_club.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_club_KeyPress);
             // 
             // txt_cod_club
             // 
             this.txt_cod_club.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cod_club.Location = new System.Drawing.Point(40, 58);
+            this.txt_cod_club.MaxLength = 10;
             this.txt_cod_club.Name = "txt_cod_club";
             this.txt_cod_club.Size = new System.Drawing.Size(96, 26);
             this.txt_cod_club.TabIndex = 36;
