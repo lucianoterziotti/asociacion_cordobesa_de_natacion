@@ -54,6 +54,11 @@
     <Compile Include="Clases\Profesores.cs" />
     <Compile Include="Clases\Torneos.cs" />
     <Compile Include="Clases\Users.cs" />
+    <Compile Include="DS_Inscriptos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ABM-Clubes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +153,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DS_Inscriptos.xsc">
+      <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Inscriptos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Inscriptos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Inscriptos.xss">
+      <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

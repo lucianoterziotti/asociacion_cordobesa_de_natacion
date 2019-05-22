@@ -48,8 +48,6 @@ namespace AsociacionCordobesaDeNatacion
 
             if (tabla.Rows.Count == 1)
             {
-
-                usuario.id = int.Parse(tabla.Rows[0][0].ToString());
                 
                 Menus frm_menu = new Menus();
                 frm_menu.ShowDialog();

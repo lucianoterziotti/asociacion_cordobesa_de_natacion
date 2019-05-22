@@ -120,9 +120,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void txt_cod_club_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utils.FormValidator.restriccionDeLetras_KeyPress(sender,e);
-            
-            //no se encuentra en buen funcionamiento
-            btn_buscar.Enabled = true;
         }
 
         private void txt_numero_KeyPress(object sender, KeyPressEventArgs e)

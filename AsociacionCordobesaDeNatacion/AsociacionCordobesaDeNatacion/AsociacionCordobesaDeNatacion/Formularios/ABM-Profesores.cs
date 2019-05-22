@@ -114,19 +114,19 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             MessageBox.Show("La eliminacion del profesor elegido ha sido correcta");
             this.blanquear_objetos();
         }
-        
-        private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
-        }
 
-        private List<TextBox> crearArray()
-        {
-            List<TextBox> array = new List<TextBox>();
-            array.Add(this.txt_calle);
-            array.Add(this.txt_dni);
-            array.Add(this.txt_nombre_profesor);
-            return array;
-        }
-    }
+		private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+		}
+
+		private List<TextBox> crearArray()
+		{
+			List<TextBox> array = new List<TextBox>();
+			array.Add(this.txt_calle);
+			array.Add(this.txt_dni);
+			array.Add(this.txt_nombre_profesor);
+			return array;
+		}
+	}
 }
