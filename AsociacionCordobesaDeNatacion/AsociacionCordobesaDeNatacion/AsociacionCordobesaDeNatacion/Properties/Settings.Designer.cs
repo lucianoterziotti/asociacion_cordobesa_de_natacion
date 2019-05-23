@@ -33,5 +33,16 @@ namespace AsociacionCordobesaDeNatacion.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=SQLNCLI11;Data Source=BELENPC\\BELEN;Integrated Security=SSPI;Initial Cat" +
+            "alog=PAV")]
+        public string ConnectionString1 {
+            get {
+                return ((string)(this["ConnectionString1"]));
+            }
+        }
     }
 }
