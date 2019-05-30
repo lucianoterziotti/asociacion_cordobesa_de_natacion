@@ -3,11 +3,7 @@ nombre varchar(255) NOT NULL,
 password varchar(255),
 PRIMARY KEY (nombre)
 );
-CREATE TABLE TipoDoc(
-tipo_doc varchar(255) NOT NULL,
-nombre varchar(255),
-PRIMARY KEY (tipo_doc)
-);
+
 CREATE TABLE Especialidad(
 cod_espec int NOT NULL,
 descripcion varchar(255),
@@ -33,8 +29,6 @@ CREATE TABLE Profesores (
     nombre varchar(255),
     calle varchar(255),
 	numero varchar(255),
-	tipo_doc varchar(255) FOREIGN KEY REFERENCES TipoDoc(tipo_doc),
-	nro_doc int,
 PRIMARY KEY(cod_prof)
 );
 
@@ -42,21 +36,7 @@ CREATE TABLE Nadadores (
     cod_nacional int NOT NULL,
     nombre varchar(255),
     calle varchar(255),
-	tipo_doc varchar(255) FOREIGN KEY REFERENCES TipoDoc(tipo_doc),
-	nro_doc int, 
 PRIMARY KEY(cod_nacional)
-);
-CREATE TABLE NadadxEspe(
-cod_nad int FOREIGN KEY REFERENCES Nadadores(cod_nacional),
-cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
-PRIMARY KEY(cod_nad, cod_espe)
-);
-
-CREATE TABLE TorneosxAnio(
-cod_torneo int FOREIGN KEY REFERENCES Torneos(cod_torneo) NOT NULL,
-anio int NOT NULL,
-cod_club int FOREIGN KEY REFERENCES Clubes(cod_club),
-PRIMARY KEY(anio,cod_torneo)
 );
 
 CREATE TABLE Inscriptos(
@@ -69,23 +49,6 @@ tiempo time,
 PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
 );
 
-CREATE TABLE ProfxClub(
-cod_prof int FOREIGN KEY REFERENCES Profesores(cod_prof),
-cod_club int FOREIGN KEY REFERENCES Clubes(cod_club),
-PRIMARY KEY(cod_prof, cod_club) 
-);
-CREATE TABLE ProfxEspe(
-cod_prof int FOREIGN KEY REFERENCES Profesores(cod_prof),
-cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
-PRIMARY KEY(cod_prof, cod_espe) 
-);
-CREATE TABLE EspexToreno(
-cod_torneo int NOT NULL FOREIGN KEY REFERENCES Profesores(cod_prof),
-anio int NOT NULL,
-cod_espe int FOREIGN KEY REFERENCES Especialidad(cod_espec),
-fecha date ,
-PRIMARY KEY(cod_torneo, cod_espe, anio) 
-);
 
 INSERT INTO Usuarios (nombre, password)
 VALUES ('belen', '1234');
