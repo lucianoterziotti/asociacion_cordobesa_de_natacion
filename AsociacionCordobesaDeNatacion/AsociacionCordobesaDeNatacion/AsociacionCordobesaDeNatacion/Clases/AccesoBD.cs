@@ -18,7 +18,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 		OleDbConnection conexion = new OleDbConnection();
 		OleDbCommand cmd = new OleDbCommand();
 
-        string cadena_conexion = "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
+        string cadena_conexion = "Provider=SQLNCLI11;Data Source=DESKTOP-5EFA1ET\\LOURDESSQL;User ID=sa;Initial Catalog=PAV;password=voley123";
 
         //LUPO:   "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
 

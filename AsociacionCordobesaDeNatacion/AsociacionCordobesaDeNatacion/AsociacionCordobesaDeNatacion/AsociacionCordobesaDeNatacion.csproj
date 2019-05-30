@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_Especialidades_Lourdes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Especialidades_Lourdes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_Especialidad_Lupo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Lupo_Torneo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_Nadadores_Lourdes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Nadadores_Lourdes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_Nadador_Lupo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +123,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Torneos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Torneos_Lourdes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Torneos_Lourdes.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\ABM-Clubes.cs">
       <SubType>Form</SubType>
@@ -285,6 +300,17 @@
     <None Include="DataSet7.xss">
       <DependentUpon>DataSet7.xsd</DependentUpon>
     </None>
+    <None Include="DS_Especialidades_Lourdes.xsc">
+      <DependentUpon>DS_Especialidades_Lourdes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Especialidades_Lourdes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Especialidades_Lourdes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Especialidades_Lourdes.xss">
+      <DependentUpon>DS_Especialidades_Lourdes.xsd</DependentUpon>
+    </None>
     <None Include="DS_Especialidad_Lupo.xsc">
       <DependentUpon>DS_Especialidad_Lupo.xsd</DependentUpon>
     </None>
@@ -318,6 +344,17 @@
     <None Include="DS_Lupo_Torneo.xss">
       <DependentUpon>DS_Lupo_Torneo.xsd</DependentUpon>
     </None>
+    <None Include="DS_Nadadores_Lourdes.xsc">
+      <DependentUpon>DS_Nadadores_Lourdes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Nadadores_Lourdes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Nadadores_Lourdes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Nadadores_Lourdes.xss">
+      <DependentUpon>DS_Nadadores_Lourdes.xsd</DependentUpon>
+    </None>
     <None Include="DS_Nadador_Lupo.xsc">
       <DependentUpon>DS_Nadador_Lupo.xsd</DependentUpon>
     </None>
@@ -339,6 +376,17 @@
     </None>
     <None Include="DS_Torneos.xss">
       <DependentUpon>DS_Torneos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Torneos_Lourdes.xsc">
+      <DependentUpon>DS_Torneos_Lourdes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Torneos_Lourdes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Torneos_Lourdes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Torneos_Lourdes.xss">
+      <DependentUpon>DS_Torneos_Lourdes.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -205,16 +205,26 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void ABM_Inscriptos_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet7.Inscriptos' table. You can move, or remove it, as needed.
-            this.inscriptosTableAdapter2.Fill(this.dataSet7.Inscriptos);
-            // TODO: This line of code loads data into the 'dS_Nadador_Lupo.Nadadores' table. You can move, or remove it, as needed.
-            this.nadadoresTableAdapter2.Fill(this.dS_Nadador_Lupo.Nadadores);
-            // TODO: This line of code loads data into the 'dS_Especialidad_Lupo.Especialidad' table. You can move, or remove it, as needed.
-            this.especialidadTableAdapter2.Fill(this.dS_Especialidad_Lupo.Especialidad);
-            // TODO: This line of code loads data into the 'dS_Lupo_Torneo.Torneos' table. You can move, or remove it, as needed.
-            this.torneosTableAdapter2.Fill(this.dS_Lupo_Torneo.Torneos);
+            //LOURDES
+            // TODO: esta línea de código carga datos en la tabla 'dS_Nadadores_Lourdes.Nadadores' Puede moverla o quitarla según sea necesario.
+            this.nadadoresTableAdapter3.Fill(this.dS_Nadadores_Lourdes.Nadadores);
+            // TODO: esta línea de código carga datos en la tabla 'dS_Especialidades_Lourdes.Especialidad' Puede moverla o quitarla según sea necesario.
+            this.especialidadTableAdapter3.Fill(this.dS_Especialidades_Lourdes.Especialidad);
+            // TODO: esta línea de código carga datos en la tabla 'dS_Torneos_Lourdes.Torneos' Puede moverla o quitarla según sea necesario.
+            this.torneosTableAdapter3.Fill(this.dS_Torneos_Lourdes.Torneos);
 
-            //DATA SET DE MATI
+
+            //LUPO
+            //// TODO: This line of code loads data into the 'dataSet7.Inscriptos' table. You can move, or remove it, as needed.
+            //this.inscriptosTableAdapter2.Fill(this.dataSet7.Inscriptos);
+            //// TODO: This line of code loads data into the 'dS_Nadador_Lupo.Nadadores' table. You can move, or remove it, as needed.
+            //this.nadadoresTableAdapter2.Fill(this.dS_Nadador_Lupo.Nadadores);
+            //// TODO: This line of code loads data into the 'dS_Especialidad_Lupo.Especialidad' table. You can move, or remove it, as needed.
+            //this.especialidadTableAdapter2.Fill(this.dS_Especialidad_Lupo.Especialidad);
+            //// TODO: This line of code loads data into the 'dS_Lupo_Torneo.Torneos' table. You can move, or remove it, as needed.
+            //this.torneosTableAdapter2.Fill(this.dS_Lupo_Torneo.Torneos);
+
+            //DATA SET DE BELEN
             // TODO: esta línea de código carga datos en la tabla 'dataSet6.Inscriptos' Puede moverla o quitarla según sea necesario.
             //this.inscriptosTableAdapter1.Fill(this.dataSet6.Inscriptos);
             // TODO: esta línea de código carga datos en la tabla 'dataSet5.Nadadores' Puede moverla o quitarla según sea necesario.
@@ -265,6 +275,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             var row = (sender as DataGridView).CurrentRow;
             txt_cod_nadador.Text = row.Cells[0].Value.ToString();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
