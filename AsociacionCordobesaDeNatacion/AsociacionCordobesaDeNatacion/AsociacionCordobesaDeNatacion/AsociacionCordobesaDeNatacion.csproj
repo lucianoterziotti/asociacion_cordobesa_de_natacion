@@ -84,10 +84,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Especialidad_Lupo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Especialidad_Lupo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_Inscriptos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Lupo_Torneo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Lupo_Torneo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Nadador_Lupo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Nadador_Lupo.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_Torneos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -254,6 +274,28 @@
     <None Include="DataSet6.xss">
       <DependentUpon>DataSet6.xsd</DependentUpon>
     </None>
+    <None Include="DataSet7.xsc">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet7.xss">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Especialidad_Lupo.xsc">
+      <DependentUpon>DS_Especialidad_Lupo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Especialidad_Lupo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Especialidad_Lupo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Especialidad_Lupo.xss">
+      <DependentUpon>DS_Especialidad_Lupo.xsd</DependentUpon>
+    </None>
     <None Include="DS_Inscriptos.xsc">
       <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
     </None>
@@ -264,6 +306,28 @@
     </None>
     <None Include="DS_Inscriptos.xss">
       <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Lupo_Torneo.xsc">
+      <DependentUpon>DS_Lupo_Torneo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Lupo_Torneo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Lupo_Torneo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Lupo_Torneo.xss">
+      <DependentUpon>DS_Lupo_Torneo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Nadador_Lupo.xsc">
+      <DependentUpon>DS_Nadador_Lupo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Nadador_Lupo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Nadador_Lupo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Nadador_Lupo.xss">
+      <DependentUpon>DS_Nadador_Lupo.xsd</DependentUpon>
     </None>
     <None Include="DS_Torneos.xsc">
       <DependentUpon>DS_Torneos.xsd</DependentUpon>

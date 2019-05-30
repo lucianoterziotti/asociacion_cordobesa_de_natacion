@@ -86,7 +86,6 @@
             // btn_buscar
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.White;
-            this.btn_buscar.Enabled = false;
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.Location = new System.Drawing.Point(152, 58);
             this.btn_buscar.Name = "btn_buscar";

@@ -129,7 +129,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 						 txt_cod_nadador.Text.Trim() + ", " +
 						 txt_anio.Text.Trim() + ")";
 			_BD.insert_update_delete(sql);
-			this.cargar_grilla();
 			this.label5.Text = "En proceso";
 		}
 
@@ -156,7 +155,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 		private void btn_IniciarTrans_Click(object sender, EventArgs e)
 		{
 			_BD.iniciar_transaccion();
-			this.cargar_grilla();
+			//this.cargar_grilla();
 			this.label5.Text = "Iniciada";
 		}
 
@@ -189,7 +188,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 								"anio = " + txt_anio.Text.Trim();
 
 			_BD.insert_update_delete(sql);
-			this.cargar_grilla();
 			this.label5.Text = "En proceso";
 		}
 
@@ -202,26 +200,37 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 								"anio = " + txt_anio.Text.Trim();
 
 			_BD.insert_update_delete(sql);
-			this.cargar_grilla();
 			this.label5.Text = "En proceso";
 		}
 
         private void ABM_Inscriptos_Load(object sender, EventArgs e)
         {
-			// TODO: esta línea de código carga datos en la tabla 'dataSet6.Inscriptos' Puede moverla o quitarla según sea necesario.
-			this.inscriptosTableAdapter1.Fill(this.dataSet6.Inscriptos);
-			// TODO: esta línea de código carga datos en la tabla 'dataSet5.Nadadores' Puede moverla o quitarla según sea necesario.
-			this.nadadoresTableAdapter1.Fill(this.dataSet5.Nadadores);
-			// TODO: esta línea de código carga datos en la tabla 'dataSet4.Especialidad' Puede moverla o quitarla según sea necesario.
-			this.especialidadTableAdapter1.Fill(this.dataSet4.Especialidad);
-			// TODO: esta línea de código carga datos en la tabla 'dataSet3.Torneos' Puede moverla o quitarla según sea necesario.
-			this.torneosTableAdapter1.Fill(this.dataSet3.Torneos);
-			// TODO: esta línea de código carga datos en la tabla 'dataSet2.Nadadores' Puede moverla o quitarla según sea necesario.
-			//this.nadadoresTableAdapter.Fill(this.dataSet2.Nadadores);
-   //         // TODO: esta línea de código carga datos en la tabla 'dataSet1.Especialidad' Puede moverla o quitarla según sea necesario.
-   //         this.especialidadTableAdapter.Fill(this.dataSet1.Especialidad);
-   //         // TODO: esta línea de código carga datos en la tabla 'dS_Torneos.Torneos' Puede moverla o quitarla según sea necesario.
-   //         this.torneosTableAdapter.Fill(this.dS_Torneos.Torneos);
+            // TODO: This line of code loads data into the 'dataSet7.Inscriptos' table. You can move, or remove it, as needed.
+            this.inscriptosTableAdapter2.Fill(this.dataSet7.Inscriptos);
+            // TODO: This line of code loads data into the 'dS_Nadador_Lupo.Nadadores' table. You can move, or remove it, as needed.
+            this.nadadoresTableAdapter2.Fill(this.dS_Nadador_Lupo.Nadadores);
+            // TODO: This line of code loads data into the 'dS_Especialidad_Lupo.Especialidad' table. You can move, or remove it, as needed.
+            this.especialidadTableAdapter2.Fill(this.dS_Especialidad_Lupo.Especialidad);
+            // TODO: This line of code loads data into the 'dS_Lupo_Torneo.Torneos' table. You can move, or remove it, as needed.
+            this.torneosTableAdapter2.Fill(this.dS_Lupo_Torneo.Torneos);
+
+            //DATA SET DE MATI
+            // TODO: esta línea de código carga datos en la tabla 'dataSet6.Inscriptos' Puede moverla o quitarla según sea necesario.
+            //this.inscriptosTableAdapter1.Fill(this.dataSet6.Inscriptos);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet5.Nadadores' Puede moverla o quitarla según sea necesario.
+            //this.nadadoresTableAdapter1.Fill(this.dataSet5.Nadadores);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet4.Especialidad' Puede moverla o quitarla según sea necesario.
+            //this.especialidadTableAdapter1.Fill(this.dataSet4.Especialidad);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet3.Torneos' Puede moverla o quitarla según sea necesario.
+            //this.torneosTableAdapter1.Fill(this.dataSet3.Torneos);
+
+            //DATA SET DE MATI
+            // TODO: esta línea de código carga datos en la tabla 'dataSet2.Nadadores' Puede moverla o quitarla según sea necesario.
+            //this.nadadoresTableAdapter.Fill(this.dataSet2.Nadadores);
+            //         // TODO: esta línea de código carga datos en la tabla 'dataSet1.Especialidad' Puede moverla o quitarla según sea necesario.
+            //         this.especialidadTableAdapter.Fill(this.dataSet1.Especialidad);
+            //         // TODO: esta línea de código carga datos en la tabla 'dS_Torneos.Torneos' Puede moverla o quitarla según sea necesario.
+            //         this.torneosTableAdapter.Fill(this.dS_Torneos.Torneos);
 
         }
 
