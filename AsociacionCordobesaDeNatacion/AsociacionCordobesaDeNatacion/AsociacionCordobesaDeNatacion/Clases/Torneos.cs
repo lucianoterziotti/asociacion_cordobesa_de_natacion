@@ -60,7 +60,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          this._descripcion_torneo + "')" ;
             MessageBox.Show(SqlInsert);
 
-            this._BD.grabar_modificar(SqlInsert);
+            this._BD.query(SqlInsert);
         }
 
         public void modificar_torneo()
@@ -71,14 +71,14 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          "descripccion ='" + this._descripcion_torneo + "'" +
                          "WHERE cod_torneo ="+ cod_torneo_aux;
 
-            this._BD.grabar_modificar(sqlupdate);
+            this._BD.query(sqlupdate);
         }
         public void eliminar_torneo()
         {
             int cod_torneo_aux = Int32.Parse(cod_torneo);
             string sqlDelete = @"DELETE FROM torneos WHERE cod_torneo =" + cod_torneo_aux;
 
-            this._BD.grabar_modificar(sqlDelete);
+            this._BD.query(sqlDelete);
 
         }
     }

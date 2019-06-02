@@ -55,7 +55,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          this.calle_nadador + "')";
             MessageBox.Show(SqlInsert);
 
-            this._BD.grabar_modificar(SqlInsert);
+            this._BD.query(SqlInsert);
         }
 
         public void modificar_nadador()
@@ -67,14 +67,14 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          "calle ='" + this.calle_nadador + "'" +
                          "WHERE cod_nacional =" + dni_nadador_aux;
 
-            this._BD.grabar_modificar(sqlupdate);
+            this._BD.query(sqlupdate);
         }
         public void eliminar_nadador()
         {
             int dni_nadador_aux = Int32.Parse(dni_nadador);
             string sqlDelete = @"DELETE FROM nadadores WHERE cod_nacional =" + dni_nadador_aux;
 
-            this._BD.grabar_modificar(sqlDelete);
+            this._BD.query(sqlDelete);
 
         }
     }

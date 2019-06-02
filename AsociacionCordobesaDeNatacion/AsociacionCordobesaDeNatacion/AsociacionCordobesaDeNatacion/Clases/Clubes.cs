@@ -65,7 +65,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          _numero_club + ")";
             MessageBox.Show(SqlInsert);
              
-            this._BD.grabar_modificar(SqlInsert);
+            this._BD.query(SqlInsert);
         }
         
         public void modificar_club(string _cod_club)
@@ -79,7 +79,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          "numero ="+_numero_club  +
                          " WHERE cod_club =" + cod_club_aux;
 
-            this._BD.grabar_modificar(sqlupdate);
+            this._BD.query(sqlupdate);
         }
 
         public void eliminar_club()
@@ -87,7 +87,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_club_aux = Int32.Parse(cod_club);
             string sqlDelete = @"DELETE FROM Clubes WHERE cod_club ="+ cod_club_aux;
 
-            this._BD.grabar_modificar(sqlDelete);
+            this._BD.query(sqlDelete);
 
         }
     }

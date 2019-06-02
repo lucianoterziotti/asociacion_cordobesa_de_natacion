@@ -56,7 +56,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          this.calle_profesor + "')";
             MessageBox.Show(SqlInsert);
 
-            this._BD.grabar_modificar(SqlInsert);
+            this._BD.query(SqlInsert);
         }
 
         public void modificar_profesor()
@@ -68,14 +68,14 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          "calle ='" + this.calle_profesor + "'" +
                          "WHERE cod_prof =" + dni_profesor_aux;
 
-            this._BD.grabar_modificar(sqlupdate);
+            this._BD.query(sqlupdate);
         }
         public void eliminar_profesor()
         {
             int dni_profesor_aux = Int32.Parse(dni_profesor);
             string sqlDelete = @"DELETE FROM Profesores WHERE cod_prof =" + dni_profesor_aux;
 
-            this._BD.grabar_modificar(sqlDelete);
+            this._BD.query(sqlDelete);
 
         }
 

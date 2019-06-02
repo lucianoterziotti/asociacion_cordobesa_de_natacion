@@ -51,7 +51,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          this.descripcion + "')";
             MessageBox.Show(SqlInsert);
 
-            this._BD.grabar_modificar(SqlInsert);
+            this._BD.query(SqlInsert);
         }
 
         public void modificar_especialidad()
@@ -62,14 +62,14 @@ namespace AsociacionCordobesaDeNatacion.Clases
                          "descripcion ='" + this.descripcion + "'" +
                          "WHERE cod_espec =" + cod_esp_aux;
 
-            this._BD.grabar_modificar(sqlupdate);
+            this._BD.query(sqlupdate);
         }
         public void eliminar_especialidad()
         {
             int cod_torneo_aux = Int32.Parse(cod_esp);
             string sqlDelete = @"DELETE FROM Especialidad WHERE cod_espec =" + cod_torneo_aux;
 
-            this._BD.grabar_modificar(sqlDelete);
+            this._BD.query(sqlDelete);
 
         }
     }

@@ -16,12 +16,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
     {
 
 		AccesoBD _BD = new AccesoBD();
+        Inscriptos inscriptos = new Inscriptos();
 
         Nadadores nadadores = new Nadadores();
         Torneos torneos = new Torneos();
         Especialidades especialidades = new Especialidades();
         DataTable tabla = new DataTable();
-        float randomNumber;
+       
 
 
         public ABM_Inscriptos()
@@ -33,17 +34,22 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
 		private void cmd_grabar_Click(object sender, EventArgs e)
 		{
-            Random random = new Random();
-            this.randomNumber = randomNumberMethod(random);
 
-            string sql = @"INSERT INTO Inscriptos 
-                         (cod_espe, cod_torneo, cod_nad, anio, tiempo) VALUES(" +
-                         txt_cod_especialidad.Text.Trim() + ", " +
-                         txt_cod_torneo.Text.Trim() + ", " +
-                         txt_cod_nadador.Text.Trim() + ", " +
-                         txt_anio.Text.Trim() + ", " +
-                         this.randomNumber + ")";
-            _BD.insert_update_delete(sql);
+            List<TextBox> array = crearArray();
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
+                inscriptos.cod_torneo = this.txt_cod_torneo.Text;
+                inscriptos.cod_nadador = this.txt_cod_nadador.Text;
+                inscriptos.anio = this.txt_anio.Text;
+                inscriptos.grabar_inscripto();
+                this.cargar_grilla();
+            }
+            else
+            {
+                MessageBox.Show("Falta ingresar el Año");
+            }
+
             this.label5.Text = "En proceso";
         }
 
@@ -100,13 +106,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
 		private void btn_eliminar_Click(object sender, EventArgs e)
 		{
-			string sql = @"DELETE FROM Inscriptos 
-                         WHERE  cod_espe = " + txt_cod_especialidad.Text.Trim() +
-								"cod_torneo = " + txt_cod_torneo.Text.Trim() +
-								"cod_nad = " + txt_cod_nadador.Text.Trim() +
-								"anio = " + txt_anio.Text.Trim();
+            inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
+            inscriptos.cod_torneo = this.txt_cod_torneo.Text;
+            inscriptos.cod_nadador = this.txt_cod_nadador.Text;
+            inscriptos.anio = this.txt_anio.Text;
 
-			_BD.insert_update_delete(sql);
+            inscriptos.eliminar_Inscripto();
+
+            
 			this.label5.Text = "En proceso";
 		}
 
@@ -179,5 +186,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
             return (float)(numero);
         }
+
+        private List<TextBox> crearArray()
+        {
+            List<TextBox> array = new List<TextBox>();
+            array.Add(this.txt_anio);
+           
+            return array;
+        }
+
+        
     }
 }

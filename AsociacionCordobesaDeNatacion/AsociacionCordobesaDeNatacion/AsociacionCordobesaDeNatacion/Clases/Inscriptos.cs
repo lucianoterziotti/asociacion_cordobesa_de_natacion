@@ -14,8 +14,9 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _anio;
         string _cod_especialidad;
         string _cod_nadador;
-        string _posicion;
+        int _posicion;
         float _tiempo;
+
 
 
 
@@ -39,7 +40,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             get { return this._cod_torneo; }
             set { this._cod_torneo = value; }
         }
-        public string posicion
+        public int posicion
         {
             get { return this._posicion; }
             set { this._posicion = value; }
@@ -82,22 +83,77 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         public void grabar_inscripto()
         {
+
+            Random random = new Random();
+            this.tiempo = randomNumberMethod(random);
+
             int cod_nad_aux = Int32.Parse(this.cod_nadador);
             int cod_esp_aux = Int32.Parse(this.cod_especialidad);
             int cod_torneo_aux = Int32.Parse(this.cod_torneo);
             int anio_aux = Int32.Parse(this.anio);
-        //    int posicion_aux = Int32.Parse(this.posicion);
-            
+                        
             string SqlInsert = @"INSERT INTO Inscriptos 
-                         (cod_espe, cod_torneo, cod_nad, anio, tiempo) VALUES (" +
+                         (cod_espe, cod_torneo, cod_nad, tiempo, posicion, anio ) VALUES (" +
                          cod_esp_aux + "," +
                          cod_torneo_aux + "," +
                           cod_nad_aux + "," +
                           tiempo + "," +
+                          posicion + "," +
                          anio_aux +")";
                    MessageBox.Show(SqlInsert);
 
-            this._BD.grabar_modificar(SqlInsert);
+            this._BD.query(SqlInsert);
         }
+
+        public void eliminar_Inscripto()
+        {
+            int anio_aux = Int32.Parse(anio);
+            int cod_nadador_aux = Int32.Parse(this.cod_nadador);
+            int cod_torneo_aux = Int32.Parse(this.cod_torneo);
+            int cod_especialidad = Int32.Parse(this.cod_especialidad);
+
+            string sqlDelete = @"DELETE FROM Inscriptos 
+                         WHERE  cod_torneo =" + cod_torneo +
+                                "anio =" + anio  +
+                                "cod_nad =" + cod_nadador +
+                                "cod_espe = " +cod_especialidad ;
+
+
+            this._BD.query(sqlDelete);
+
+        }
+
+        public float randomNumberMethod(Random random)
+        {
+            double a = 22;
+            double b = 30;
+            double numero = a + random.NextDouble() * (b - a);
+
+            return (float)(numero);
+        }
+
+        //private int setearPuesto()
+        //{
+        //    List<string> array = new List<string>();
+        //    DataTable tabla = new DataTable();
+        //    int puesto=0;
+            
+        //    tabla = _BD.consulta("SELECT * FROM Inscriptos");
+
+        //    int counter = tabla.Rows.Count;
+        //    foreach (DataTable row in tabla.Rows)
+        //    {
+
+        //        array.Add(row.Rows[5].ToString());
+        //        array.Sort();
+        //    }
+        //    if (counter == 0)
+        //    {
+
+        //    }
+        //    return ;
+        //}
     }
+
+    
 }

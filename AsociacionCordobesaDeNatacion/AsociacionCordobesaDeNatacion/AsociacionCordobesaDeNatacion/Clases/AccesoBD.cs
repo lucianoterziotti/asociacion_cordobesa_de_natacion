@@ -144,7 +144,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 			return tabla;
 		}
 
-		public void grabar_modificar(string comando)
+		public void query(string comando)
 		{
 			conectar();
 			cmd.CommandText = comando;

@@ -69,8 +69,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.codespecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiemporecordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidadBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Especialidades_Lourdes = new AsociacionCordobesaDeNatacion.DS_Especialidades_Lourdes();
+            this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Especialidad_Lupo = new AsociacionCordobesaDeNatacion.DS_Especialidad_Lupo();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txt_cod_nadador = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -78,8 +78,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.codnacionalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nadadoresBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Nadadores_Lourdes = new AsociacionCordobesaDeNatacion.DS_Nadadores_Lourdes();
+            this.nadadoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Nadador_Lupo = new AsociacionCordobesaDeNatacion.DS_Nadador_Lupo();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_anio = new System.Windows.Forms.TextBox();
             this.txt_cod_torneo = new System.Windows.Forms.TextBox();
@@ -88,14 +88,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridTorneo = new System.Windows.Forms.DataGridView();
             this.codtorneoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.torneosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Torneos_Lourdes = new AsociacionCordobesaDeNatacion.DS_Torneos_Lourdes();
-            this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Especialidad_Lupo = new AsociacionCordobesaDeNatacion.DS_Especialidad_Lupo();
-            this.nadadoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Nadador_Lupo = new AsociacionCordobesaDeNatacion.DS_Nadador_Lupo();
             this.torneosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dS_Lupo_Torneo = new AsociacionCordobesaDeNatacion.DS_Lupo_Torneo();
+            this.especialidadBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Especialidades_Lourdes = new AsociacionCordobesaDeNatacion.DS_Especialidades_Lourdes();
+            this.nadadoresBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Nadadores_Lourdes = new AsociacionCordobesaDeNatacion.DS_Nadadores_Lourdes();
+            this.torneosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Torneos_Lourdes = new AsociacionCordobesaDeNatacion.DS_Torneos_Lourdes();
             this.especialidadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet4 = new AsociacionCordobesaDeNatacion.DataSet4();
             this.nadadoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -127,10 +127,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.codnadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.posicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inscriptosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet7 = new AsociacionCordobesaDeNatacion.DataSet7();
             this.inscriptosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet6 = new AsociacionCordobesaDeNatacion.DataSet6();
+            this.inscriptosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet7 = new AsociacionCordobesaDeNatacion.DataSet7();
             this.label6 = new System.Windows.Forms.Label();
             this.torneosTableAdapter1 = new AsociacionCordobesaDeNatacion.DataSet3TableAdapters.TorneosTableAdapter();
             this.especialidadTableAdapter1 = new AsociacionCordobesaDeNatacion.DataSet4TableAdapters.EspecialidadTableAdapter();
@@ -146,22 +146,22 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEspecialidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridNadador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTorneo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Torneos_Lourdes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNadador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTorneo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Lupo_Torneo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Torneos_Lourdes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource1)).BeginInit();
@@ -179,10 +179,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dS_Inscriptos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Inscriptos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -208,7 +208,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox1.Size = new System.Drawing.Size(1429, 369);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "INSCRIPTOS";
+            this.groupBox1.Text = "INCRIPCION";
             // 
             // label7
             // 
@@ -315,7 +315,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.btn_FinalizarTrans.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FinalizarTrans.Location = new System.Drawing.Point(1338, 0);
-            this.btn_FinalizarTrans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_FinalizarTrans.Margin = new System.Windows.Forms.Padding(2);
             this.btn_FinalizarTrans.Name = "btn_FinalizarTrans";
             this.btn_FinalizarTrans.Size = new System.Drawing.Size(86, 32);
             this.btn_FinalizarTrans.TabIndex = 47;
@@ -337,7 +337,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.btn_IniciarTrans.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_IniciarTrans.Location = new System.Drawing.Point(1075, 1);
-            this.btn_IniciarTrans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_IniciarTrans.Margin = new System.Windows.Forms.Padding(2);
             this.btn_IniciarTrans.Name = "btn_IniciarTrans";
             this.btn_IniciarTrans.Size = new System.Drawing.Size(86, 32);
             this.btn_IniciarTrans.TabIndex = 46;
@@ -454,15 +454,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.tiemporecordDataGridViewTextBoxColumn.ReadOnly = true;
             this.tiemporecordDataGridViewTextBoxColumn.Width = 134;
             // 
-            // especialidadBindingSource3
+            // especialidadBindingSource2
             // 
-            this.especialidadBindingSource3.DataMember = "Especialidad";
-            this.especialidadBindingSource3.DataSource = this.dS_Especialidades_Lourdes;
+            this.especialidadBindingSource2.DataMember = "Especialidad";
+            this.especialidadBindingSource2.DataSource = this.dS_Especialidad_Lupo;
             // 
-            // dS_Especialidades_Lourdes
+            // dS_Especialidad_Lupo
             // 
-            this.dS_Especialidades_Lourdes.DataSetName = "DS_Especialidades_Lourdes";
-            this.dS_Especialidades_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dS_Especialidad_Lupo.DataSetName = "DS_Especialidad_Lupo";
+            this.dS_Especialidad_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox4
             // 
@@ -567,15 +567,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.calleDataGridViewTextBoxColumn.ReadOnly = true;
             this.calleDataGridViewTextBoxColumn.Width = 69;
             // 
-            // nadadoresBindingSource3
+            // nadadoresBindingSource2
             // 
-            this.nadadoresBindingSource3.DataMember = "Nadadores";
-            this.nadadoresBindingSource3.DataSource = this.dS_Nadadores_Lourdes;
+            this.nadadoresBindingSource2.DataMember = "Nadadores";
+            this.nadadoresBindingSource2.DataSource = this.dS_Nadador_Lupo;
             // 
-            // dS_Nadadores_Lourdes
+            // dS_Nadador_Lupo
             // 
-            this.dS_Nadadores_Lourdes.DataSetName = "DS_Nadadores_Lourdes";
-            this.dS_Nadadores_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dS_Nadador_Lupo.DataSetName = "DS_Nadador_Lupo";
+            this.dS_Nadador_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -702,36 +702,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.descripccionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.descripccionDataGridViewTextBoxColumn.Width = 120;
             // 
-            // torneosBindingSource3
-            // 
-            this.torneosBindingSource3.DataMember = "Torneos";
-            this.torneosBindingSource3.DataSource = this.dS_Torneos_Lourdes;
-            // 
-            // dS_Torneos_Lourdes
-            // 
-            this.dS_Torneos_Lourdes.DataSetName = "DS_Torneos_Lourdes";
-            this.dS_Torneos_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // especialidadBindingSource2
-            // 
-            this.especialidadBindingSource2.DataMember = "Especialidad";
-            this.especialidadBindingSource2.DataSource = this.dS_Especialidad_Lupo;
-            // 
-            // dS_Especialidad_Lupo
-            // 
-            this.dS_Especialidad_Lupo.DataSetName = "DS_Especialidad_Lupo";
-            this.dS_Especialidad_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nadadoresBindingSource2
-            // 
-            this.nadadoresBindingSource2.DataMember = "Nadadores";
-            this.nadadoresBindingSource2.DataSource = this.dS_Nadador_Lupo;
-            // 
-            // dS_Nadador_Lupo
-            // 
-            this.dS_Nadador_Lupo.DataSetName = "DS_Nadador_Lupo";
-            this.dS_Nadador_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // torneosBindingSource2
             // 
             this.torneosBindingSource2.DataMember = "Torneos";
@@ -741,6 +711,36 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.dS_Lupo_Torneo.DataSetName = "DS_Lupo_Torneo";
             this.dS_Lupo_Torneo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // especialidadBindingSource3
+            // 
+            this.especialidadBindingSource3.DataMember = "Especialidad";
+            this.especialidadBindingSource3.DataSource = this.dS_Especialidades_Lourdes;
+            // 
+            // dS_Especialidades_Lourdes
+            // 
+            this.dS_Especialidades_Lourdes.DataSetName = "DS_Especialidades_Lourdes";
+            this.dS_Especialidades_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nadadoresBindingSource3
+            // 
+            this.nadadoresBindingSource3.DataMember = "Nadadores";
+            this.nadadoresBindingSource3.DataSource = this.dS_Nadadores_Lourdes;
+            // 
+            // dS_Nadadores_Lourdes
+            // 
+            this.dS_Nadadores_Lourdes.DataSetName = "DS_Nadadores_Lourdes";
+            this.dS_Nadadores_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // torneosBindingSource3
+            // 
+            this.torneosBindingSource3.DataMember = "Torneos";
+            this.torneosBindingSource3.DataSource = this.dS_Torneos_Lourdes;
+            // 
+            // dS_Torneos_Lourdes
+            // 
+            this.dS_Torneos_Lourdes.DataSetName = "DS_Torneos_Lourdes";
+            this.dS_Torneos_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // especialidadBindingSource1
             // 
@@ -806,7 +806,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.btn_CargarGrilla.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CargarGrilla.Location = new System.Drawing.Point(420, 475);
-            this.btn_CargarGrilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_CargarGrilla.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CargarGrilla.Name = "btn_CargarGrilla";
             this.btn_CargarGrilla.Size = new System.Drawing.Size(138, 33);
             this.btn_CargarGrilla.TabIndex = 49;
@@ -965,16 +965,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.tiempoDataGridViewTextBoxColumn.ReadOnly = true;
             this.tiempoDataGridViewTextBoxColumn.Width = 85;
             // 
-            // inscriptosBindingSource3
-            // 
-            this.inscriptosBindingSource3.DataMember = "Inscriptos";
-            this.inscriptosBindingSource3.DataSource = this.dataSet7;
-            // 
-            // dataSet7
-            // 
-            this.dataSet7.DataSetName = "DataSet7";
-            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // inscriptosBindingSource2
             // 
             this.inscriptosBindingSource2.DataMember = "Inscriptos";
@@ -984,6 +974,16 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.dataSet6.DataSetName = "DataSet6";
             this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inscriptosBindingSource3
+            // 
+            this.inscriptosBindingSource3.DataMember = "Inscriptos";
+            this.inscriptosBindingSource3.DataSource = this.dataSet7;
+            // 
+            // dataSet7
+            // 
+            this.dataSet7.DataSetName = "DataSet7";
+            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -1062,24 +1062,24 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEspecialidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNadador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTorneo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Torneos_Lourdes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Lupo_Torneo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Torneos_Lourdes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource1)).EndInit();
@@ -1097,10 +1097,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dS_Inscriptos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Inscriptos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
