@@ -1,4 +1,5 @@
-﻿namespace AsociacionCordobesaDeNatacion.Formularios
+﻿
+namespace AsociacionCordobesaDeNatacion.Formularios
 {
     partial class ABM_Inscriptos
     {
@@ -68,8 +69,8 @@
             this.codespecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiemporecordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Especialidad_Lupo = new AsociacionCordobesaDeNatacion.DS_Especialidad_Lupo();
+            this.especialidadBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Especialidades_Lourdes = new AsociacionCordobesaDeNatacion.DS_Especialidades_Lourdes();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txt_cod_nadador = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -77,8 +78,8 @@
             this.codnacionalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nadadoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Nadador_Lupo = new AsociacionCordobesaDeNatacion.DS_Nadador_Lupo();
+            this.nadadoresBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Nadadores_Lourdes = new AsociacionCordobesaDeNatacion.DS_Nadadores_Lourdes();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_anio = new System.Windows.Forms.TextBox();
             this.txt_cod_torneo = new System.Windows.Forms.TextBox();
@@ -89,6 +90,10 @@
             this.descripccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.torneosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dS_Torneos_Lourdes = new AsociacionCordobesaDeNatacion.DS_Torneos_Lourdes();
+            this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Especialidad_Lupo = new AsociacionCordobesaDeNatacion.DS_Especialidad_Lupo();
+            this.nadadoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Nadador_Lupo = new AsociacionCordobesaDeNatacion.DS_Nadador_Lupo();
             this.torneosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dS_Lupo_Torneo = new AsociacionCordobesaDeNatacion.DS_Lupo_Torneo();
             this.especialidadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -136,25 +141,25 @@
             this.nadadoresTableAdapter2 = new AsociacionCordobesaDeNatacion.DS_Nadador_LupoTableAdapters.NadadoresTableAdapter();
             this.inscriptosTableAdapter2 = new AsociacionCordobesaDeNatacion.DataSet7TableAdapters.InscriptosTableAdapter();
             this.torneosTableAdapter3 = new AsociacionCordobesaDeNatacion.DS_Torneos_LourdesTableAdapters.TorneosTableAdapter();
-            this.dS_Especialidades_Lourdes = new AsociacionCordobesaDeNatacion.DS_Especialidades_Lourdes();
-            this.especialidadBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.especialidadTableAdapter3 = new AsociacionCordobesaDeNatacion.DS_Especialidades_LourdesTableAdapters.EspecialidadTableAdapter();
-            this.dS_Nadadores_Lourdes = new AsociacionCordobesaDeNatacion.DS_Nadadores_Lourdes();
-            this.nadadoresBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.nadadoresTableAdapter3 = new AsociacionCordobesaDeNatacion.DS_Nadadores_LourdesTableAdapters.NadadoresTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEspecialidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNadador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTorneo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Torneos_Lourdes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Lupo_Torneo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource1)).BeginInit();
@@ -178,10 +183,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -202,23 +203,21 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(44, 50);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(33, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1905, 454);
+            this.groupBox1.Size = new System.Drawing.Size(1429, 369);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INSCRIPTOS";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(1160, 5);
+            this.label7.Location = new System.Drawing.Point(870, 4);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 31);
+            this.label7.Size = new System.Drawing.Size(118, 25);
             this.label7.TabIndex = 50;
             this.label7.Text = "TRANSACCIÓN:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -228,10 +227,9 @@
             this.btn_eliminar.BackColor = System.Drawing.Color.White;
             this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
             this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar.Location = new System.Drawing.Point(1727, -2);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar.Location = new System.Drawing.Point(1295, -2);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(51, 43);
+            this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
             this.btn_eliminar.TabIndex = 45;
             this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
@@ -241,10 +239,9 @@
             this.cmd_grabar.BackColor = System.Drawing.Color.White;
             this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
             this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Location = new System.Drawing.Point(1612, -2);
-            this.cmd_grabar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmd_grabar.Location = new System.Drawing.Point(1209, -2);
             this.cmd_grabar.Name = "cmd_grabar";
-            this.cmd_grabar.Size = new System.Drawing.Size(49, 43);
+            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
             this.cmd_grabar.TabIndex = 43;
             this.cmd_grabar.UseVisualStyleBackColor = false;
             this.cmd_grabar.Click += new System.EventHandler(this.cmd_grabar_Click);
@@ -254,9 +251,10 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(1323, 5);
+            this.label5.Location = new System.Drawing.Point(992, 4);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 30);
+            this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 50;
             this.label5.Text = "Sin iniciar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,10 +264,9 @@
             this.cmd_actualizar.BackColor = System.Drawing.Color.White;
             this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
             this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Location = new System.Drawing.Point(1669, -2);
-            this.cmd_actualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmd_actualizar.Location = new System.Drawing.Point(1252, -2);
             this.cmd_actualizar.Name = "cmd_actualizar";
-            this.cmd_actualizar.Size = new System.Drawing.Size(49, 43);
+            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
             this.cmd_actualizar.TabIndex = 44;
             this.cmd_actualizar.UseVisualStyleBackColor = false;
             this.cmd_actualizar.Click += new System.EventHandler(this.cmd_actualizar_Click);
@@ -279,10 +276,9 @@
             this.cmd_nuevo.BackColor = System.Drawing.Color.White;
             this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__2_;
             this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_nuevo.Location = new System.Drawing.Point(1555, -2);
-            this.cmd_nuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmd_nuevo.Location = new System.Drawing.Point(1166, -2);
             this.cmd_nuevo.Name = "cmd_nuevo";
-            this.cmd_nuevo.Size = new System.Drawing.Size(49, 43);
+            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
             this.cmd_nuevo.TabIndex = 42;
             this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
             this.cmd_nuevo.UseVisualStyleBackColor = false;
@@ -291,40 +287,37 @@
             // 
             this.txt_tiempo.BackColor = System.Drawing.Color.White;
             this.txt_tiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tiempo.Location = new System.Drawing.Point(1748, 268);
-            this.txt_tiempo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_tiempo.Location = new System.Drawing.Point(1311, 218);
             this.txt_tiempo.Name = "txt_tiempo";
-            this.txt_tiempo.Size = new System.Drawing.Size(113, 30);
+            this.txt_tiempo.Size = new System.Drawing.Size(86, 26);
             this.txt_tiempo.TabIndex = 36;
             // 
             // txt_posicion
             // 
             this.txt_posicion.BackColor = System.Drawing.Color.White;
             this.txt_posicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_posicion.Location = new System.Drawing.Point(1784, 207);
-            this.txt_posicion.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_posicion.Location = new System.Drawing.Point(1338, 168);
             this.txt_posicion.Name = "txt_posicion";
-            this.txt_posicion.Size = new System.Drawing.Size(39, 30);
+            this.txt_posicion.Size = new System.Drawing.Size(30, 26);
             this.txt_posicion.TabIndex = 36;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1768, 242);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(1326, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 23);
+            this.label4.Size = new System.Drawing.Size(54, 19);
             this.label4.TabIndex = 32;
             this.label4.Text = "Tiempo";
             // 
             // btn_FinalizarTrans
             // 
             this.btn_FinalizarTrans.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_FinalizarTrans.Location = new System.Drawing.Point(1784, 0);
-            this.btn_FinalizarTrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_FinalizarTrans.Location = new System.Drawing.Point(1338, 0);
+            this.btn_FinalizarTrans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_FinalizarTrans.Name = "btn_FinalizarTrans";
-            this.btn_FinalizarTrans.Size = new System.Drawing.Size(115, 39);
+            this.btn_FinalizarTrans.Size = new System.Drawing.Size(86, 32);
             this.btn_FinalizarTrans.TabIndex = 47;
             this.btn_FinalizarTrans.Text = "Finalizar";
             this.btn_FinalizarTrans.UseVisualStyleBackColor = true;
@@ -334,20 +327,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1765, 181);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(1324, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 23);
+            this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 32;
             this.label3.Text = "Posición";
             // 
             // btn_IniciarTrans
             // 
             this.btn_IniciarTrans.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_IniciarTrans.Location = new System.Drawing.Point(1433, 1);
-            this.btn_IniciarTrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_IniciarTrans.Location = new System.Drawing.Point(1075, 1);
+            this.btn_IniciarTrans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_IniciarTrans.Name = "btn_IniciarTrans";
-            this.btn_IniciarTrans.Size = new System.Drawing.Size(115, 39);
+            this.btn_IniciarTrans.Size = new System.Drawing.Size(86, 32);
             this.btn_IniciarTrans.TabIndex = 46;
             this.btn_IniciarTrans.Text = "Iniciar";
             this.btn_IniciarTrans.UseVisualStyleBackColor = true;
@@ -359,11 +351,9 @@
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.dataGridEspecialidad);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(596, 62);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Location = new System.Drawing.Point(447, 50);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(553, 363);
+            this.groupBox5.Size = new System.Drawing.Size(415, 295);
             this.groupBox5.TabIndex = 30;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Especialidad";
@@ -373,10 +363,9 @@
             this.txt_cod_especialidad.BackColor = System.Drawing.Color.White;
             this.txt_cod_especialidad.Enabled = false;
             this.txt_cod_especialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_especialidad.Location = new System.Drawing.Point(233, 58);
-            this.txt_cod_especialidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cod_especialidad.Location = new System.Drawing.Point(175, 47);
             this.txt_cod_especialidad.Name = "txt_cod_especialidad";
-            this.txt_cod_especialidad.Size = new System.Drawing.Size(73, 30);
+            this.txt_cod_especialidad.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_especialidad.TabIndex = 12;
             this.txt_cod_especialidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -384,10 +373,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(235, 31);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(176, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 23);
+            this.label11.Size = new System.Drawing.Size(53, 19);
             this.label11.TabIndex = 17;
             this.label11.Text = "Código";
             // 
@@ -414,7 +402,7 @@
             this.descripcionDataGridViewTextBoxColumn,
             this.tiemporecordDataGridViewTextBoxColumn});
             this.dataGridEspecialidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridEspecialidad.DataSource = this.especialidadBindingSource3;
+            this.dataGridEspecialidad.DataSource = this.especialidadBindingSource2;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -423,8 +411,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridEspecialidad.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridEspecialidad.Location = new System.Drawing.Point(29, 118);
-            this.dataGridEspecialidad.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridEspecialidad.Location = new System.Drawing.Point(22, 96);
             this.dataGridEspecialidad.MultiSelect = false;
             this.dataGridEspecialidad.Name = "dataGridEspecialidad";
             this.dataGridEspecialidad.ReadOnly = true;
@@ -433,9 +420,8 @@
             this.dataGridEspecialidad.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridEspecialidad.RowTemplate.ReadOnly = true;
             this.dataGridEspecialidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridEspecialidad.Size = new System.Drawing.Size(496, 191);
+            this.dataGridEspecialidad.Size = new System.Drawing.Size(372, 155);
             this.dataGridEspecialidad.TabIndex = 52;
-            this.dataGridEspecialidad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridEspecialidad.SelectionChanged += new System.EventHandler(this.dataGridEspecialidad_SelectionChanged);
             // 
             // codespecDataGridViewTextBoxColumn
@@ -446,7 +432,7 @@
             this.codespecDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codespecDataGridViewTextBoxColumn.Name = "codespecDataGridViewTextBoxColumn";
             this.codespecDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codespecDataGridViewTextBoxColumn.Width = 107;
+            this.codespecDataGridViewTextBoxColumn.Width = 88;
             // 
             // descripcionDataGridViewTextBoxColumn
             // 
@@ -456,7 +442,7 @@
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
             this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn.Width = 148;
+            this.descripcionDataGridViewTextBoxColumn.Width = 120;
             // 
             // tiemporecordDataGridViewTextBoxColumn
             // 
@@ -466,17 +452,17 @@
             this.tiemporecordDataGridViewTextBoxColumn.HeaderText = "Tiempo Récord";
             this.tiemporecordDataGridViewTextBoxColumn.Name = "tiemporecordDataGridViewTextBoxColumn";
             this.tiemporecordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tiemporecordDataGridViewTextBoxColumn.Width = 164;
+            this.tiemporecordDataGridViewTextBoxColumn.Width = 134;
             // 
-            // especialidadBindingSource2
+            // especialidadBindingSource3
             // 
-            this.especialidadBindingSource2.DataMember = "Especialidad";
-            this.especialidadBindingSource2.DataSource = this.dS_Especialidad_Lupo;
+            this.especialidadBindingSource3.DataMember = "Especialidad";
+            this.especialidadBindingSource3.DataSource = this.dS_Especialidades_Lourdes;
             // 
-            // dS_Especialidad_Lupo
+            // dS_Especialidades_Lourdes
             // 
-            this.dS_Especialidad_Lupo.DataSetName = "DS_Especialidad_Lupo";
-            this.dS_Especialidad_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dS_Especialidades_Lourdes.DataSetName = "DS_Especialidades_Lourdes";
+            this.dS_Especialidades_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox4
             // 
@@ -484,11 +470,9 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.dataGridNadador);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(1199, 62);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(899, 50);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(472, 363);
+            this.groupBox4.Size = new System.Drawing.Size(354, 295);
             this.groupBox4.TabIndex = 30;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Nadador";
@@ -498,10 +482,9 @@
             this.txt_cod_nadador.BackColor = System.Drawing.Color.White;
             this.txt_cod_nadador.Enabled = false;
             this.txt_cod_nadador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_nadador.Location = new System.Drawing.Point(145, 57);
-            this.txt_cod_nadador.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cod_nadador.Location = new System.Drawing.Point(109, 46);
             this.txt_cod_nadador.Name = "txt_cod_nadador";
-            this.txt_cod_nadador.Size = new System.Drawing.Size(164, 30);
+            this.txt_cod_nadador.Size = new System.Drawing.Size(124, 26);
             this.txt_cod_nadador.TabIndex = 12;
             this.txt_cod_nadador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -509,10 +492,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(203, 31);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(152, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 23);
+            this.label8.Size = new System.Drawing.Size(34, 19);
             this.label8.TabIndex = 17;
             this.label8.Text = "DNI";
             // 
@@ -539,7 +521,7 @@
             this.nombreDataGridViewTextBoxColumn,
             this.calleDataGridViewTextBoxColumn});
             this.dataGridNadador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridNadador.DataSource = this.nadadoresBindingSource3;
+            this.dataGridNadador.DataSource = this.nadadoresBindingSource2;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -548,8 +530,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridNadador.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridNadador.Location = new System.Drawing.Point(59, 118);
-            this.dataGridNadador.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridNadador.Location = new System.Drawing.Point(44, 96);
             this.dataGridNadador.MultiSelect = false;
             this.dataGridNadador.Name = "dataGridNadador";
             this.dataGridNadador.ReadOnly = true;
@@ -558,9 +539,8 @@
             this.dataGridNadador.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridNadador.RowTemplate.ReadOnly = true;
             this.dataGridNadador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridNadador.Size = new System.Drawing.Size(360, 191);
+            this.dataGridNadador.Size = new System.Drawing.Size(270, 155);
             this.dataGridNadador.TabIndex = 52;
-            this.dataGridNadador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridNadador.SelectionChanged += new System.EventHandler(this.dataGridNadador_SelectionChanged);
             // 
             // codnacionalDataGridViewTextBoxColumn
@@ -569,7 +549,7 @@
             this.codnacionalDataGridViewTextBoxColumn.HeaderText = "DNI";
             this.codnacionalDataGridViewTextBoxColumn.Name = "codnacionalDataGridViewTextBoxColumn";
             this.codnacionalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codnacionalDataGridViewTextBoxColumn.Width = 76;
+            this.codnacionalDataGridViewTextBoxColumn.Width = 61;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -577,7 +557,7 @@
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 116;
+            this.nombreDataGridViewTextBoxColumn.Width = 95;
             // 
             // calleDataGridViewTextBoxColumn
             // 
@@ -585,17 +565,17 @@
             this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
             this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
             this.calleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.calleDataGridViewTextBoxColumn.Width = 86;
+            this.calleDataGridViewTextBoxColumn.Width = 69;
             // 
-            // nadadoresBindingSource2
+            // nadadoresBindingSource3
             // 
-            this.nadadoresBindingSource2.DataMember = "Nadadores";
-            this.nadadoresBindingSource2.DataSource = this.dS_Nadador_Lupo;
+            this.nadadoresBindingSource3.DataMember = "Nadadores";
+            this.nadadoresBindingSource3.DataSource = this.dS_Nadadores_Lourdes;
             // 
-            // dS_Nadador_Lupo
+            // dS_Nadadores_Lourdes
             // 
-            this.dS_Nadador_Lupo.DataSetName = "DS_Nadador_Lupo";
-            this.dS_Nadador_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dS_Nadadores_Lourdes.DataSetName = "DS_Nadadores_Lourdes";
+            this.dS_Nadadores_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -605,23 +585,19 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dataGridTorneo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(25, 62);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(19, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(509, 363);
+            this.groupBox2.Size = new System.Drawing.Size(382, 295);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Torneo";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txt_anio
             // 
             this.txt_anio.BackColor = System.Drawing.Color.White;
-            this.txt_anio.Location = new System.Drawing.Point(292, 57);
-            this.txt_anio.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_anio.Location = new System.Drawing.Point(219, 46);
             this.txt_anio.Name = "txt_anio";
-            this.txt_anio.Size = new System.Drawing.Size(73, 32);
+            this.txt_anio.Size = new System.Drawing.Size(56, 27);
             this.txt_anio.TabIndex = 32;
             this.txt_anio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -630,11 +606,10 @@
             this.txt_cod_torneo.BackColor = System.Drawing.Color.White;
             this.txt_cod_torneo.Enabled = false;
             this.txt_cod_torneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_torneo.Location = new System.Drawing.Point(145, 58);
-            this.txt_cod_torneo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cod_torneo.Location = new System.Drawing.Point(109, 47);
             this.txt_cod_torneo.MaxLength = 10;
             this.txt_cod_torneo.Name = "txt_cod_torneo";
-            this.txt_cod_torneo.Size = new System.Drawing.Size(73, 30);
+            this.txt_cod_torneo.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_torneo.TabIndex = 31;
             this.txt_cod_torneo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -642,10 +617,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(307, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(230, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 23);
+            this.label1.Size = new System.Drawing.Size(34, 19);
             this.label1.TabIndex = 23;
             this.label1.Text = "Año";
             // 
@@ -653,10 +627,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(147, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(110, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 17;
             this.label2.Text = "Código";
             // 
@@ -682,7 +655,7 @@
             this.codtorneoDataGridViewTextBoxColumn1,
             this.descripccionDataGridViewTextBoxColumn});
             this.dataGridTorneo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridTorneo.DataSource = this.torneosBindingSource3;
+            this.dataGridTorneo.DataSource = this.torneosBindingSource2;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -691,8 +664,7 @@
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridTorneo.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridTorneo.Location = new System.Drawing.Point(92, 118);
-            this.dataGridTorneo.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridTorneo.Location = new System.Drawing.Point(69, 96);
             this.dataGridTorneo.MultiSelect = false;
             this.dataGridTorneo.Name = "dataGridTorneo";
             this.dataGridTorneo.ReadOnly = true;
@@ -701,10 +673,8 @@
             this.dataGridTorneo.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridTorneo.RowTemplate.ReadOnly = true;
             this.dataGridTorneo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTorneo.Size = new System.Drawing.Size(332, 191);
+            this.dataGridTorneo.Size = new System.Drawing.Size(249, 155);
             this.dataGridTorneo.TabIndex = 52;
-            this.dataGridTorneo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Especialidad_CellContentClick);
-            this.dataGridTorneo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridTorneo.SelectionChanged += new System.EventHandler(this.dataGridTorneo_SelectionChanged);
             // 
             // codtorneoDataGridViewTextBoxColumn1
@@ -718,7 +688,7 @@
             this.codtorneoDataGridViewTextBoxColumn1.Name = "codtorneoDataGridViewTextBoxColumn1";
             this.codtorneoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.codtorneoDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.codtorneoDataGridViewTextBoxColumn1.Width = 107;
+            this.codtorneoDataGridViewTextBoxColumn1.Width = 88;
             // 
             // descripccionDataGridViewTextBoxColumn
             // 
@@ -730,7 +700,7 @@
             this.descripccionDataGridViewTextBoxColumn.Name = "descripccionDataGridViewTextBoxColumn";
             this.descripccionDataGridViewTextBoxColumn.ReadOnly = true;
             this.descripccionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.descripccionDataGridViewTextBoxColumn.Width = 148;
+            this.descripccionDataGridViewTextBoxColumn.Width = 120;
             // 
             // torneosBindingSource3
             // 
@@ -741,6 +711,26 @@
             // 
             this.dS_Torneos_Lourdes.DataSetName = "DS_Torneos_Lourdes";
             this.dS_Torneos_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // especialidadBindingSource2
+            // 
+            this.especialidadBindingSource2.DataMember = "Especialidad";
+            this.especialidadBindingSource2.DataSource = this.dS_Especialidad_Lupo;
+            // 
+            // dS_Especialidad_Lupo
+            // 
+            this.dS_Especialidad_Lupo.DataSetName = "DS_Especialidad_Lupo";
+            this.dS_Especialidad_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nadadoresBindingSource2
+            // 
+            this.nadadoresBindingSource2.DataMember = "Nadadores";
+            this.nadadoresBindingSource2.DataSource = this.dS_Nadador_Lupo;
+            // 
+            // dS_Nadador_Lupo
+            // 
+            this.dS_Nadador_Lupo.DataSetName = "DS_Nadador_Lupo";
+            this.dS_Nadador_Lupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // torneosBindingSource2
             // 
@@ -815,10 +805,10 @@
             // btn_CargarGrilla
             // 
             this.btn_CargarGrilla.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CargarGrilla.Location = new System.Drawing.Point(560, 585);
-            this.btn_CargarGrilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CargarGrilla.Location = new System.Drawing.Point(420, 475);
+            this.btn_CargarGrilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_CargarGrilla.Name = "btn_CargarGrilla";
-            this.btn_CargarGrilla.Size = new System.Drawing.Size(184, 41);
+            this.btn_CargarGrilla.Size = new System.Drawing.Size(138, 33);
             this.btn_CargarGrilla.TabIndex = 49;
             this.btn_CargarGrilla.Text = "Cargar grilla";
             this.btn_CargarGrilla.UseVisualStyleBackColor = true;
@@ -906,7 +896,7 @@
             this.posicionDataGridViewTextBoxColumn,
             this.tiempoDataGridViewTextBoxColumn});
             this.dataGrid_Inscriptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGrid_Inscriptos.DataSource = this.inscriptosBindingSource3;
+            this.dataGrid_Inscriptos.DataSource = this.inscriptosBindingSource2;
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -915,8 +905,7 @@
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_Inscriptos.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGrid_Inscriptos.Location = new System.Drawing.Point(560, 631);
-            this.dataGrid_Inscriptos.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGrid_Inscriptos.Location = new System.Drawing.Point(420, 513);
             this.dataGrid_Inscriptos.MultiSelect = false;
             this.dataGrid_Inscriptos.Name = "dataGrid_Inscriptos";
             this.dataGrid_Inscriptos.ReadOnly = true;
@@ -925,9 +914,8 @@
             this.dataGrid_Inscriptos.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGrid_Inscriptos.RowTemplate.ReadOnly = true;
             this.dataGrid_Inscriptos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Inscriptos.Size = new System.Drawing.Size(737, 191);
+            this.dataGrid_Inscriptos.Size = new System.Drawing.Size(553, 155);
             this.dataGrid_Inscriptos.TabIndex = 52;
-            this.dataGrid_Inscriptos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // codtorneoDataGridViewTextBoxColumn
             // 
@@ -935,7 +923,7 @@
             this.codtorneoDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codtorneoDataGridViewTextBoxColumn.Name = "codtorneoDataGridViewTextBoxColumn";
             this.codtorneoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codtorneoDataGridViewTextBoxColumn.Width = 99;
+            this.codtorneoDataGridViewTextBoxColumn.Width = 83;
             // 
             // anioDataGridViewTextBoxColumn
             // 
@@ -943,7 +931,7 @@
             this.anioDataGridViewTextBoxColumn.HeaderText = "Año";
             this.anioDataGridViewTextBoxColumn.Name = "anioDataGridViewTextBoxColumn";
             this.anioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.anioDataGridViewTextBoxColumn.Width = 74;
+            this.anioDataGridViewTextBoxColumn.Width = 61;
             // 
             // codespeDataGridViewTextBoxColumn
             // 
@@ -951,7 +939,7 @@
             this.codespeDataGridViewTextBoxColumn.HeaderText = "Especialidad";
             this.codespeDataGridViewTextBoxColumn.Name = "codespeDataGridViewTextBoxColumn";
             this.codespeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codespeDataGridViewTextBoxColumn.Width = 144;
+            this.codespeDataGridViewTextBoxColumn.Width = 117;
             // 
             // codnadDataGridViewTextBoxColumn
             // 
@@ -959,7 +947,7 @@
             this.codnadDataGridViewTextBoxColumn.HeaderText = "Nadador";
             this.codnadDataGridViewTextBoxColumn.Name = "codnadDataGridViewTextBoxColumn";
             this.codnadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codnadDataGridViewTextBoxColumn.Width = 113;
+            this.codnadDataGridViewTextBoxColumn.Width = 94;
             // 
             // posicionDataGridViewTextBoxColumn
             // 
@@ -967,7 +955,7 @@
             this.posicionDataGridViewTextBoxColumn.HeaderText = "Posición";
             this.posicionDataGridViewTextBoxColumn.Name = "posicionDataGridViewTextBoxColumn";
             this.posicionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.posicionDataGridViewTextBoxColumn.Width = 110;
+            this.posicionDataGridViewTextBoxColumn.Width = 90;
             // 
             // tiempoDataGridViewTextBoxColumn
             // 
@@ -975,7 +963,7 @@
             this.tiempoDataGridViewTextBoxColumn.HeaderText = "Tiempo";
             this.tiempoDataGridViewTextBoxColumn.Name = "tiempoDataGridViewTextBoxColumn";
             this.tiempoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tiempoDataGridViewTextBoxColumn.Width = 104;
+            this.tiempoDataGridViewTextBoxColumn.Width = 85;
             // 
             // inscriptosBindingSource3
             // 
@@ -1001,10 +989,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(776, 550);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(582, 447);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(296, 31);
+            this.label6.Size = new System.Drawing.Size(234, 26);
             this.label6.TabIndex = 53;
             this.label6.Text = "GRILLA DE INSCRIPTOS";
             // 
@@ -1044,29 +1031,9 @@
             // 
             this.torneosTableAdapter3.ClearBeforeFill = true;
             // 
-            // dS_Especialidades_Lourdes
-            // 
-            this.dS_Especialidades_Lourdes.DataSetName = "DS_Especialidades_Lourdes";
-            this.dS_Especialidades_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // especialidadBindingSource3
-            // 
-            this.especialidadBindingSource3.DataMember = "Especialidad";
-            this.especialidadBindingSource3.DataSource = this.dS_Especialidades_Lourdes;
-            // 
             // especialidadTableAdapter3
             // 
             this.especialidadTableAdapter3.ClearBeforeFill = true;
-            // 
-            // dS_Nadadores_Lourdes
-            // 
-            this.dS_Nadadores_Lourdes.DataSetName = "DS_Nadadores_Lourdes";
-            this.dS_Nadadores_Lourdes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nadadoresBindingSource3
-            // 
-            this.nadadoresBindingSource3.DataMember = "Nadadores";
-            this.nadadoresBindingSource3.DataSource = this.dS_Nadadores_Lourdes;
             // 
             // nadadoresTableAdapter3
             // 
@@ -1074,19 +1041,18 @@
             // 
             // ABM_Inscriptos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1771, 750);
+            this.ClientSize = new System.Drawing.Size(1274, 609);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGrid_Inscriptos);
             this.Controls.Add(this.btn_CargarGrilla);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ABM_Inscriptos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscriptos";
@@ -1096,18 +1062,22 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEspecialidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNadador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTorneo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Torneos_Lourdes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidad_Lupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadador_Lupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Lupo_Torneo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource1)).EndInit();
@@ -1131,10 +1101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Especialidades_Lourdes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Nadadores_Lourdes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

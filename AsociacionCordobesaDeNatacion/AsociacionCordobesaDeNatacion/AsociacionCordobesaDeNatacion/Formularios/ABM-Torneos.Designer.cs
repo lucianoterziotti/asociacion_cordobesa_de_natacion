@@ -77,6 +77,7 @@
             this.txt_cod_torneo.Name = "txt_cod_torneo";
             this.txt_cod_torneo.Size = new System.Drawing.Size(77, 26);
             this.txt_cod_torneo.TabIndex = 35;
+            this.txt_cod_torneo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cod_torneo_KeyPress);
             // 
             // txt_descripcion
             // 

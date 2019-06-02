@@ -101,6 +101,7 @@
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(133, 26);
             this.txt_dni.TabIndex = 14;
+            this.txt_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dni_KeyPress);
             // 
             // groupBox2
             // 

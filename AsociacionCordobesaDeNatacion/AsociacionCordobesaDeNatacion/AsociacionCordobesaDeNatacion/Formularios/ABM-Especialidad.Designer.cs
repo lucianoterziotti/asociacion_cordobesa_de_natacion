@@ -74,6 +74,7 @@
             this.txt_cod_especialidad.Name = "txt_cod_especialidad";
             this.txt_cod_especialidad.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_especialidad.TabIndex = 32;
+            this.txt_cod_especialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cod_especialidad_KeyPress);
             // 
             // groupBox1
             // 

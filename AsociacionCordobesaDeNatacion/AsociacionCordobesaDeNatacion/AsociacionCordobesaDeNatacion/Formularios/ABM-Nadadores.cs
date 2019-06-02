@@ -119,6 +119,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.blanquear_objetos();
         }
 
+
         private List<TextBox> crearArray()
         {
             List<TextBox> array = new List<TextBox>();
@@ -126,6 +127,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             array.Add(this.txt_dni);
             array.Add(this.txt_nombre_nadador);
             return array;
+        }
+
+        private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
         }
     }
 }

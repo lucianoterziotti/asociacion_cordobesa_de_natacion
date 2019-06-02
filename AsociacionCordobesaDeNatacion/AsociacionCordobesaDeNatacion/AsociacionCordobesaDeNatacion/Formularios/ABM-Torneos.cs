@@ -117,5 +117,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             array.Add(this.txt_descripcion);
             return array;
         }
+
+        private void txt_cod_torneo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+        }
     }
 }

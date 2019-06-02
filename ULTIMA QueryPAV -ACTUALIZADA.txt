@@ -45,7 +45,7 @@ anio int NOT NULL,
 cod_espe int NOT NULL FOREIGN KEY REFERENCES Especialidad(cod_espec),
 cod_nad int NOT NULL FOREIGN KEY REFERENCES Nadadores(cod_nacional),
 posicion int,
-tiempo time,
+tiempo floar,
 PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
 );
 

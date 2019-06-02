@@ -15,7 +15,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _cod_especialidad;
         string _cod_nadador;
         string _posicion;
-        string _tiempo;
+        float _tiempo;
 
 
 
@@ -44,7 +44,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             get { return this._posicion; }
             set { this._posicion = value; }
         }
-        public string tiempo
+        public float tiempo
         {
             get { return this._tiempo; }
             set { this._tiempo = value; }
@@ -89,10 +89,11 @@ namespace AsociacionCordobesaDeNatacion.Clases
         //    int posicion_aux = Int32.Parse(this.posicion);
             
             string SqlInsert = @"INSERT INTO Inscriptos 
-                         (cod_espe, cod_torneo, cod_nad, anio) VALUES (" +
+                         (cod_espe, cod_torneo, cod_nad, anio, tiempo) VALUES (" +
                          cod_esp_aux + "," +
                          cod_torneo_aux + "," +
                           cod_nad_aux + "," +
+                          tiempo + "," +
                          anio_aux +")";
                    MessageBox.Show(SqlInsert);
 

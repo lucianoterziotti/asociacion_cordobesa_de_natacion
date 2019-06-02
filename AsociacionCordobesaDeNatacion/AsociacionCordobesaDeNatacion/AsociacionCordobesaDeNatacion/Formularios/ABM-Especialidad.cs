@@ -113,12 +113,19 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.blanquear_objetos();
         }
 
+
+
         private List<TextBox> crearArray()
         {
             List<TextBox> array = new List<TextBox>();
             array.Add(this.txt_cod_especialidad);
             array.Add(this.txt_descripcion);
             return array;
+        }
+
+        private void txt_cod_especialidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
         }
     }
 }

@@ -17,120 +17,35 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
 		AccesoBD _BD = new AccesoBD();
 
-		Inscriptos inscriptos = new Inscriptos();
         Nadadores nadadores = new Nadadores();
         Torneos torneos = new Torneos();
         Especialidades especialidades = new Especialidades();
         DataTable tabla = new DataTable();
+        float randomNumber;
 
 
         public ABM_Inscriptos()
         {
             InitializeComponent();
+           
         }
 
 
-		//NO VA
-		//private void btn_buscarXtorneo_Click(object sender, EventArgs e)
-		//{
-		//    if (this.txt_cod_torneo.Text == "")
-		//    {
-
-		//        MessageBox.Show("El codigo de torneo no está cargado");
-
-		//        this.txt_cod_torneo.Focus();
-
-		//        return;
-		//    }
-		//    DataTable tabla = new DataTable();
-
-		//}
-
 		private void cmd_grabar_Click(object sender, EventArgs e)
 		{
+            Random random = new Random();
+            this.randomNumber = randomNumberMethod(random);
 
-
-            ////VALIDACIONES QUE HIZO LUPO!!!!!!!
-            //inscriptos.anio = txt_anio.Text;
-            //especialidades.cod_esp = txt_cod_especialidad.Text;
-            //nadadores.dni_nadador = txt_cod_nadador.Text;
-            //torneos.cod_torneo = txt_cod_torneo.Text;
-            //inscriptos.posicion = txt_posicion.Text;
-            //inscriptos.tiempo = txt_tiempo.Text;
-            //if (validarTorneo())
-            //{
-            //    if (validarEspecialidad())
-            //    {
-            //        if (validarNadador())
-            //        {
-            //            inscriptos.cod_especialidad = txt_cod_especialidad.Text;
-            //            inscriptos.cod_nadador = txt_cod_nadador.Text;
-            //            inscriptos.cod_torneo = txt_cod_torneo.Text;
-            //            inscriptos.grabar_inscripto();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("No se ha ingresado codigo de nadador o es invalido");
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("No se ha ingresado codigo de especialidad o es invalido");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No se ha ingresado codigo de torneo o es invalido");
-            //}
-
-
-
-            //bool validarTorneo()
-            //{
-            //    tabla = torneos.buscar_torneo(this.txt_cod_torneo.Text);
-            //    if (tabla.Rows.Count == 1)
-            //    {
-            //        return true;
-            //    }
-            //    return false;
-            //}
-
-            //bool validarEspecialidad()
-            //{
-            //    tabla = especialidades.buscar_especialidad();
-            //    if (tabla.Rows.Count == 1)
-            //    {
-            //        return true;
-            //    }
-            //    return false;
-            //}
-
-            //bool validarNadador()
-            //{
-            //    tabla = nadadores.buscar_nadador();
-            //    if (tabla.Rows.Count == 1)
-            //    {
-            //        return true;
-            //    }
-            //    return false;
-            //}
-
-            inscriptos.anio = txt_anio.Text;
-			especialidades.cod_esp = txt_cod_especialidad.Text;
-			nadadores.dni_nadador = txt_cod_nadador.Text;
-			torneos.cod_torneo = txt_cod_torneo.Text;
-			inscriptos.posicion = txt_posicion.Text;
-			inscriptos.tiempo = txt_tiempo.Text;
-			
-			string sql = @"INSERT INTO Inscriptos 
-                         (cod_espe, cod_torneo, cod_nad, anio) VALUES(" +
-						 txt_cod_especialidad.Text.Trim() + ", " +
-						 txt_cod_torneo.Text.Trim() + ", " +
-						 txt_cod_nadador.Text.Trim() + ", " +
-						 txt_anio.Text.Trim() + ")";
-			_BD.insert_update_delete(sql);
-			this.label5.Text = "En proceso";
-		}
+            string sql = @"INSERT INTO Inscriptos 
+                         (cod_espe, cod_torneo, cod_nad, anio, tiempo) VALUES(" +
+                         txt_cod_especialidad.Text.Trim() + ", " +
+                         txt_cod_torneo.Text.Trim() + ", " +
+                         txt_cod_nadador.Text.Trim() + ", " +
+                         txt_anio.Text.Trim() + ", " +
+                         this.randomNumber + ")";
+            _BD.insert_update_delete(sql);
+            this.label5.Text = "En proceso";
+        }
 
 		
 
@@ -155,7 +70,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 		private void btn_IniciarTrans_Click(object sender, EventArgs e)
 		{
 			_BD.iniciar_transaccion();
-			//this.cargar_grilla();
 			this.label5.Text = "Iniciada";
 		}
 
@@ -169,13 +83,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
 		private void cmd_actualizar_Click(object sender, EventArgs e)
 		{
-			inscriptos.anio = txt_anio.Text;
-			especialidades.cod_esp = txt_cod_especialidad.Text;
-			nadadores.dni_nadador = txt_cod_nadador.Text;
-			torneos.cod_torneo = txt_cod_torneo.Text;
-			inscriptos.posicion = txt_posicion.Text;
-			inscriptos.tiempo = txt_tiempo.Text;
-
 			string sql = @"UPDATE Inscriptos 
                          SET (cod_espe, cod_torneo, cod_nad, anio) = ( '" +
 						 txt_cod_especialidad.Text.Trim() + "," +
@@ -205,26 +112,26 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void ABM_Inscriptos_Load(object sender, EventArgs e)
         {
-            //LOURDES
-            // TODO: esta línea de código carga datos en la tabla 'dS_Nadadores_Lourdes.Nadadores' Puede moverla o quitarla según sea necesario.
-            this.nadadoresTableAdapter3.Fill(this.dS_Nadadores_Lourdes.Nadadores);
-            // TODO: esta línea de código carga datos en la tabla 'dS_Especialidades_Lourdes.Especialidad' Puede moverla o quitarla según sea necesario.
-            this.especialidadTableAdapter3.Fill(this.dS_Especialidades_Lourdes.Especialidad);
-            // TODO: esta línea de código carga datos en la tabla 'dS_Torneos_Lourdes.Torneos' Puede moverla o quitarla según sea necesario.
-            this.torneosTableAdapter3.Fill(this.dS_Torneos_Lourdes.Torneos);
+            ////DATA SET DE LOURDES
+            //// TODO: esta línea de código carga datos en la tabla 'dS_Nadadores_Lourdes.Nadadores' Puede moverla o quitarla según sea necesario.
+            //this.nadadoresTableAdapter3.Fill(this.dS_Nadadores_Lourdes.Nadadores);
+            //// TODO: esta línea de código carga datos en la tabla 'dS_Especialidades_Lourdes.Especialidad' Puede moverla o quitarla según sea necesario.
+            //this.especialidadTableAdapter3.Fill(this.dS_Especialidades_Lourdes.Especialidad);
+            //// TODO: esta línea de código carga datos en la tabla 'dS_Torneos_Lourdes.Torneos' Puede moverla o quitarla según sea necesario.
+            //this.torneosTableAdapter3.Fill(this.dS_Torneos_Lourdes.Torneos);
 
 
-            //LUPO
-            //// TODO: This line of code loads data into the 'dataSet7.Inscriptos' table. You can move, or remove it, as needed.
-            //this.inscriptosTableAdapter2.Fill(this.dataSet7.Inscriptos);
-            //// TODO: This line of code loads data into the 'dS_Nadador_Lupo.Nadadores' table. You can move, or remove it, as needed.
-            //this.nadadoresTableAdapter2.Fill(this.dS_Nadador_Lupo.Nadadores);
-            //// TODO: This line of code loads data into the 'dS_Especialidad_Lupo.Especialidad' table. You can move, or remove it, as needed.
-            //this.especialidadTableAdapter2.Fill(this.dS_Especialidad_Lupo.Especialidad);
-            //// TODO: This line of code loads data into the 'dS_Lupo_Torneo.Torneos' table. You can move, or remove it, as needed.
-            //this.torneosTableAdapter2.Fill(this.dS_Lupo_Torneo.Torneos);
+            //DATA SET DE LUPO
+            // TODO: This line of code loads data into the 'dataSet7.Inscriptos' table. You can move, or remove it, as needed.
+            this.inscriptosTableAdapter2.Fill(this.dataSet7.Inscriptos);
+            // TODO: This line of code loads data into the 'dS_Nadador_Lupo.Nadadores' table. You can move, or remove it, as needed.
+            this.nadadoresTableAdapter2.Fill(this.dS_Nadador_Lupo.Nadadores);
+            // TODO: This line of code loads data into the 'dS_Especialidad_Lupo.Especialidad' table. You can move, or remove it, as needed.
+            this.especialidadTableAdapter2.Fill(this.dS_Especialidad_Lupo.Especialidad);
+            // TODO: This line of code loads data into the 'dS_Lupo_Torneo.Torneos' table. You can move, or remove it, as needed.
+            this.torneosTableAdapter2.Fill(this.dS_Lupo_Torneo.Torneos);
 
-            //DATA SET DE BELEN
+            ////DATA SET DE BELEN
             // TODO: esta línea de código carga datos en la tabla 'dataSet6.Inscriptos' Puede moverla o quitarla según sea necesario.
             //this.inscriptosTableAdapter1.Fill(this.dataSet6.Inscriptos);
             // TODO: esta línea de código carga datos en la tabla 'dataSet5.Nadadores' Puede moverla o quitarla según sea necesario.
@@ -234,30 +141,16 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // TODO: esta línea de código carga datos en la tabla 'dataSet3.Torneos' Puede moverla o quitarla según sea necesario.
             //this.torneosTableAdapter1.Fill(this.dataSet3.Torneos);
 
-            //DATA SET DE MATI
-            // TODO: esta línea de código carga datos en la tabla 'dataSet2.Nadadores' Puede moverla o quitarla según sea necesario.
+            ////DATA SET DE MATI
+            //// TODO: esta línea de código carga datos en la tabla 'dataSet2.Nadadores' Puede moverla o quitarla según sea necesario.
             //this.nadadoresTableAdapter.Fill(this.dataSet2.Nadadores);
-            //         // TODO: esta línea de código carga datos en la tabla 'dataSet1.Especialidad' Puede moverla o quitarla según sea necesario.
+            //// TODO: esta línea de código carga datos en la tabla 'dataSet1.Especialidad' Puede moverla o quitarla según sea necesario.
             //         this.especialidadTableAdapter.Fill(this.dataSet1.Especialidad);
-            //         // TODO: esta línea de código carga datos en la tabla 'dS_Torneos.Torneos' Puede moverla o quitarla según sea necesario.
+            //// TODO: esta línea de código carga datos en la tabla 'dS_Torneos.Torneos' Puede moverla o quitarla según sea necesario.
             //         this.torneosTableAdapter.Fill(this.dS_Torneos.Torneos);
 
         }
 
-        private void dataGrid_Especialidad_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridTorneo_SelectionChanged(object sender, EventArgs e)
         {
@@ -277,9 +170,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             txt_cod_nadador.Text = row.Cells[0].Value.ToString();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
 
+        public float randomNumberMethod(Random random)
+         {
+            double a = 22;
+            double b = 30;
+            double numero = a + random.NextDouble()*(b-a);
+
+            return (float)(numero);
         }
     }
 }
