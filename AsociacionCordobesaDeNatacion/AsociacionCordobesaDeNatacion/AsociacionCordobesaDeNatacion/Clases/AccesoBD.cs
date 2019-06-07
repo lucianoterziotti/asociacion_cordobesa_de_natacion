@@ -14,11 +14,11 @@ namespace AsociacionCordobesaDeNatacion.Clases
 	{
 		public enum resultado_acceso { error, correcto }
 		public enum tipo_conexion { simple, transaccion }
+        static string cadena_conexion = "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
 
-		OleDbConnection conexion = new OleDbConnection();
+        OleDbConnection conexion = new OleDbConnection(cadena_conexion);
 		OleDbCommand cmd = new OleDbCommand();
 
-        string cadena_conexion = "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
 
         //LUPO:   "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
         //LOURDES: "Provider=SQLNCLI11;Data Source=DESKTOP-5EFA1ET\\LOURDESSQL;User ID=sa;Initial Catalog=PAV;password=voley123"
@@ -49,7 +49,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
 		{
 			if (conexion.State == System.Data.ConnectionState.Closed)
 			{
-				conexion.ConnectionString = cadena_conexion;
 				conexion.Open();
 				cmd.Connection = conexion;
 				cmd.CommandType = System.Data.CommandType.Text;
@@ -122,8 +121,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
 		private void conectar()
 		{
-
-			conexion.ConnectionString = cadena_conexion;
 			conexion.Open();
 			cmd.Connection = conexion;
 			cmd.CommandType = CommandType.Text;
