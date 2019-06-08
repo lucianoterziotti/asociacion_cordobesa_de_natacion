@@ -56,7 +56,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.cmb_torneo = new System.Windows.Forms.ComboBox();
             this.txt_anio = new System.Windows.Forms.TextBox();
             this.txt_cod_torneo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.nadadoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -83,6 +82,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.inscriptosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.inscriptosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmb_anio = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -106,10 +109,12 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Inscriptos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btn_eliminar);
             this.groupBox1.Controls.Add(this.cmd_grabar);
@@ -243,7 +248,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // cmb_especialidad
             // 
             this.cmb_especialidad.FormattingEnabled = true;
-            this.cmb_especialidad.Location = new System.Drawing.Point(98, 111);
+            this.cmb_especialidad.Location = new System.Drawing.Point(87, 111);
             this.cmb_especialidad.Name = "cmb_especialidad";
             this.cmb_especialidad.Size = new System.Drawing.Size(166, 28);
             this.cmb_especialidad.TabIndex = 34;
@@ -254,7 +259,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.txt_cod_especialidad.BackColor = System.Drawing.Color.White;
             this.txt_cod_especialidad.Enabled = false;
             this.txt_cod_especialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_especialidad.Location = new System.Drawing.Point(173, 47);
+            this.txt_cod_especialidad.Location = new System.Drawing.Point(98, 61);
             this.txt_cod_especialidad.Name = "txt_cod_especialidad";
             this.txt_cod_especialidad.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_especialidad.TabIndex = 12;
@@ -264,7 +269,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(176, 25);
+            this.label11.Location = new System.Drawing.Point(94, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 19);
             this.label11.TabIndex = 17;
@@ -286,7 +291,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // cmb_nadadores
             // 
             this.cmb_nadadores.FormattingEnabled = true;
-            this.cmb_nadadores.Location = new System.Drawing.Point(93, 111);
+            this.cmb_nadadores.Location = new System.Drawing.Point(68, 111);
             this.cmb_nadadores.Name = "cmb_nadadores";
             this.cmb_nadadores.Size = new System.Drawing.Size(166, 28);
             this.cmb_nadadores.TabIndex = 34;
@@ -297,7 +302,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.txt_cod_nadador.BackColor = System.Drawing.Color.White;
             this.txt_cod_nadador.Enabled = false;
             this.txt_cod_nadador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_nadador.Location = new System.Drawing.Point(93, 46);
+            this.txt_cod_nadador.Location = new System.Drawing.Point(68, 61);
             this.txt_cod_nadador.Name = "txt_cod_nadador";
             this.txt_cod_nadador.Size = new System.Drawing.Size(124, 26);
             this.txt_cod_nadador.TabIndex = 12;
@@ -307,7 +312,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(138, 25);
+            this.label8.Location = new System.Drawing.Point(64, 39);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 19);
             this.label8.TabIndex = 17;
@@ -316,9 +321,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cmb_torneo);
-            this.groupBox2.Controls.Add(this.txt_anio);
             this.groupBox2.Controls.Add(this.txt_cod_torneo);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(19, 50);
@@ -331,16 +334,17 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // cmb_torneo
             // 
             this.cmb_torneo.FormattingEnabled = true;
-            this.cmb_torneo.Location = new System.Drawing.Point(109, 111);
+            this.cmb_torneo.Location = new System.Drawing.Point(71, 111);
             this.cmb_torneo.Name = "cmb_torneo";
-            this.cmb_torneo.Size = new System.Drawing.Size(166, 28);
+            this.cmb_torneo.Size = new System.Drawing.Size(232, 28);
             this.cmb_torneo.TabIndex = 33;
             this.cmb_torneo.SelectedIndexChanged += new System.EventHandler(this.cmb_torneo_SelectedIndexChanged);
             // 
             // txt_anio
             // 
             this.txt_anio.BackColor = System.Drawing.Color.White;
-            this.txt_anio.Location = new System.Drawing.Point(219, 46);
+            this.txt_anio.Enabled = false;
+            this.txt_anio.Location = new System.Drawing.Point(71, 36);
             this.txt_anio.Name = "txt_anio";
             this.txt_anio.Size = new System.Drawing.Size(56, 27);
             this.txt_anio.TabIndex = 32;
@@ -351,28 +355,18 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.txt_cod_torneo.BackColor = System.Drawing.Color.White;
             this.txt_cod_torneo.Enabled = false;
             this.txt_cod_torneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_torneo.Location = new System.Drawing.Point(109, 47);
+            this.txt_cod_torneo.Location = new System.Drawing.Point(71, 61);
             this.txt_cod_torneo.MaxLength = 10;
             this.txt_cod_torneo.Name = "txt_cod_torneo";
             this.txt_cod_torneo.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_torneo.TabIndex = 31;
             this.txt_cod_torneo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(230, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 19);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Año";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 25);
+            this.label2.Location = new System.Drawing.Point(67, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 17;
@@ -482,6 +476,46 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label6.TabIndex = 53;
             this.label6.Text = "GRILLA DE INSCRIPTOS";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cmb_anio);
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.txt_anio);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(19, 252);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(382, 88);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Año";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(71, 111);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(232, 28);
+            this.comboBox1.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 19);
+            this.label3.TabIndex = 23;
+            // 
+            // cmb_anio
+            // 
+            this.cmb_anio.FormattingEnabled = true;
+            this.cmb_anio.Location = new System.Drawing.Point(177, 35);
+            this.cmb_anio.Name = "cmb_anio";
+            this.cmb_anio.Size = new System.Drawing.Size(126, 28);
+            this.cmb_anio.TabIndex = 51;
+            this.cmb_anio.SelectedIndexChanged += new System.EventHandler(this.cmb_anio_SelectedIndexChanged);
+            // 
             // ABM_Inscriptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,6 +559,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Inscriptos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,7 +581,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private System.Windows.Forms.Button cmd_actualizar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_cod_torneo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_anio;
 		private System.Windows.Forms.Button btn_IniciarTrans;
@@ -580,5 +615,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private System.Windows.Forms.ComboBox cmb_especialidad;
         private System.Windows.Forms.ComboBox cmb_nadadores;
         private System.Windows.Forms.ComboBox cmb_torneo;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cmb_anio;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

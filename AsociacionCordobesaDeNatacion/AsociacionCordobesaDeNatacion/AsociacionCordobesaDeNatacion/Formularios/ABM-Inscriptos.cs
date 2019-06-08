@@ -31,6 +31,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             cargarComboBoxEspecialidad();
             cargarComboBoxNadadores();
             cargarComboBoxTorneos();
+            cargarComboBoxAnios();
+            cargarTextBoxs();
         }
 
 
@@ -38,23 +40,22 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
 
             List<TextBox> array = crearArray();
-            if (Utils.FormValidator.validacionesDeTextosVacios(array))
-            {
-                inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
-                inscriptos.cod_torneo = this.txt_cod_torneo.Text;
-                inscriptos.cod_nadador = this.txt_cod_nadador.Text;
-                inscriptos.anio = this.txt_anio.Text;
-                inscriptos.grabar_inscripto();
-                this.cargar_grilla();
-            }
-            else
-            {
-                MessageBox.Show("Falta ingresar el Año");
-            }
-            this.label5.Text = "En proceso";
+            
+            
+                if (Utils.FormValidator.validacionesDeTextosVacios(array))
+                {
+                    inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
+                    inscriptos.cod_torneo = this.txt_cod_torneo.Text;
+                    inscriptos.cod_nadador = this.txt_cod_nadador.Text;
+                    inscriptos.anio = this.txt_anio.Text;
+                    inscriptos.grabar_inscripto();
+                    this.cargar_grilla();
+                }
+                else
+                {
+                    MessageBox.Show("Esta faltando seleccionar algun comboBox");
+                }
         }
-
-
 
         private void cargar_grilla()
         {
@@ -118,26 +119,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label5.Text = "En proceso";
         }
 
-
-        private void dataGridTorneo_SelectionChanged(object sender, EventArgs e)
-        {
-            var row = (sender as DataGridView).CurrentRow;
-            txt_cod_torneo.Text = row.Cells[0].Value.ToString();
-        }
-
-        private void dataGridEspecialidad_SelectionChanged(object sender, EventArgs e)
-        {
-            var row = (sender as DataGridView).CurrentRow;
-            txt_cod_especialidad.Text = row.Cells[0].Value.ToString();
-        }
-
-        private void dataGridNadador_SelectionChanged(object sender, EventArgs e)
-        {
-            var row = (sender as DataGridView).CurrentRow;
-            txt_cod_nadador.Text = row.Cells[0].Value.ToString();
-        }
-
-
         public float randomNumberMethod(Random random)
         {
             double a = 22;
@@ -150,8 +131,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private List<TextBox> crearArray()
         {
             List<TextBox> array = new List<TextBox>();
-            array.Add(this.txt_anio);
-
+            array.Add(this.txt_cod_especialidad);
+            array.Add(this.txt_cod_nadador);
+            array.Add(this.txt_cod_torneo);
             return array;
         }
 
@@ -160,7 +142,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             cmb_especialidad.DataSource = _BD.consulta("SELECT * FROM Especialidad");
             cmb_especialidad.ValueMember = "cod_espec";
             cmb_especialidad.DisplayMember = "descripcion";
-
         }
 
         public void cargarComboBoxTorneos()
@@ -178,6 +159,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             cmb_nadadores.DisplayMember = "nombre";
         }
 
+        public void cargarComboBoxAnios()
+        {
+            cmb_anio.DataSource = _BD.consulta("SELECT * FROM anioTorneo");
+            cmb_anio.ValueMember = "anio";
+            cmb_anio.DisplayMember = "anio";
+        }
+
         private void cmb_especialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_cod_especialidad.Text = cmb_especialidad.SelectedValue.ToString();
@@ -193,15 +181,18 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             txt_cod_nadador.Text = cmb_nadadores.SelectedValue.ToString();
         }
 
+        private void cmb_anio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_anio.Text = cmb_anio.SelectedValue.ToString();
+        }
+
         private void nuevo()
         {
             cmb_nadadores.SelectedIndex = -1;
             cmb_especialidad.SelectedIndex = -1;
             cmb_torneo.SelectedIndex = -1;
-            txt_anio.Text = "";
-            txt_cod_especialidad.Text = "";
-            txt_cod_nadador.Text = "";
-            txt_cod_torneo.Text = "";
+            cmb_anio.SelectedIndex = -1;
+            cargarTextBoxs();
         }
 
         private void cmd_nuevo_Click(object sender, EventArgs e)
@@ -209,5 +200,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             nuevo();
         }
 
+        public void cargarTextBoxs()
+        {
+            txt_anio.Text = "";
+            txt_cod_nadador.Text = "";
+            txt_cod_especialidad.Text = "";
+            txt_cod_torneo.Text = "";
+        }
+
+        
     }
 }
