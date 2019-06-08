@@ -113,9 +113,9 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_especialidad = Int32.Parse(this.cod_especialidad);
 
             string sqlDelete = @"DELETE FROM Inscriptos 
-                         WHERE  cod_torneo =" + cod_torneo +
-                                "anio =" + anio  +
-                                "cod_nad =" + cod_nadador +
+                         WHERE  cod_torneo =" + cod_torneo_aux+ " AND " +
+                               "anio =" + anio_aux + " AND " +
+                                "cod_nad =" + cod_nadador_aux + " AND " +
                                 "cod_espe = " +cod_especialidad ;
 
 
