@@ -47,7 +47,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                     inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
                     inscriptos.cod_torneo = this.txt_cod_torneo.Text;
                     inscriptos.cod_nadador = this.txt_cod_nadador.Text;
-                    inscriptos.anio = this.txt_anio.Text;
+                    inscriptos.anio = this.cmb_anio.Text;
                     inscriptos.grabar_inscripto();
                     this.cargar_grilla();
                 }
@@ -91,20 +91,24 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-            string sql = @"UPDATE Inscriptos 
-                         SET (cod_espe, cod_torneo, cod_nad, anio) = ( '" +
-                         txt_cod_especialidad.Text.Trim() + "," +
-                         txt_cod_torneo.Text.Trim() + "," +
-                         txt_cod_nadador.Text.Trim() + "," +
-                         txt_anio.Text.Trim() + "' )" +
-                         " WHERE cod_espe = " + txt_cod_especialidad.Text.Trim() +
-                                "cod_torneo = " + txt_cod_torneo.Text.Trim() +
-                                "cod_nad = " + txt_cod_nadador.Text.Trim() +
-                                "anio = " + txt_anio.Text.Trim();
+			List<TextBox> array = crearArray();
 
-            _BD.insert_update_delete(sql);
-            this.label5.Text = "En proceso";
-        }
+
+			if (Utils.FormValidator.validacionesDeTextosVacios(array))
+			{
+				inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
+				inscriptos.cod_torneo = this.txt_cod_torneo.Text;
+				inscriptos.cod_nadador = this.txt_cod_nadador.Text;
+				inscriptos.anio = this.txt_anio.Text;
+				inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text);
+				this.cargar_grilla();
+				this.label5.Text = "En proceso";
+			}
+			else
+			{
+				MessageBox.Show("Esta faltando seleccionar algun comboBox");
+			}
+		}
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {

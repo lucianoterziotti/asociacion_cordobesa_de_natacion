@@ -14,9 +14,11 @@ namespace AsociacionCordobesaDeNatacion.Clases
 	{
 		public enum resultado_acceso { error, correcto }
 		public enum tipo_conexion { simple, transaccion }
-        static string cadena_conexion = "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
+        static string cadena_conexion = "Provider=SQLNCLI11;Data Source=BELENPC\\BELEN;Integrated Security=SSPI;Initial Catalog=PAV";
 
-        OleDbConnection conexion = new OleDbConnection(cadena_conexion);
+		//LUPO: Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345;
+
+		OleDbConnection conexion = new OleDbConnection(cadena_conexion);
 		OleDbCommand cmd = new OleDbCommand();
 
 

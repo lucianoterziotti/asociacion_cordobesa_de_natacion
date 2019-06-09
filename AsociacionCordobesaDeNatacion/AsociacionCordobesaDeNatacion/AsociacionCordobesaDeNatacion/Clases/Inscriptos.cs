@@ -123,6 +123,26 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         }
 
+		public void modificar_Inscripto(string cod_nadador, string cod_especialidad, string cod_torneo, string anio)
+		{
+			int cod_nad_aux = Int32.Parse(this.cod_nadador);
+			int cod_esp_aux = Int32.Parse(this.cod_especialidad);
+			int cod_torneo_aux = Int32.Parse(this.cod_torneo);
+			int anio_aux = Int32.Parse(this.anio);
+
+			string sqlUpdate = "UPDATE Inscriptos SET cod_torneo =" + cod_torneo_aux +
+								", anio =" + anio_aux +
+								", cod_espe =" + cod_esp_aux +
+								", cod_nad =" + cod_nad_aux +
+								" WHERE  cod_torneo =" + cod_torneo_aux + " AND " +
+							    "anio =" + anio_aux + " AND " +
+								"cod_nad =" + cod_nad_aux + " AND " +
+								"cod_espe = " + cod_esp_aux;
+			MessageBox.Show(sqlUpdate);
+			this._BD.query(sqlUpdate);
+			
+		}
+
         public float randomNumberMethod(Random random)
         {
             double a = 22;
