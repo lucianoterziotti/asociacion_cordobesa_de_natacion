@@ -21,7 +21,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         Torneos torneos = new Torneos();
         Especialidades especialidades = new Especialidades();
         DataTable tabla = new DataTable();
-
+        VistaGrilla listaInscriptos;
 
 
         public ABM_Inscriptos()
@@ -49,30 +49,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                     inscriptos.cod_nadador = this.txt_cod_nadador.Text;
                     inscriptos.anio = this.cmb_anio.Text;
                     inscriptos.grabar_inscripto();
-                    this.cargar_grilla();
                 }
                 else
                 {
                     MessageBox.Show("Esta faltando seleccionar algun comboBox");
                 }
-        }
-
-        private void cargar_grilla()
-        {
-            DataTable tabla = new DataTable();
-            tabla = _BD.consulta("SELECT * FROM Inscriptos");
-            if (tabla.Rows.Count == 0)
-            {
-                return;
-            }
-            dataGrid_Inscriptos.DataSource = tabla;
-            dataGrid_Inscriptos.Columns[0].Width = 150;
-            dataGrid_Inscriptos.Columns[1].Width = 300;
-        }
-
-        private void btn_CargarGrilla_Click(object sender, EventArgs e)
-        {
-            this.cargar_grilla();
         }
 
         private void btn_IniciarTrans_Click(object sender, EventArgs e)
@@ -84,7 +65,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void btn_FinalizarTrans_Click(object sender, EventArgs e)
         {
             _BD.cerrar_transaccion();
-            this.cargar_grilla();
             this.label5.Text = "Finalizada";
         }
 
@@ -101,7 +81,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 				inscriptos.cod_nadador = this.txt_cod_nadador.Text;
 				inscriptos.anio = this.txt_anio.Text;
 				inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text);
-				this.cargar_grilla();
 				this.label5.Text = "En proceso";
 			}
 			else
@@ -212,6 +191,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             txt_cod_torneo.Text = "";
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaInscriptos = new VistaGrilla("Inscriptos");
+
+            listaInscriptos.ShowDialog();
+
+            listaInscriptos.Dispose();
+        }
     }
 }

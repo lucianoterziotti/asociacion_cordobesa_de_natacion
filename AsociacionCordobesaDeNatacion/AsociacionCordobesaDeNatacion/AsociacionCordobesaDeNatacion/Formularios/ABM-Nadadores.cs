@@ -18,6 +18,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             InitializeComponent();
         }
         Nadadores nadadores = new Nadadores();
+        VistaGrilla listaNadadores;
 
         private void btn_buscar_nad_Click(object sender, EventArgs e)
         {
@@ -132,6 +133,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaNadadores = new VistaGrilla("Nadadores");
+
+            listaNadadores.ShowDialog();
+
+            listaNadadores.Dispose();
         }
     }
 }

@@ -9,12 +9,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
     public partial class ABM_Clubes : Form
     {
         Clubes clubes = new Clubes();
-        
+        VistaGrilla listaClubes;
+
         public ABM_Clubes()
         {
             InitializeComponent();
         }
-
+        
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             if (txt_cod_club.Text =="")
@@ -136,6 +137,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             array.Add(this.txt_nombre_club);
 
             return array;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaClubes = new VistaGrilla("Clubes");
+
+            listaClubes.ShowDialog();
+
+            listaClubes.Dispose();
         }
     }
     

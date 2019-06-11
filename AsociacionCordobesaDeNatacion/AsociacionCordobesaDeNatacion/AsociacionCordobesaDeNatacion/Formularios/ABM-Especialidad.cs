@@ -19,7 +19,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         }
 
         Especialidades especialidades = new Especialidades();
-
+        VistaGrilla listaEspecialidades;
 
         private void cmd_buscar01_Click(object sender, EventArgs e)
         {
@@ -126,6 +126,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void txt_cod_especialidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaEspecialidades = new VistaGrilla("Especialidad");
+
+            listaEspecialidades.ShowDialog();
+
+            listaEspecialidades.Dispose();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             InitializeComponent();
         }
         Torneos torneos = new Torneos();
+        VistaGrilla listaTorneos;
 
         private void cmd_buscar01_Click(object sender, EventArgs e)
         {
@@ -121,6 +122,15 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void txt_cod_torneo_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaTorneos = new VistaGrilla("Torneos");
+
+            listaTorneos.ShowDialog();
+
+            listaTorneos.Dispose();
         }
     }
 }

@@ -31,11 +31,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABM_Inscriptos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_anio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.cmd_grabar = new System.Windows.Forms.Button();
@@ -54,7 +54,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmb_torneo = new System.Windows.Forms.ComboBox();
-            this.txt_anio = new System.Windows.Forms.TextBox();
             this.txt_cod_torneo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -69,7 +68,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.especialidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nadadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.torneosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_CargarGrilla = new System.Windows.Forms.Button();
             this.inscriptosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dSInscriptosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dS_Inscriptos = new AsociacionCordobesaDeNatacion.DS_Inscriptos();
@@ -78,15 +76,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGrid_Inscriptos = new System.Windows.Forms.DataGridView();
             this.inscriptosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.inscriptosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.cmb_anio = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,39 +102,67 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dSInscriptosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Inscriptos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Inscriptos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btn_eliminar);
-            this.groupBox1.Controls.Add(this.cmd_grabar);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cmd_actualizar);
-            this.groupBox1.Controls.Add(this.cmd_nuevo);
             this.groupBox1.Controls.Add(this.btn_FinalizarTrans);
             this.groupBox1.Controls.Add(this.btn_IniciarTrans);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 22);
+            this.groupBox1.Location = new System.Drawing.Point(47, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1274, 369);
+            this.groupBox1.Size = new System.Drawing.Size(929, 459);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "INCRIPCION";
+            this.groupBox1.Text = "INCRIPCIÓN";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.cmb_anio);
+            this.groupBox3.Controls.Add(this.txt_anio);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(448, 257);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(415, 167);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Año";
+            // 
+            // txt_anio
+            // 
+            this.txt_anio.BackColor = System.Drawing.Color.White;
+            this.txt_anio.Enabled = false;
+            this.txt_anio.Location = new System.Drawing.Point(71, 60);
+            this.txt_anio.Name = "txt_anio";
+            this.txt_anio.Size = new System.Drawing.Size(56, 27);
+            this.txt_anio.TabIndex = 32;
+            this.txt_anio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 19);
+            this.label3.TabIndex = 23;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(791, 4);
+            this.label7.Location = new System.Drawing.Point(605, 3);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 25);
@@ -151,7 +175,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.btn_eliminar.BackColor = System.Drawing.Color.White;
             this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
             this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar.Location = new System.Drawing.Point(1216, -2);
+            this.btn_eliminar.Location = new System.Drawing.Point(957, 198);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
             this.btn_eliminar.TabIndex = 45;
@@ -163,7 +187,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.cmd_grabar.BackColor = System.Drawing.Color.White;
             this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
             this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Location = new System.Drawing.Point(1130, -2);
+            this.cmd_grabar.Location = new System.Drawing.Point(957, 116);
             this.cmd_grabar.Name = "cmd_grabar";
             this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
             this.cmd_grabar.TabIndex = 43;
@@ -175,7 +199,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(913, 4);
+            this.label5.Location = new System.Drawing.Point(727, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
@@ -188,7 +212,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.cmd_actualizar.BackColor = System.Drawing.Color.White;
             this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
             this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Location = new System.Drawing.Point(1173, -2);
+            this.cmd_actualizar.Location = new System.Drawing.Point(957, 157);
             this.cmd_actualizar.Name = "cmd_actualizar";
             this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
             this.cmd_actualizar.TabIndex = 44;
@@ -200,7 +224,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.cmd_nuevo.BackColor = System.Drawing.Color.White;
             this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__2_;
             this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_nuevo.Location = new System.Drawing.Point(1087, -2);
+            this.cmd_nuevo.Location = new System.Drawing.Point(957, 75);
             this.cmd_nuevo.Name = "cmd_nuevo";
             this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
             this.cmd_nuevo.TabIndex = 42;
@@ -223,7 +247,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // btn_IniciarTrans
             // 
             this.btn_IniciarTrans.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_IniciarTrans.Location = new System.Drawing.Point(996, 1);
+            this.btn_IniciarTrans.Location = new System.Drawing.Point(810, 0);
             this.btn_IniciarTrans.Margin = new System.Windows.Forms.Padding(2);
             this.btn_IniciarTrans.Name = "btn_IniciarTrans";
             this.btn_IniciarTrans.Size = new System.Drawing.Size(86, 32);
@@ -238,9 +262,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox5.Controls.Add(this.txt_cod_especialidad);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(447, 50);
+            this.groupBox5.Location = new System.Drawing.Point(41, 257);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(415, 185);
+            this.groupBox5.Size = new System.Drawing.Size(354, 167);
             this.groupBox5.TabIndex = 30;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Especialidad";
@@ -248,7 +272,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // cmb_especialidad
             // 
             this.cmb_especialidad.FormattingEnabled = true;
-            this.cmb_especialidad.Location = new System.Drawing.Point(87, 111);
+            this.cmb_especialidad.Location = new System.Drawing.Point(71, 111);
             this.cmb_especialidad.Name = "cmb_especialidad";
             this.cmb_especialidad.Size = new System.Drawing.Size(166, 28);
             this.cmb_especialidad.TabIndex = 34;
@@ -259,7 +283,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.txt_cod_especialidad.BackColor = System.Drawing.Color.White;
             this.txt_cod_especialidad.Enabled = false;
             this.txt_cod_especialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_especialidad.Location = new System.Drawing.Point(98, 61);
+            this.txt_cod_especialidad.Location = new System.Drawing.Point(71, 61);
             this.txt_cod_especialidad.Name = "txt_cod_especialidad";
             this.txt_cod_especialidad.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_especialidad.TabIndex = 12;
@@ -269,7 +293,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(94, 39);
+            this.label11.Location = new System.Drawing.Point(67, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 19);
             this.label11.TabIndex = 17;
@@ -281,9 +305,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox4.Controls.Add(this.txt_cod_nadador);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(899, 50);
+            this.groupBox4.Location = new System.Drawing.Point(41, 61);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(354, 202);
+            this.groupBox4.Size = new System.Drawing.Size(354, 167);
             this.groupBox4.TabIndex = 30;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Nadador";
@@ -324,9 +348,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox2.Controls.Add(this.txt_cod_torneo);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(19, 50);
+            this.groupBox2.Location = new System.Drawing.Point(448, 65);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(382, 185);
+            this.groupBox2.Size = new System.Drawing.Size(415, 163);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Torneo";
@@ -339,16 +363,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.cmb_torneo.Size = new System.Drawing.Size(232, 28);
             this.cmb_torneo.TabIndex = 33;
             this.cmb_torneo.SelectedIndexChanged += new System.EventHandler(this.cmb_torneo_SelectedIndexChanged);
-            // 
-            // txt_anio
-            // 
-            this.txt_anio.BackColor = System.Drawing.Color.White;
-            this.txt_anio.Enabled = false;
-            this.txt_anio.Location = new System.Drawing.Point(71, 36);
-            this.txt_anio.Name = "txt_anio";
-            this.txt_anio.Size = new System.Drawing.Size(56, 27);
-            this.txt_anio.TabIndex = 32;
-            this.txt_anio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_cod_torneo
             // 
@@ -371,18 +385,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 17;
             this.label2.Text = "Código";
-            // 
-            // btn_CargarGrilla
-            // 
-            this.btn_CargarGrilla.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CargarGrilla.Location = new System.Drawing.Point(82, 450);
-            this.btn_CargarGrilla.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_CargarGrilla.Name = "btn_CargarGrilla";
-            this.btn_CargarGrilla.Size = new System.Drawing.Size(138, 33);
-            this.btn_CargarGrilla.TabIndex = 49;
-            this.btn_CargarGrilla.Text = "Cargar grilla";
-            this.btn_CargarGrilla.UseVisualStyleBackColor = true;
-            this.btn_CargarGrilla.Click += new System.EventHandler(this.btn_CargarGrilla_Click);
             // 
             // inscriptosBindingSource1
             // 
@@ -428,93 +430,36 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridViewTextBoxColumn3.HeaderText = "tiempo";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGrid_Inscriptos
+            // button1
             // 
-            this.dataGrid_Inscriptos.AllowUserToAddRows = false;
-            this.dataGrid_Inscriptos.AllowUserToDeleteRows = false;
-            this.dataGrid_Inscriptos.AllowUserToOrderColumns = true;
-            this.dataGrid_Inscriptos.AllowUserToResizeRows = false;
-            this.dataGrid_Inscriptos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGrid_Inscriptos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_Inscriptos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGrid_Inscriptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Inscriptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid_Inscriptos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGrid_Inscriptos.Location = new System.Drawing.Point(82, 501);
-            this.dataGrid_Inscriptos.MultiSelect = false;
-            this.dataGrid_Inscriptos.Name = "dataGrid_Inscriptos";
-            this.dataGrid_Inscriptos.ReadOnly = true;
-            this.dataGrid_Inscriptos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGrid_Inscriptos.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGrid_Inscriptos.RowTemplate.ReadOnly = true;
-            this.dataGrid_Inscriptos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Inscriptos.Size = new System.Drawing.Size(822, 155);
-            this.dataGrid_Inscriptos.TabIndex = 52;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(77, 410);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(234, 26);
-            this.label6.TabIndex = 53;
-            this.label6.Text = "GRILLA DE INSCRIPTOS";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cmb_anio);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.txt_anio);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(19, 252);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(382, 88);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Año";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(71, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 28);
-            this.comboBox1.TabIndex = 33;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 19);
-            this.label3.TabIndex = 23;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(511, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Ver lista";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmb_anio
             // 
             this.cmb_anio.FormattingEnabled = true;
-            this.cmb_anio.Location = new System.Drawing.Point(177, 35);
+            this.cmb_anio.Location = new System.Drawing.Point(71, 111);
             this.cmb_anio.Name = "cmb_anio";
             this.cmb_anio.Size = new System.Drawing.Size(126, 28);
             this.cmb_anio.TabIndex = 51;
             this.cmb_anio.SelectedIndexChanged += new System.EventHandler(this.cmb_anio_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 19);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Año";
             // 
             // ABM_Inscriptos
             // 
@@ -523,17 +468,20 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1342, 609);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1033, 532);
+            this.Controls.Add(this.btn_eliminar);
+            this.Controls.Add(this.cmd_grabar);
+            this.Controls.Add(this.cmd_actualizar);
+            this.Controls.Add(this.cmd_nuevo);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGrid_Inscriptos);
-            this.Controls.Add(this.btn_CargarGrilla);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ABM_Inscriptos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscriptos";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -556,13 +504,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dSInscriptosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Inscriptos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Inscriptos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inscriptosBindingSource3)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -589,7 +533,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 		private System.Windows.Forms.BindingSource inscriptosBindingSource;
 		private DS_InscriptosTableAdapters.InscriptosTableAdapter inscriptosTableAdapter;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-		private System.Windows.Forms.Button btn_CargarGrilla;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.BindingSource dSInscriptosBindingSource;
 		private System.Windows.Forms.BindingSource inscriptosBindingSource1;
@@ -598,8 +541,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private System.Windows.Forms.BindingSource nadadoresBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridView dataGrid_Inscriptos;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.BindingSource torneosBindingSource1;
 		private System.Windows.Forms.BindingSource especialidadBindingSource1;
@@ -616,8 +557,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private System.Windows.Forms.ComboBox cmb_nadadores;
         private System.Windows.Forms.ComboBox cmb_torneo;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cmb_anio;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmb_anio;
     }
 }

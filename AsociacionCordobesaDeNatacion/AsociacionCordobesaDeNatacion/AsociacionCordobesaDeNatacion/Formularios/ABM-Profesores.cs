@@ -18,6 +18,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             InitializeComponent();
         }
         Profesores profesores = new Profesores();
+        VistaGrilla listaProfesores;
 
         private void cmd_buscar01_Click(object sender, EventArgs e)
         {
@@ -128,5 +129,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 			array.Add(this.txt_nombre_profesor);
 			return array;
 		}
-	}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaProfesores = new VistaGrilla("Profesores");
+
+            listaProfesores.ShowDialog();
+
+            listaProfesores.Dispose();
+        }
+    }
 }

@@ -18,8 +18,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
         float _tiempo;
 
 
-
-
         public string anio
         {
             get { return _anio; }
@@ -99,7 +97,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
                           cod_nad_aux + "," +
                           tiempo + "," +
                           posicion + "," +
-                         anio_aux +")";
+                          anio_aux +")";
                    MessageBox.Show(SqlInsert);
 
             this._BD.query(SqlInsert);
@@ -113,7 +111,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_especialidad = Int32.Parse(this.cod_especialidad);
 
             string sqlDelete = @"DELETE FROM Inscriptos 
-                         WHERE  cod_torneo =" + cod_torneo_aux+ " AND " +
+                                 WHERE  cod_torneo =" + cod_torneo_aux+ " AND " +
                                "anio =" + anio_aux + " AND " +
                                 "cod_nad =" + cod_nadador_aux + " AND " +
                                 "cod_espe = " +cod_especialidad ;

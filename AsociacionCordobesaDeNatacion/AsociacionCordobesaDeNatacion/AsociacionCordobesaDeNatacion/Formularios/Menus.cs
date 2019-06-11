@@ -18,6 +18,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         ABM_Torneos frm_torneos;
         ABM_Inscriptos frm_inscriptos;
         ABM_Especialidad frm_especialidad;
+        ResultadoTorneos frm_resultados;
 
         public Menus()
         {
@@ -71,6 +72,18 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             frm_especialidad = new ABM_Especialidad();
             frm_especialidad.ShowDialog();
             frm_especialidad.Dispose();
+        }
+
+        private void btn_resultados_Click(object sender, EventArgs e)
+        {
+            frm_resultados = new ResultadoTorneos();
+            frm_resultados.ShowDialog();
+            frm_resultados.Dispose();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
