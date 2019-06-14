@@ -64,8 +64,5 @@ namespace AsociacionCordobesaDeNatacion
                 e.Cancel = false;
             }
         }
-
-
     }
-
 }

@@ -70,7 +70,17 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void btn_lourdes_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                _BD = new AccesoBD(4);
+                _BD.consulta("Select * from Clubes");
+                Login frm_login = new Login(_BD);
+                frm_login.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ups estas equivocado amigooo");
+            }
         }
     }
 }

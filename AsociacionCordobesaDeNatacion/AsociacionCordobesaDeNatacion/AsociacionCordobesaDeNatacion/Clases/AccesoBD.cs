@@ -26,7 +26,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 		OleDbCommand cmd = new OleDbCommand();
 
 
-        //LOURDES: "Provider=SQLNCLI11;Data Source=DESKTOP-5EFA1ET\\LOURDESSQL;User ID=sa;Initial Catalog=PAV;password=voley123"
+        //LOURDES: 
         resultado_acceso control_transaccion = resultado_acceso.correcto;
 		tipo_conexion analisis_tipo_transaccion = tipo_conexion.simple;
 		OleDbTransaction transaccion;
@@ -161,7 +161,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             string CADENA_CONEXION_BELEN = "Provider=SQLNCLI11;Data Source=BELENPC\\BELEN;Integrated Security=SSPI;Initial Catalog=PAV";
             string CADENA_CONEXION_MATI = "Provider=SQLNCLI11;Data Source=MATIAS;Integrated Security=SSPI;Initial Catalog=PAV";
             string CADENA_CONEXION_LUPO = "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
-
+            string CADENA_CONEXION_LOURDES = "Provider=SQLNCLI11;Data Source=DESKTOP-5EFA1ET\\LOURDESSQL;User ID=sa;Initial Catalog=PAV;password=voley123";
             switch (numeroUsuario)
             {
 
@@ -171,8 +171,14 @@ namespace AsociacionCordobesaDeNatacion.Clases
                 case 2:
                       cadena_conexion = CADENA_CONEXION_MATI;
                     break;
-                default:
+                case 3:
                       cadena_conexion = CADENA_CONEXION_LUPO;
+                    break;
+                case 4:
+                    cadena_conexion = CADENA_CONEXION_LOURDES;
+                    break;
+                default:
+                    cadena_conexion = "";
                     break;
             }
             return cadena_conexion;
