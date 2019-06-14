@@ -10,9 +10,11 @@ namespace AsociacionCordobesaDeNatacion.Clases
 {
     class Profesores
     {
-        AccesoBD _BD = new AccesoBD();
-
-
+        AccesoBD _BD;
+        public Profesores(AccesoBD BD)
+        {
+            _BD = BD;
+        }
         string _nombre_profesor;
         string _dni_profesor;
         string _calle_profesor;

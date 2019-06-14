@@ -11,18 +11,22 @@ using AsociacionCordobesaDeNatacion.Clases;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ABM_Profesores : Form
+    internal partial class ABM_Profesores : Form
     {
-        public ABM_Profesores()
+        Profesores profesores;
+        AccesoBD _BD;
+        public ABM_Profesores(AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
+            profesores = new Profesores(BD);
+
         }
-        Profesores profesores = new Profesores();
         VistaGrilla listaProfesores;
 
         private void cmd_buscar01_Click(object sender, EventArgs e)
         {
-            if(this.txt_dni.Text == "")
+            if (this.txt_dni.Text == "")
             {
                 MessageBox.Show("El DNI no está cargado");
 
@@ -47,7 +51,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
 
         }
-        
+
         private void blanquear_objetos()
         {
 
@@ -77,7 +81,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
@@ -96,7 +100,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -116,23 +120,23 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.blanquear_objetos();
         }
 
-		private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
-		}
+        private void txt_dni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
+        }
 
-		private List<TextBox> crearArray()
-		{
-			List<TextBox> array = new List<TextBox>();
-			array.Add(this.txt_calle);
-			array.Add(this.txt_dni);
-			array.Add(this.txt_nombre_profesor);
-			return array;
-		}
+        private List<TextBox> crearArray()
+        {
+            List<TextBox> array = new List<TextBox>();
+            array.Add(this.txt_calle);
+            array.Add(this.txt_dni);
+            array.Add(this.txt_nombre_profesor);
+            return array;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listaProfesores = new VistaGrilla("Profesores");
+            listaProfesores = new VistaGrilla("Profesores", _BD);
 
             listaProfesores.ShowDialog();
 

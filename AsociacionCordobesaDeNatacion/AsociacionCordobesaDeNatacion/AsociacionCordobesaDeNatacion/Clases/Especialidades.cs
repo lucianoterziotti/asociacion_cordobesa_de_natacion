@@ -11,9 +11,15 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
     class Especialidades
     {
+        AccesoBD _BD;
         string _cod_esp;
         string _descripcion;
         string _tiempo_record;
+
+        public Especialidades(AccesoBD BD)
+        {
+            _BD = BD;
+        }
 
         public string cod_esp
         {
@@ -31,7 +37,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
             set { _tiempo_record = value; }
         }
 
-        AccesoBD _BD = new AccesoBD();
 
         public DataTable buscar_especialidad()
         {

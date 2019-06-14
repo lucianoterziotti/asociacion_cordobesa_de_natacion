@@ -11,15 +11,17 @@ using AsociacionCordobesaDeNatacion.Clases;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class VistaGrilla : Form
+    internal partial class VistaGrilla : Form
     {
 
-        AccesoBD _BD = new AccesoBD();
+        AccesoBD _BD ;
         DataTable tabla = new DataTable();
 
-        public VistaGrilla(string parametro)
+
+        public VistaGrilla(string parametro, AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
             cargar_grilla(parametro);
         }
 

@@ -23,11 +23,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private void btn_comenzar_click(object sender, EventArgs e)
         {
             
-            Login frm_login = new Login();
+            Usuario frm_CheckUserlogin = new Usuario();
 
-            frm_login.ShowDialog();
+            frm_CheckUserlogin.ShowDialog();
 
-            frm_login.Dispose();
+            frm_CheckUserlogin.Dispose();
             
         }
     }

@@ -11,6 +11,11 @@ namespace AsociacionCordobesaDeNatacion
 {
     class Users
     {
+        AccesoBD _BD;
+        public Users(AccesoBD acceso)
+        {
+            _BD = acceso;
+        }
         int _id = 0;
         string _usuario;
         string _password;
@@ -29,11 +34,10 @@ namespace AsociacionCordobesaDeNatacion
         public string password
         {
             get { return _password; }
-            set { _password = value; }  
+            set { _password = value; }
 
         }
-        AccesoBD _BD = new AccesoBD();
-        
+
         public DataTable consulta_login(string usuario, string pssw)
         {
             string sqltxt = @"SELECT * FROM Usuarios 

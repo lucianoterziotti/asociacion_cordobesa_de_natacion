@@ -11,13 +11,16 @@ using AsociacionCordobesaDeNatacion.Clases;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ABM_Torneos : Form
+    internal partial class ABM_Torneos : Form
     {
-        public ABM_Torneos()
+        Torneos torneos;
+        AccesoBD _BD;
+        public ABM_Torneos(AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
+            torneos = new Torneos(BD);
         }
-        Torneos torneos = new Torneos();
         VistaGrilla listaTorneos;
 
         private void cmd_buscar01_Click(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("El torneo con codigo: " + this.txt_cod_torneo.Text + " tiene la siguiente descripcion: "
                     + tabla.Rows[0]["descripccion"].ToString());
-        
+
             }
             else
             {
@@ -91,13 +94,13 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             torneos.cod_torneo = txt_cod_torneo.Text;
-            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el torneo Con codigo:" + torneos.cod_torneo+" ?"
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el torneo Con codigo:" + torneos.cod_torneo + " ?"
                 , "importante", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -126,7 +129,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listaTorneos = new VistaGrilla("Torneos");
+            listaTorneos = new VistaGrilla("Torneos", _BD);
 
             listaTorneos.ShowDialog();
 

@@ -13,20 +13,20 @@ using AsociacionCordobesaDeNatacion.Formularios;
 namespace AsociacionCordobesaDeNatacion
 
 {
-        public partial class Login : Form
-        {
+    internal partial class Login : Form
+    {
+        Users usuario;
+        Menus frm_menu;
 
-        
-        public Login()
+        public Login(AccesoBD BD)
         {
             InitializeComponent();
-
+            frm_menu = new Menus(BD);
+            usuario = new Users(BD);
         }
 
         private void cmd_ingresar_Click(object sender, EventArgs e)
         {
-
-
             if (this.txt_usuario.Text == "")
             {
                 MessageBox.Show("El campo 'Usuario' está vacío.");
@@ -40,24 +40,19 @@ namespace AsociacionCordobesaDeNatacion
                 return;
             }
 
-            Users usuario = new Users();
-
             DataTable tabla = new DataTable();
-
-            tabla = usuario.consulta_login(this.txt_usuario.Text.Trim(),this.txt_pssw.Text.Trim());
+            tabla = usuario.consulta_login(this.txt_usuario.Text.Trim(), this.txt_pssw.Text.Trim());
 
             if (tabla.Rows.Count == 1)
             {
-                
-                Menus frm_menu = new Menus();
+                string nombreUsuario = this.txt_usuario.Text.Trim();
                 frm_menu.ShowDialog();
-                  
+
             }
             else
             {
                 MessageBox.Show("La contrasenia o el usuario es invalido");
             }
-           
         }
 
         private void login_formclosing(object sender, FormClosingEventArgs e)
@@ -69,6 +64,7 @@ namespace AsociacionCordobesaDeNatacion
                 e.Cancel = false;
             }
         }
+
 
     }
 

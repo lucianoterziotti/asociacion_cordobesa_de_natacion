@@ -10,21 +10,22 @@ using AsociacionCordobesaDeNatacion.Clases;
 
 namespace AsociacionCordobesaDeNatacion.Clases
 {
-	class AccesoBD
-	{
-		public enum resultado_acceso { error, correcto }
+    class AccesoBD
+    {
+        string cadena_conexion_definitiva;
+        public AccesoBD(int numeroUsuario)
+        {
+            cadena_conexion_definitiva = cadenaDeConexionCorrecta(numeroUsuario);
+        }
+        
+
+        public enum resultado_acceso { error, correcto }
 		public enum tipo_conexion { simple, transaccion }
-        static string cadena_conexion = "Provider=SQLNCLI11;Data Source=MATIAS;Integrated Security=SSPI;Initial Catalog=PAV";
 
-        //BELEN: "Provider=SQLNCLI11;Data Source=BELENPC\\BELEN;Integrated Security=SSPI;Initial Catalog=PAV";
-
-        //LUPO: Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345;
-
-        OleDbConnection conexion = new OleDbConnection(cadena_conexion);
+        OleDbConnection conexion = new OleDbConnection();
 		OleDbCommand cmd = new OleDbCommand();
 
 
-        //LUPO:   "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
         //LOURDES: "Provider=SQLNCLI11;Data Source=DESKTOP-5EFA1ET\\LOURDESSQL;User ID=sa;Initial Catalog=PAV;password=voley123"
         resultado_acceso control_transaccion = resultado_acceso.correcto;
 		tipo_conexion analisis_tipo_transaccion = tipo_conexion.simple;
@@ -125,7 +126,8 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
 		private void conectar()
 		{
-			conexion.Open();
+            conexion.ConnectionString = cadena_conexion_definitiva;
+            conexion.Open();
 			cmd.Connection = conexion;
 			cmd.CommandType = CommandType.Text;
 		}
@@ -152,5 +154,30 @@ namespace AsociacionCordobesaDeNatacion.Clases
 			cmd.ExecuteNonQuery();
 			cerrar();
 		}
-	}
+
+        public string cadenaDeConexionCorrecta(int numeroUsuario)
+        {
+            string cadena_conexion;
+            string CADENA_CONEXION_BELEN = "Provider=SQLNCLI11;Data Source=BELENPC\\BELEN;Integrated Security=SSPI;Initial Catalog=PAV";
+            string CADENA_CONEXION_MATI = "Provider=SQLNCLI11;Data Source=MATIAS;Integrated Security=SSPI;Initial Catalog=PAV";
+            string CADENA_CONEXION_LUPO = "Provider=SQLNCLI11;Data Source=LAP-030\\SERVERINSTANCE;User ID=sa;Initial Catalog=master;password=12345";
+
+            switch (numeroUsuario)
+            {
+
+                case 1:
+                      cadena_conexion = CADENA_CONEXION_BELEN;
+                    break;
+                case 2:
+                      cadena_conexion = CADENA_CONEXION_MATI;
+                    break;
+                default:
+                      cadena_conexion = CADENA_CONEXION_LUPO;
+                    break;
+            }
+            return cadena_conexion;
+        }
+
+        
+    }
 }

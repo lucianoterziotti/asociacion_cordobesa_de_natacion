@@ -6,19 +6,22 @@ using AsociacionCordobesaDeNatacion.Clases;
 using AsociacionCordobesaDeNatacion.Utils;
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ABM_Clubes : Form
+    internal partial class ABM_Clubes : Form
     {
-        Clubes clubes = new Clubes();
+        Clubes clubes;
         VistaGrilla listaClubes;
-
-        public ABM_Clubes()
+        AccesoBD _BD;
+        public ABM_Clubes(AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
+            clubes = new Clubes(BD);
+
         }
-        
+
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            if (txt_cod_club.Text =="")
+            if (txt_cod_club.Text == "")
             {
 
                 MessageBox.Show("El codigo no está cargado");
@@ -61,7 +64,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 this.clubes.grabar_club();
                 MessageBox.Show("La grabación fue correcta");
                 this.blanquear_objetos();
-            }else
+            }
+            else
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
@@ -69,7 +73,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-           List<TextBox> array = crearArray();
+            List<TextBox> array = crearArray();
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
                 clubes.calle_club = this.txt_calle.Text;
@@ -84,11 +88,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void blanquear_objetos()
-        {  
+        {
             this.txt_calle.Text = "";
             this.txt_cod_club.Text = "";
             this.txt_nombre_club.Text = "";
@@ -116,11 +120,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 MessageBox.Show("No ingreso un codigo de club");
             }
         }
-        
+
 
         private void txt_cod_club_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utils.FormValidator.restriccionDeLetras_KeyPress(sender,e);
+            Utils.FormValidator.restriccionDeLetras_KeyPress(sender, e);
         }
 
         private void txt_numero_KeyPress(object sender, KeyPressEventArgs e)
@@ -141,12 +145,12 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listaClubes = new VistaGrilla("Clubes");
+            listaClubes = new VistaGrilla("Clubes", _BD);
 
             listaClubes.ShowDialog();
 
             listaClubes.Dispose();
         }
     }
-    
+
 }

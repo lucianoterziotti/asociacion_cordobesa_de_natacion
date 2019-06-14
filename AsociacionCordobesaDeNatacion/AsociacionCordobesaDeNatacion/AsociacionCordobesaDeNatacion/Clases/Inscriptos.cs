@@ -10,6 +10,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 {
     class Inscriptos
     {
+        AccesoBD _BD;
         string _cod_torneo;
         string _anio;
         string _cod_especialidad;
@@ -17,6 +18,10 @@ namespace AsociacionCordobesaDeNatacion.Clases
         int _posicion;
         float _tiempo;
 
+        public Inscriptos(AccesoBD BD)
+        {
+            _BD = BD;
+        }
 
         public string anio
         {
@@ -49,7 +54,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
             set { this._tiempo = value; }
         }
 
-        AccesoBD _BD = new AccesoBD();
 
         public DataTable buscar_inscripcionXespecialidad()
         {
@@ -89,7 +93,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_esp_aux = Int32.Parse(this.cod_especialidad);
             int cod_torneo_aux = Int32.Parse(this.cod_torneo);
             int anio_aux = Int32.Parse(this.anio);
-                        
+
             string SqlInsert = @"INSERT INTO Inscriptos 
                          (cod_espe, cod_torneo, cod_nad, tiempo, posicion, anio ) VALUES (" +
                          cod_esp_aux + "," +
@@ -97,8 +101,8 @@ namespace AsociacionCordobesaDeNatacion.Clases
                           cod_nad_aux + "," +
                           tiempo + "," +
                           posicion + "," +
-                          anio_aux +")";
-                   MessageBox.Show(SqlInsert);
+                          anio_aux + ")";
+            MessageBox.Show(SqlInsert);
 
             this._BD.query(SqlInsert);
         }
@@ -111,35 +115,35 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_especialidad = Int32.Parse(this.cod_especialidad);
 
             string sqlDelete = @"DELETE FROM Inscriptos 
-                                 WHERE  cod_torneo =" + cod_torneo_aux+ " AND " +
+                                 WHERE  cod_torneo =" + cod_torneo_aux + " AND " +
                                "anio =" + anio_aux + " AND " +
                                 "cod_nad =" + cod_nadador_aux + " AND " +
-                                "cod_espe = " +cod_especialidad ;
+                                "cod_espe = " + cod_especialidad;
 
 
             this._BD.query(sqlDelete);
 
         }
 
-		public void modificar_Inscripto(string cod_nadador, string cod_especialidad, string cod_torneo, string anio)
-		{
-			int cod_nad_aux = Int32.Parse(this.cod_nadador);
-			int cod_esp_aux = Int32.Parse(this.cod_especialidad);
-			int cod_torneo_aux = Int32.Parse(this.cod_torneo);
-			int anio_aux = Int32.Parse(this.anio);
+        public void modificar_Inscripto(string cod_nadador, string cod_especialidad, string cod_torneo, string anio)
+        {
+            int cod_nad_aux = Int32.Parse(this.cod_nadador);
+            int cod_esp_aux = Int32.Parse(this.cod_especialidad);
+            int cod_torneo_aux = Int32.Parse(this.cod_torneo);
+            int anio_aux = Int32.Parse(this.anio);
 
-			string sqlUpdate = "UPDATE Inscriptos SET cod_torneo =" + cod_torneo_aux +
-								", anio =" + anio_aux +
-								", cod_espe =" + cod_esp_aux +
-								", cod_nad =" + cod_nad_aux +
-								" WHERE  cod_torneo =" + cod_torneo_aux + " AND " +
-							    "anio =" + anio_aux + " AND " +
-								"cod_nad =" + cod_nad_aux + " AND " +
-								"cod_espe = " + cod_esp_aux;
-			MessageBox.Show(sqlUpdate);
-			this._BD.query(sqlUpdate);
-			
-		}
+            string sqlUpdate = "UPDATE Inscriptos SET cod_torneo =" + cod_torneo_aux +
+                                ", anio =" + anio_aux +
+                                ", cod_espe =" + cod_esp_aux +
+                                ", cod_nad =" + cod_nad_aux +
+                                " WHERE  cod_torneo =" + cod_torneo_aux + " AND " +
+                                "anio =" + anio_aux + " AND " +
+                                "cod_nad =" + cod_nad_aux + " AND " +
+                                "cod_espe = " + cod_esp_aux;
+            MessageBox.Show(sqlUpdate);
+            this._BD.query(sqlUpdate);
+
+        }
 
         public float randomNumberMethod(Random random)
         {
@@ -155,7 +159,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         //    List<string> array = new List<string>();
         //    DataTable tabla = new DataTable();
         //    int puesto=0;
-            
+
         //    tabla = _BD.consulta("SELECT * FROM Inscriptos");
 
         //    int counter = tabla.Rows.Count;
@@ -173,5 +177,5 @@ namespace AsociacionCordobesaDeNatacion.Clases
         //}
     }
 
-    
+
 }

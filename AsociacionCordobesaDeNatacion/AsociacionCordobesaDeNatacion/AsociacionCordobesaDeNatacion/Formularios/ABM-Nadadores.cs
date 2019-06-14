@@ -11,33 +11,36 @@ using System.Windows.Forms;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ABM_Nadadores : Form
+    internal partial class ABM_Nadadores : Form
     {
-        public ABM_Nadadores()
+        Nadadores nadadores;
+        AccesoBD _BD;
+        public ABM_Nadadores(AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
+            nadadores = new Nadadores(BD);
         }
-        Nadadores nadadores = new Nadadores();
         VistaGrilla listaNadadores;
 
         private void btn_buscar_nad_Click(object sender, EventArgs e)
         {
-            
+
             if (this.txt_dni.Text == "")
             {
-                
+
                 MessageBox.Show("El nombre no está cargado");
-               
+
                 this.txt_dni.Focus();
-                
+
                 return;
             }
-           
-            
+
+
             DataTable tabla = new DataTable();
             nadadores.dni_nadador = txt_dni.Text;
             tabla = nadadores.buscar_nadador();
-            
+
             if (tabla.Rows.Count == 1)
             {
                 MessageBox.Show("El Nadador con DNI: " + this.txt_dni.Text + " su nombre es: "
@@ -49,7 +52,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 MessageBox.Show("No se encontro nadador con dni especificado");
             }
         }
- 
+
 
         private void blanquear_objetos()
         {
@@ -80,7 +83,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
@@ -100,7 +103,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -137,7 +140,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listaNadadores = new VistaGrilla("Nadadores");
+            listaNadadores = new VistaGrilla("Nadadores", _BD);
 
             listaNadadores.ShowDialog();
 

@@ -10,9 +10,15 @@ namespace AsociacionCordobesaDeNatacion.Clases
 {
     class Nadadores
     {
+        AccesoBD _BD;
         string _nombre_nadador;
         string _dni_nadador;
         string _calle_nadador;
+
+        public Nadadores(AccesoBD BD)
+        {
+            _BD = BD;
+        }
 
         public string nombre_nadador
         {
@@ -33,8 +39,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         }
 
-        AccesoBD _BD = new AccesoBD();
- 
+
 
         public DataTable buscar_nadador()
         {

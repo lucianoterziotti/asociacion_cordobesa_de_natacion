@@ -12,16 +12,18 @@ using AsociacionCordobesaDeNatacion.Clases;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ResultadoTorneos : Form
+    internal partial class ResultadoTorneos : Form
     {
-        AccesoBD _BD = new AccesoBD();
+        AccesoBD _BD ;
 
-        public ResultadoTorneos()
+        public ResultadoTorneos(AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
             cargarComboBoxAnios();
             cargarComboBoxEspecialidad();
             cargarComboBoxTorneos();
+            
         }
 
         private void cargar_grilla()

@@ -11,14 +11,17 @@ using System.Windows.Forms;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ABM_Especialidad : Form
+    internal partial class ABM_Especialidad : Form
     {
-        public ABM_Especialidad()
+        Especialidades especialidades;
+        AccesoBD _BD;
+        public ABM_Especialidad(AccesoBD BD)
         {
             InitializeComponent();
+            _BD = BD;
+            especialidades = new Especialidades(BD);
         }
 
-        Especialidades especialidades = new Especialidades();
         VistaGrilla listaEspecialidades;
 
         private void cmd_buscar01_Click(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 MessageBox.Show("Falta ingresar algun dato");
             }
-            
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -130,7 +133,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listaEspecialidades = new VistaGrilla("Especialidad");
+            listaEspecialidades = new VistaGrilla("Especialidad", _BD);
 
             listaEspecialidades.ShowDialog();
 

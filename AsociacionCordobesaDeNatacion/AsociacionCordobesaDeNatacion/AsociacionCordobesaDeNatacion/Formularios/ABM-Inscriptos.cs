@@ -12,48 +12,51 @@ using AsociacionCordobesaDeNatacion.Formularios;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
 {
-    public partial class ABM_Inscriptos : Form
+    internal partial class ABM_Inscriptos : Form
     {
-
-        AccesoBD _BD = new AccesoBD();
-        Inscriptos inscriptos = new Inscriptos();
-        Nadadores nadadores = new Nadadores();
-        Torneos torneos = new Torneos();
-        Especialidades especialidades = new Especialidades();
-        DataTable tabla = new DataTable();
+        AccesoBD _BD;
+        Inscriptos inscriptos;
+        Nadadores nadadores;
+        Torneos torneos;
+        Especialidades especialidades;
+        DataTable tabla;
         VistaGrilla listaInscriptos;
-
-
-        public ABM_Inscriptos()
+        public ABM_Inscriptos(AccesoBD BD)
         {
+            _BD = BD;
             InitializeComponent();
+            inscriptos = new Inscriptos(BD);
+            nadadores = new Nadadores(BD);
+            torneos = new Torneos(BD);
+            especialidades = new Especialidades(BD);
+            tabla = new DataTable();
             nuevo();
             cargarComboBoxEspecialidad();
             cargarComboBoxNadadores();
             cargarComboBoxTorneos();
             cargarComboBoxAnios();
             cargarTextBoxs();
-        }
 
+        }
 
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
 
             List<TextBox> array = crearArray();
-            
-            
-                if (Utils.FormValidator.validacionesDeTextosVacios(array))
-                {
-                    inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
-                    inscriptos.cod_torneo = this.txt_cod_torneo.Text;
-                    inscriptos.cod_nadador = this.txt_cod_nadador.Text;
-                    inscriptos.anio = this.cmb_anio.Text;
-                    inscriptos.grabar_inscripto();
-                }
-                else
-                {
-                    MessageBox.Show("Esta faltando seleccionar algun comboBox");
-                }
+
+
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
+                inscriptos.cod_torneo = this.txt_cod_torneo.Text;
+                inscriptos.cod_nadador = this.txt_cod_nadador.Text;
+                inscriptos.anio = this.cmb_anio.Text;
+                inscriptos.grabar_inscripto();
+            }
+            else
+            {
+                MessageBox.Show("Esta faltando seleccionar algun comboBox");
+            }
         }
 
         private void btn_IniciarTrans_Click(object sender, EventArgs e)
@@ -71,23 +74,23 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
-			List<TextBox> array = crearArray();
+            List<TextBox> array = crearArray();
 
 
-			if (Utils.FormValidator.validacionesDeTextosVacios(array))
-			{
-				inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
-				inscriptos.cod_torneo = this.txt_cod_torneo.Text;
-				inscriptos.cod_nadador = this.txt_cod_nadador.Text;
-				inscriptos.anio = this.txt_anio.Text;
-				inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text);
-				this.label5.Text = "En proceso";
-			}
-			else
-			{
-				MessageBox.Show("Esta faltando seleccionar algun comboBox");
-			}
-		}
+            if (Utils.FormValidator.validacionesDeTextosVacios(array))
+            {
+                inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
+                inscriptos.cod_torneo = this.txt_cod_torneo.Text;
+                inscriptos.cod_nadador = this.txt_cod_nadador.Text;
+                inscriptos.anio = this.txt_anio.Text;
+                inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text);
+                this.label5.Text = "En proceso";
+            }
+            else
+            {
+                MessageBox.Show("Esta faltando seleccionar algun comboBox");
+            }
+        }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -193,7 +196,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listaInscriptos = new VistaGrilla("Inscriptos");
+            listaInscriptos = new VistaGrilla("Inscriptos", _BD);
 
             listaInscriptos.ShowDialog();
 

@@ -13,6 +13,12 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _cod_torneo;
         string _descripcion_torneo;
         int _id;
+        AccesoBD _BD;
+
+        public Torneos(AccesoBD BD)
+        {
+            this._BD = BD;
+        }
 
         public int id
         {
@@ -32,7 +38,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
             set { _descripcion_torneo = value; }
         }
 
-        AccesoBD _BD = new AccesoBD();
 
         public DataTable buscar_torneo(string cod_torneo)
         {
@@ -57,7 +62,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             string SqlInsert = @" INSERT INTO torneos 
                          (cod_torneo, descripccion) VALUES (" +
                          cod_torneo_aux + ", '" +
-                         this._descripcion_torneo + "')" ;
+                         this._descripcion_torneo + "')";
             MessageBox.Show(SqlInsert);
 
             this._BD.query(SqlInsert);
@@ -69,7 +74,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             string sqlupdate = @"UPDATE Torneos 
                          SET cod_torneo = " + cod_torneo_aux + "," +
                          "descripccion ='" + this._descripcion_torneo + "'" +
-                         "WHERE cod_torneo ="+ cod_torneo_aux;
+                         "WHERE cod_torneo =" + cod_torneo_aux;
 
             this._BD.query(sqlupdate);
         }
