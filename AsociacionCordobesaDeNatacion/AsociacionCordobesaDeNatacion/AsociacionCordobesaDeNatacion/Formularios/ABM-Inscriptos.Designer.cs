@@ -440,7 +440,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.button1.TabIndex = 54;
             this.button1.Text = "Ver lista";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.mostrarGrilla);
             // 
             // cmb_anio
             // 

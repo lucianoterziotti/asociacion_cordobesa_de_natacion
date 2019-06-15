@@ -36,14 +36,12 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             cargarComboBoxTorneos();
             cargarComboBoxAnios();
             cargarTextBoxs();
-
         }
 
         private void cmd_grabar_Click(object sender, EventArgs e)
         {
 
             List<TextBox> array = crearArray();
-
 
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
@@ -52,6 +50,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 inscriptos.cod_nadador = this.txt_cod_nadador.Text;
                 inscriptos.anio = this.cmb_anio.Text;
                 inscriptos.grabar_inscripto();
+                this.mostrarGrilla(sender,e);
             }
             else
             {
@@ -98,11 +97,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             inscriptos.cod_torneo = this.txt_cod_torneo.Text;
             inscriptos.cod_nadador = this.txt_cod_nadador.Text;
             inscriptos.anio = this.txt_anio.Text;
-
             inscriptos.eliminar_Inscripto();
+            this.mostrarGrilla(sender, e);
 
-
-            this.label5.Text = "En proceso";
+            //this.label5.Text = "En proceso";
         }
 
         public float randomNumberMethod(Random random)
@@ -194,7 +192,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             txt_cod_torneo.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void mostrarGrilla(object sender, EventArgs e)
         {
             listaInscriptos = new VistaGrilla("Inscriptos", _BD);
 

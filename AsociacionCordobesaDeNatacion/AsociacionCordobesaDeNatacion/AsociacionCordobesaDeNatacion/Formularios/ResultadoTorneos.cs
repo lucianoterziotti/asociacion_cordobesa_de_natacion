@@ -23,7 +23,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             cargarComboBoxAnios();
             cargarComboBoxEspecialidad();
             cargarComboBoxTorneos();
-            
         }
 
         private void cargar_grilla()
@@ -32,9 +31,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
             tabla = _BD.consulta("SELECT n.nombre, i.tiempo FROM Nadadores n, Inscriptos i " +
                                  "WHERE i.cod_nad = n.cod_nacional " +
-                                 "AND i.anio = " + cmb_anio.SelectedValue.ToString() +
-                                 "AND i.cod_torneo = " + cmb_torneo.SelectedValue.ToString() +
-                                 "AND i.cod_espe = " + cmb_especialidad.SelectedValue.ToString() +
+                                 "AND i.anio = " + cmb_anio.SelectedValue +
+                                 "AND i.cod_torneo = " + cmb_torneo.SelectedValue +
+                                 "AND i.cod_espe = " + cmb_especialidad.SelectedValue +
                                  "ORDER BY i.tiempo");
 
             tabla.Columns.Add("Posición", typeof(int));
@@ -65,7 +64,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 cmb_torneo.DataSource = _BD.consulta("SELECT * FROM Torneos");
                 cmb_torneo.ValueMember = "cod_torneo";
                 cmb_torneo.DisplayMember = "descripccion";
-
             }
 
             public void cargarComboBoxAnios()

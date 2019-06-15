@@ -44,8 +44,8 @@ cod_torneo int NOT NULL FOREIGN KEY REFERENCES Torneos(cod_torneo),
 anio int NOT NULL,
 cod_espe int NOT NULL FOREIGN KEY REFERENCES Especialidad(cod_espec),
 cod_nad int NOT NULL FOREIGN KEY REFERENCES Nadadores(cod_nacional),
-posicion int,
-tiempo floar,
+posicion int NULL,
+tiempo float NULL,
 PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
 );
 
@@ -53,8 +53,14 @@ PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
 INSERT INTO Usuarios (nombre, password)
 VALUES ('belen', '1234');
 
-INSERT INTO Profesores (cod_prof, nombre, calle, numero, tipo_doc, nro_doc)
-VALUES ('22', 'Agus', 'BsAs', null, null, null);
+INSERT INTO Profesores (cod_prof, nombre, calle)
+VALUES ('22', 'Agus', 'BsAs', null, null, null)
 
 INSERT INTO Inscriptos(cod_torneo, anio, cod_espe, cod_nad, posicion, tiempo)
 VALUES ('5', '2019', '6', '1', null, null);
+
+INSERT INTO Nadadores(cod_nacional, nombre, calle)
+VALUES (5, '2019', '6');
+
+INSERT INTO Torneos(cod_torneo, descripccion)
+VALUES ('1', 'Torneo');

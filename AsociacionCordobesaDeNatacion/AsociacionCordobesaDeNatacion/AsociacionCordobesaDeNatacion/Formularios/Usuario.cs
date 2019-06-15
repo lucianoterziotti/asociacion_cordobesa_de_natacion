@@ -31,7 +31,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo");
+                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
             }
             
         }
@@ -47,7 +47,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch(Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo");
+                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
             }
             
         }
@@ -63,9 +63,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo");
+                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
             }
-            
+
         }
 
         private void btn_lourdes_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo");
+                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
             }
         }
     }
