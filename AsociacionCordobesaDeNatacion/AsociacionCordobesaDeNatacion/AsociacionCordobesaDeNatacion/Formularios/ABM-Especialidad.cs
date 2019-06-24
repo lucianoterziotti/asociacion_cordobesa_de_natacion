@@ -37,7 +37,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
 
             DataTable tabla = new DataTable();
-            especialidades.cod_esp = txt_cod_especialidad.Text;
+            especialidades.cod_especialidad = txt_cod_especialidad.Text;
             tabla = especialidades.buscar_especialidad();
 
             if (tabla.Rows.Count == 1)
@@ -57,7 +57,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             List<TextBox> array = crearArray();
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
-                especialidades.cod_esp = txt_cod_especialidad.Text;
+                especialidades.cod_especialidad = txt_cod_especialidad.Text;
                 especialidades.descripcion = txt_descripcion.Text;
                 this.especialidades.grabar_especialidad();
                 MessageBox.Show("La grabación fue correcta");
@@ -86,7 +86,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             List<TextBox> array = crearArray();
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
-                especialidades.cod_esp = txt_cod_especialidad.Text;
+                especialidades.cod_especialidad = txt_cod_especialidad.Text;
                 especialidades.descripcion = txt_descripcion.Text;
                 this.especialidades.modificar_especialidad();
                 MessageBox.Show("La modificacion fue correcta");
@@ -101,8 +101,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            especialidades.cod_esp = txt_cod_especialidad.Text;
-            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar la Especialidad con codigo:" + especialidades.cod_esp + " ?"
+            especialidades.cod_especialidad = txt_cod_especialidad.Text;
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar la Especialidad con codigo:" + especialidades.cod_especialidad + " ?"
                 , "importante", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

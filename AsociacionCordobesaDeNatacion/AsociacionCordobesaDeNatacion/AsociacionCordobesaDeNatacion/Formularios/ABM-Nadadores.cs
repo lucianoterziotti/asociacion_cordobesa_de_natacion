@@ -38,7 +38,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
 
             DataTable tabla = new DataTable();
-            nadadores.dni_nadador = txt_dni.Text;
+            nadadores.cod_nadador = txt_dni.Text;
             tabla = nadadores.buscar_nadador();
 
             if (tabla.Rows.Count == 1)
@@ -73,7 +73,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
                 nadadores.calle_nadador = this.txt_calle.Text;
-                nadadores.dni_nadador = this.txt_dni.Text;
+                nadadores.cod_nadador = this.txt_dni.Text;
                 nadadores.nombre_nadador = this.txt_nombre_nadador.Text;
                 this.nadadores.grabar_nadador();
                 MessageBox.Show("La grabacion fue correcta");
@@ -92,7 +92,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             List<TextBox> array = crearArray();
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
-                nadadores.dni_nadador = txt_dni.Text;
+                nadadores.cod_nadador = txt_dni.Text;
                 nadadores.nombre_nadador = txt_nombre_nadador.Text;
                 nadadores.calle_nadador = txt_calle.Text;
                 this.nadadores.modificar_nadador();
@@ -108,8 +108,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            nadadores.dni_nadador = txt_dni.Text;
-            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el nadador de DNI:" + nadadores.dni_nadador + " ?"
+            nadadores.cod_nadador = txt_dni.Text;
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el nadador de DNI:" + nadadores.cod_nadador + " ?"
                 , "importante", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

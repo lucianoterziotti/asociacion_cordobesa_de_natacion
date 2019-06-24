@@ -59,7 +59,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 clubes.calle_club = this.txt_calle.Text;
                 clubes.cod_club = this.txt_cod_club.Text;
-                clubes.numero_club = this.txt_numero.Text;
                 clubes.nombre_club = this.txt_nombre_club.Text;
                 this.clubes.grabar_club();
                 MessageBox.Show("La grabación fue correcta");
@@ -78,7 +77,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 clubes.calle_club = this.txt_calle.Text;
                 clubes.cod_club = this.txt_cod_club.Text;
-                clubes.numero_club = this.txt_numero.Text;
                 clubes.nombre_club = this.txt_nombre_club.Text;
                 this.clubes.modificar_club(this.txt_cod_club.Text);
                 MessageBox.Show("La modificacion fue correcta");
@@ -96,7 +94,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.txt_calle.Text = "";
             this.txt_cod_club.Text = "";
             this.txt_nombre_club.Text = "";
-            this.txt_numero.Text = "";
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -137,7 +134,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             List<TextBox> array = new List<TextBox>();
             array.Add(this.txt_calle);
             array.Add(this.txt_cod_club);
-            array.Add(this.txt_numero);
             array.Add(this.txt_nombre_club);
 
             return array;

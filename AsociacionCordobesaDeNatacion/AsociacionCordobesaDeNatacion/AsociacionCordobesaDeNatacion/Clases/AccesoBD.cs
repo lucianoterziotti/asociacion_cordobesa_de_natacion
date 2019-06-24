@@ -22,7 +22,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         public enum resultado_acceso { error, correcto }
 		public enum tipo_conexion { simple, transaccion }
 
-        OleDbConnection conexion = new OleDbConnection();
+        public OleDbConnection conexion = new OleDbConnection();
 		OleDbCommand cmd = new OleDbCommand();
 
 
@@ -124,7 +124,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 			throw new NotImplementedException();
 		}
 
-		private void conectar()
+		public void conectar()
 		{
             conexion.ConnectionString = cadena_conexion_definitiva;
             conexion.Open();
@@ -132,7 +132,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
 			cmd.CommandType = CommandType.Text;
 		}
 
-		private void cerrar()
+		public void cerrar()
 		{
 			conexion.Close();
 		}

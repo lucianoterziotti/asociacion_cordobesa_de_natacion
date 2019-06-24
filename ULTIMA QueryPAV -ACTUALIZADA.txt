@@ -5,56 +5,57 @@ PRIMARY KEY (nombre)
 );
 
 CREATE TABLE Especialidad(
-cod_espec int NOT NULL,
+cod_especialidad int NOT NULL,
 descripcion varchar(255),
-tiempo_record time,
-PRIMARY KEY (cod_espec)
+PRIMARY KEY (cod_especialidad)
 );
+
 CREATE TABLE Clubes(
 cod_club int NOT NULL,
 nombre varchar(255),
 calle varchar(255),
-numero int,
 PRIMARY KEY (cod_club)
 );
 
 CREATE TABLE Torneos(
 cod_torneo int NOT NULL,
-descripccion varchar(255),
+descripcion varchar(255),
 PRIMARY KEY(cod_torneo)
 );
 
 CREATE TABLE Profesores (
-    cod_prof int NOT NULL,
+    cod_profesor int NOT NULL,
     nombre varchar(255),
     calle varchar(255),
-	numero varchar(255),
-PRIMARY KEY(cod_prof)
+PRIMARY KEY(cod_profesor)
 );
 
 CREATE TABLE Nadadores (
-    cod_nacional int NOT NULL,
+    cod_nadador int NOT NULL,
     nombre varchar(255),
     calle varchar(255),
-PRIMARY KEY(cod_nacional)
+PRIMARY KEY(cod_nadador)
 );
 
 CREATE TABLE Inscriptos(
 cod_torneo int NOT NULL FOREIGN KEY REFERENCES Torneos(cod_torneo),
 anio int NOT NULL,
-cod_espe int NOT NULL FOREIGN KEY REFERENCES Especialidad(cod_espec),
-cod_nad int NOT NULL FOREIGN KEY REFERENCES Nadadores(cod_nacional),
-posicion int NULL,
+cod_especialidad int NOT NULL FOREIGN KEY REFERENCES Especialidad(cod_especialidad),
+cod_nadador int NOT NULL FOREIGN KEY REFERENCES Nadadores(cod_nadador),
 tiempo float NULL,
-PRIMARY KEY(cod_torneo,anio,cod_espe,cod_nad)
+PRIMARY KEY(cod_torneo,anio,cod_especialidad,cod_nadador)
 );
 
+CREATE TABLE anioTorneo (
+ anio int NOT NULL,
+PRIMARY KEY(anio)
+);
 
 INSERT INTO Usuarios (nombre, password)
-VALUES ('belen', '1234');
+VALUES ('mati', '1234');
 
 INSERT INTO Profesores (cod_prof, nombre, calle)
-VALUES ('22', 'Agus', 'BsAs', null, null, null)
+VALUES ('22', 'Agus', 'BsAs')
 
 INSERT INTO Inscriptos(cod_torneo, anio, cod_espe, cod_nad, posicion, tiempo)
 VALUES ('5', '2019', '6', '1', null, null);

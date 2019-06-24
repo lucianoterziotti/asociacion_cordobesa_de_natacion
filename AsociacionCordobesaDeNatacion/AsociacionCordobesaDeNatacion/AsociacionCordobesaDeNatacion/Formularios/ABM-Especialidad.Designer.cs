@@ -33,15 +33,13 @@
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.txt_cod_especialidad = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_tiempoRecord = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmd_nuevo = new System.Windows.Forms.Button();
             this.cmd_grabar = new System.Windows.Forms.Button();
             this.cmd_actualizar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +47,7 @@
             // 
             this.cmd_buscar01.BackColor = System.Drawing.Color.White;
             this.cmd_buscar01.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmd_buscar01.Location = new System.Drawing.Point(180, 61);
+            this.cmd_buscar01.Location = new System.Drawing.Point(126, 73);
             this.cmd_buscar01.Name = "cmd_buscar01";
             this.cmd_buscar01.Size = new System.Drawing.Size(69, 26);
             this.cmd_buscar01.TabIndex = 34;
@@ -61,7 +59,7 @@
             // 
             this.txt_descripcion.BackColor = System.Drawing.Color.White;
             this.txt_descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descripcion.Location = new System.Drawing.Point(118, 112);
+            this.txt_descripcion.Location = new System.Drawing.Point(64, 124);
             this.txt_descripcion.MaxLength = 50;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(161, 26);
@@ -71,7 +69,7 @@
             // 
             this.txt_cod_especialidad.BackColor = System.Drawing.Color.White;
             this.txt_cod_especialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_especialidad.Location = new System.Drawing.Point(118, 61);
+            this.txt_cod_especialidad.Location = new System.Drawing.Point(64, 73);
             this.txt_cod_especialidad.Name = "txt_cod_especialidad";
             this.txt_cod_especialidad.Size = new System.Drawing.Size(56, 26);
             this.txt_cod_especialidad.TabIndex = 32;
@@ -83,9 +81,7 @@
             this.groupBox1.Controls.Add(this.txt_descripcion);
             this.groupBox1.Controls.Add(this.cmd_buscar01);
             this.groupBox1.Controls.Add(this.txt_cod_especialidad);
-            this.groupBox1.Controls.Add(this.txt_tiempoRecord);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -96,41 +92,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ESPECIALIDAD";
             // 
-            // txt_tiempoRecord
+            // button1
             // 
-            this.txt_tiempoRecord.BackColor = System.Drawing.Color.White;
-            this.txt_tiempoRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tiempoRecord.Location = new System.Drawing.Point(118, 164);
-            this.txt_tiempoRecord.MaxLength = 50;
-            this.txt_tiempoRecord.Name = "txt_tiempoRecord";
-            this.txt_tiempoRecord.Size = new System.Drawing.Size(86, 26);
-            this.txt_tiempoRecord.TabIndex = 33;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(256, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "Ver lista";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(114, 39);
+            this.label2.Location = new System.Drawing.Point(60, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 17;
             this.label2.Text = "Código";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 19);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Tiempo Récord";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(114, 90);
+            this.label3.Location = new System.Drawing.Point(60, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 19);
             this.label3.TabIndex = 23;
@@ -185,18 +173,6 @@
             this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(256, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 26);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Ver lista";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ABM_Especialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,8 +203,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_tiempoRecord;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmd_nuevo;
         private System.Windows.Forms.Button cmd_grabar;
         private System.Windows.Forms.Button cmd_actualizar;

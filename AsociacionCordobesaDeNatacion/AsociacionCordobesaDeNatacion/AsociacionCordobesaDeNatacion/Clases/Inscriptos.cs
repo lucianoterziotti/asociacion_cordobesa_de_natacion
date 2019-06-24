@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _anio;
         string _cod_especialidad;
         string _cod_nadador;
-        int _posicion;
-        float _tiempo;
+        double _tiempo;
 
         public Inscriptos(AccesoBD BD)
         {
@@ -43,23 +43,18 @@ namespace AsociacionCordobesaDeNatacion.Clases
             get { return this._cod_torneo; }
             set { this._cod_torneo = value; }
         }
-        public int posicion
-        {
-            get { return this._posicion; }
-            set { this._posicion = value; }
-        }
-        public float tiempo
+
+        public double tiempo
         {
             get { return this._tiempo; }
             set { this._tiempo = value; }
         }
 
-
         public DataTable buscar_inscripcionXespecialidad()
         {
             int cod_espe_aux = Int32.Parse(this.cod_especialidad);
             string sqltxt = @"SELECT * FROM Inscriptos 
-                             WHERE cod_espe =" + cod_espe_aux;
+                             WHERE cod_especialidad =" + cod_espe_aux;
 
             return _BD.consulta(sqltxt);
         }
@@ -77,34 +72,32 @@ namespace AsociacionCordobesaDeNatacion.Clases
         {
             int cod_nadador_aux = Int32.Parse(this.cod_nadador);
             string sqltxt = @"SELECT * FROM Inscriptos 
-                             WHERE cod_nad =" + cod_nadador_aux;
+                             WHERE cod_nadador =" + cod_nadador_aux;
 
             return _BD.consulta(sqltxt);
         }
 
-
         public void grabar_inscripto()
+
         {
-
-            Random random = new Random();
-            this.tiempo = randomNumberMethod(random);
-
+            double tiempo_aux = this.tiempo;
             int cod_nad_aux = Int32.Parse(this.cod_nadador);
             int cod_esp_aux = Int32.Parse(this.cod_especialidad);
             int cod_torneo_aux = Int32.Parse(this.cod_torneo);
             int anio_aux = Int32.Parse(this.anio);
 
             string SqlInsert = @"INSERT INTO Inscriptos 
-                         (cod_espe, cod_torneo, cod_nad, tiempo, posicion, anio ) VALUES (" +
+                         (cod_especialidad, cod_torneo, cod_nadador,tiempo, anio) VALUES (" +
                          cod_esp_aux + "," +
                          cod_torneo_aux + "," +
-                          cod_nad_aux + "," +
-                          tiempo + "," +
-                          posicion + "," +
-                          anio_aux + ")";
+                         cod_nad_aux + ", '" +
+                         tiempo_aux + "', " +
+                         anio_aux +
+                         ")";
+            string SqlInsert1 = @"INSERT INTO Inscriptos(tiempo) VALUES ('"+ tiempo_aux + "')";
             MessageBox.Show(SqlInsert);
-
             this._BD.query(SqlInsert);
+
         }
 
         public void eliminar_Inscripto()
@@ -116,9 +109,9 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
             string sqlDelete = @"DELETE FROM Inscriptos 
                                  WHERE  cod_torneo =" + cod_torneo_aux + " AND " +
-                               "anio =" + anio_aux + " AND " +
-                                "cod_nad =" + cod_nadador_aux + " AND " +
-                                "cod_espe = " + cod_especialidad;
+                                "anio =" + anio_aux + " AND " +
+                                "cod_nadador =" + cod_nadador_aux + " AND " +
+                                "cod_especialidad = " + cod_especialidad;
 
 
             this._BD.query(sqlDelete);
@@ -131,28 +124,25 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_esp_aux = Int32.Parse(this.cod_especialidad);
             int cod_torneo_aux = Int32.Parse(this.cod_torneo);
             int anio_aux = Int32.Parse(this.anio);
+            double tiempo_aux = this.tiempo;
 
             string sqlUpdate = "UPDATE Inscriptos SET cod_torneo =" + cod_torneo_aux +
                                 ", anio =" + anio_aux +
-                                ", cod_espe =" + cod_esp_aux +
-                                ", cod_nad =" + cod_nad_aux +
+                                ", cod_especialidad =" + cod_esp_aux +
+                                ", cod_nadador =" + cod_nad_aux +
+                                ", tiempo = '" + tiempo_aux + "'" +
                                 " WHERE  cod_torneo =" + cod_torneo_aux + " AND " +
                                 "anio =" + anio_aux + " AND " +
-                                "cod_nad =" + cod_nad_aux + " AND " +
-                                "cod_espe = " + cod_esp_aux;
+                                "cod_nadador =" + cod_nad_aux + " AND " +
+                                "cod_especialidad = " + cod_esp_aux + " AND " +
+                                "tiempo = '" + tiempo_aux + "'";
+
             MessageBox.Show(sqlUpdate);
             this._BD.query(sqlUpdate);
 
         }
 
-        public float randomNumberMethod(Random random)
-        {
-            double a = 22;
-            double b = 30;
-            double numero = a + random.NextDouble() * (b - a);
 
-            return (float)(numero);
-        }
 
         //private int setearPuesto()
         //{
@@ -175,7 +165,8 @@ namespace AsociacionCordobesaDeNatacion.Clases
         //    }
         //    return ;
         //}
+    //}
+
+
     }
-
-
 }

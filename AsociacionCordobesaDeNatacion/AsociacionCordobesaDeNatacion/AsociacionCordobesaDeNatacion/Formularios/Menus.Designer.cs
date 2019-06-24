@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_rtorneos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(37, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 20);
@@ -157,7 +159,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(100, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 19);
@@ -168,7 +170,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(297, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 19);
@@ -179,7 +181,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(497, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 19);
@@ -188,7 +190,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.btn_rtorneos);
             this.groupBox1.Controls.Add(this.btn_resultados);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btn_clubes);
@@ -200,19 +204,45 @@
             this.groupBox1.Controls.Add(this.btn_inscriptos);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(26, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(762, 414);
+            this.groupBox1.Size = new System.Drawing.Size(1020, 414);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MENU PRINCIPAL";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(703, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 19);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "REPORTES";
+            // 
+            // btn_rtorneos
+            // 
+            this.btn_rtorneos.BackColor = System.Drawing.Color.White;
+            this.btn_rtorneos.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rtorneos.ForeColor = System.Drawing.Color.Black;
+            this.btn_rtorneos.Location = new System.Drawing.Point(707, 127);
+            this.btn_rtorneos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_rtorneos.Name = "btn_rtorneos";
+            this.btn_rtorneos.Size = new System.Drawing.Size(162, 44);
+            this.btn_rtorneos.TabIndex = 7;
+            this.btn_rtorneos.Text = "TORNEOS";
+            this.btn_rtorneos.UseVisualStyleBackColor = false;
+            this.btn_rtorneos.Click += new System.EventHandler(this.btn_rtorneos_Click);
             // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 482);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(1127, 472);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -241,5 +271,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn_rtorneos;
     }
 }

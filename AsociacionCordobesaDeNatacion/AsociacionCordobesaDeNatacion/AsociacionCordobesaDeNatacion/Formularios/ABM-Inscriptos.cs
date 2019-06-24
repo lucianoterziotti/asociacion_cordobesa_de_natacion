@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 using AsociacionCordobesaDeNatacion.Formularios;
 
 namespace AsociacionCordobesaDeNatacion.Formularios
@@ -48,7 +49,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 inscriptos.cod_especialidad = this.txt_cod_especialidad.Text;
                 inscriptos.cod_torneo = this.txt_cod_torneo.Text;
                 inscriptos.cod_nadador = this.txt_cod_nadador.Text;
-                inscriptos.anio = this.cmb_anio.Text;
+                inscriptos.anio = this.txt_anio.Text;
+                inscriptos.tiempo = double.Parse(this.txt_tiempo.Text, CultureInfo.InvariantCulture.NumberFormat);
                 inscriptos.grabar_inscripto();
                 this.mostrarGrilla(sender,e);
             }
@@ -82,7 +84,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 inscriptos.cod_torneo = this.txt_cod_torneo.Text;
                 inscriptos.cod_nadador = this.txt_cod_nadador.Text;
                 inscriptos.anio = this.txt_anio.Text;
-                inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text);
+                //inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text, this.txt_tiempo.Text);
                 this.label5.Text = "En proceso";
             }
             else
@@ -124,7 +126,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         public void cargarComboBoxEspecialidad()
         {
             cmb_especialidad.DataSource = _BD.consulta("SELECT * FROM Especialidad");
-            cmb_especialidad.ValueMember = "cod_espec";
+            cmb_especialidad.ValueMember = "cod_especialidad";
             cmb_especialidad.DisplayMember = "descripcion";
         }
 
@@ -132,14 +134,14 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             cmb_torneo.DataSource = _BD.consulta("SELECT * FROM Torneos");
             cmb_torneo.ValueMember = "cod_torneo";
-            cmb_torneo.DisplayMember = "descripccion";
+            cmb_torneo.DisplayMember = "descripcion";
 
         }
 
         public void cargarComboBoxNadadores()
         {
             cmb_nadadores.DataSource = _BD.consulta("SELECT * FROM Nadadores");
-            cmb_nadadores.ValueMember = "cod_nacional";
+            cmb_nadadores.ValueMember = "cod_nadador";
             cmb_nadadores.DisplayMember = "nombre";
         }
 

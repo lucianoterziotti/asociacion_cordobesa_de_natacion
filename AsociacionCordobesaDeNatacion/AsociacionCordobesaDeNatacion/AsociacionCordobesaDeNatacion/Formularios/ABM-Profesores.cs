@@ -36,7 +36,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
 
             DataTable tabla = new DataTable();
-            profesores.dni_profesor = this.txt_dni.Text;
+            profesores.cod_profesor = this.txt_dni.Text;
             tabla = profesores.buscar_prof();
 
             if (tabla.Rows.Count == 1)
@@ -71,7 +71,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
                 profesores.calle_profesor = this.txt_calle.Text;
-                profesores.dni_profesor = this.txt_dni.Text;
+                profesores.cod_profesor = this.txt_dni.Text;
                 profesores.nombre_profesor = this.txt_nombre_profesor.Text;
                 this.profesores.grabar_profesor();
                 MessageBox.Show("La grabacion fue correcta");
@@ -90,7 +90,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             if (Utils.FormValidator.validacionesDeTextosVacios(array))
             {
                 profesores.calle_profesor = this.txt_calle.Text;
-                profesores.dni_profesor = this.txt_dni.Text;
+                profesores.cod_profesor = this.txt_dni.Text;
                 profesores.nombre_profesor = this.txt_nombre_profesor.Text;
                 this.profesores.modificar_profesor();
                 MessageBox.Show("La modificacion fue correcta");
@@ -105,8 +105,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            profesores.dni_profesor = txt_dni.Text;
-            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el profesor con DNI:" + profesores.dni_profesor + " ?"
+            profesores.cod_profesor = txt_dni.Text;
+            DialogResult dialogResult = MessageBox.Show("Está seguro que desea eliminar el profesor con DNI:" + profesores.cod_profesor + " ?"
                 , "importante", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

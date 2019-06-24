@@ -39,11 +39,11 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(566, 343);
+            this.button1.Location = new System.Drawing.Point(559, 348);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 63);
+            this.button1.Size = new System.Drawing.Size(250, 54);
             this.button1.TabIndex = 0;
             this.button1.Text = "COMENZAR";
             this.button1.UseVisualStyleBackColor = false;

@@ -12,7 +12,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
     {
         AccesoBD _BD;
         string _nombre_nadador;
-        string _dni_nadador;
+        string _cod_nadador;
         string _calle_nadador;
 
         public Nadadores(AccesoBD BD)
@@ -25,10 +25,10 @@ namespace AsociacionCordobesaDeNatacion.Clases
             get { return _nombre_nadador; }
             set { _nombre_nadador = value; }
         }
-        public string dni_nadador
+        public string cod_nadador
         {
-            get { return _dni_nadador; }
-            set { _dni_nadador = value; }
+            get { return _cod_nadador; }
+            set { _cod_nadador = value; }
 
         }
 
@@ -43,19 +43,19 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         public DataTable buscar_nadador()
         {
-            int dni_nadador_aux = Int32.Parse(_dni_nadador);
+            int cod_nadador_aux = Int32.Parse(_cod_nadador);
             string sqltxt = @"SELECT * FROM nadadores 
-                             WHERE cod_nacional =" + dni_nadador;
+                             WHERE cod_nadador =" + cod_nadador;
 
             return _BD.consulta(sqltxt);
         }
 
         public void grabar_nadador()
         {
-            int dni_nadador_aux = Int32.Parse(dni_nadador);
+            int cod_nadador_aux = Int32.Parse(cod_nadador);
             string SqlInsert = @" INSERT INTO Nadadores 
-                         (cod_nacional, nombre, calle) VALUES (" +
-                         dni_nadador_aux + ", '" +
+                         (cod_nadador, nombre, calle) VALUES (" +
+                         cod_nadador_aux + ", '" +
                          this.nombre_nadador + "', '" +
                          this.calle_nadador + "')";
             MessageBox.Show(SqlInsert);
@@ -65,19 +65,19 @@ namespace AsociacionCordobesaDeNatacion.Clases
 
         public void modificar_nadador()
         {
-            int dni_nadador_aux = Int32.Parse(dni_nadador);
+            int cod_nadador_aux = Int32.Parse(cod_nadador);
             string sqlupdate = @"UPDATE Nadadores 
-                         SET cod_nacional =" + dni_nadador_aux + "," +
+                         SET cod_nadador =" + cod_nadador_aux + "," +
                          "nombre ='" + this.nombre_nadador + "'," +
                          "calle ='" + this.calle_nadador + "'" +
-                         "WHERE cod_nacional =" + dni_nadador_aux;
+                         "WHERE cod_nadador =" + cod_nadador_aux;
 
             this._BD.query(sqlupdate);
         }
         public void eliminar_nadador()
         {
-            int dni_nadador_aux = Int32.Parse(dni_nadador);
-            string sqlDelete = @"DELETE FROM nadadores WHERE cod_nacional =" + dni_nadador_aux;
+            int cod_nadador_aux = Int32.Parse(cod_nadador);
+            string sqlDelete = @"DELETE FROM nadadores WHERE cod_nadador =" + cod_nadador_aux;
 
             this._BD.query(sqlDelete);
 

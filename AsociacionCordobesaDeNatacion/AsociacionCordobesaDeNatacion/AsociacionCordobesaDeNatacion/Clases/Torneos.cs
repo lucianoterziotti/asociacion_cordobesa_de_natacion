@@ -60,7 +60,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         {
             int cod_torneo_aux = Int32.Parse(cod_torneo);
             string SqlInsert = @" INSERT INTO torneos 
-                         (cod_torneo, descripccion) VALUES (" +
+                         (cod_torneo, descripcion) VALUES (" +
                          cod_torneo_aux + ", '" +
                          this._descripcion_torneo + "')";
             MessageBox.Show(SqlInsert);
@@ -73,7 +73,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
             int cod_torneo_aux = Int32.Parse(cod_torneo);
             string sqlupdate = @"UPDATE Torneos 
                          SET cod_torneo = " + cod_torneo_aux + "," +
-                         "descripccion ='" + this._descripcion_torneo + "'" +
+                         "descripcion ='" + this._descripcion_torneo + "'" +
                          "WHERE cod_torneo =" + cod_torneo_aux;
 
             this._BD.query(sqlupdate);

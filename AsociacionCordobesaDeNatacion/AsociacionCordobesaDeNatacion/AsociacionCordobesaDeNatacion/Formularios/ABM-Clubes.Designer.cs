@@ -35,8 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_numero = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txt_calle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -111,37 +109,15 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_numero);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt_calle);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(40, 139);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 97);
+            this.groupBox2.Size = new System.Drawing.Size(232, 97);
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Domicilio";
-            // 
-            // txt_numero
-            // 
-            this.txt_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_numero.Location = new System.Drawing.Point(282, 40);
-            this.txt_numero.MaxLength = 50;
-            this.txt_numero.Name = "txt_numero";
-            this.txt_numero.Size = new System.Drawing.Size(43, 26);
-            this.txt_numero.TabIndex = 14;
-            this.txt_numero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numero_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(225, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Número";
             // 
             // txt_calle
             // 
@@ -264,8 +240,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_numero;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_calle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_buscar;

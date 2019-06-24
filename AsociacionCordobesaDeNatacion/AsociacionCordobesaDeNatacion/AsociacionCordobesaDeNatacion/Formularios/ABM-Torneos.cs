@@ -41,7 +41,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             if (tabla.Rows.Count == 1)
             {
                 MessageBox.Show("El torneo con codigo: " + this.txt_cod_torneo.Text + " tiene la siguiente descripcion: "
-                    + tabla.Rows[0]["descripccion"].ToString());
+                    + tabla.Rows[0]["descripcion"].ToString());
 
             }
             else

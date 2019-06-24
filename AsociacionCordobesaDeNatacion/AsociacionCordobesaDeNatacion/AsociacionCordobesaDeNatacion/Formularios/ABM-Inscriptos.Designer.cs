@@ -33,15 +33,21 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABM_Inscriptos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txt_tiempo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmb_anio = new System.Windows.Forms.ComboBox();
             this.txt_anio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.cmd_grabar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmb_torneo = new System.Windows.Forms.ComboBox();
+            this.txt_cod_torneo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmd_actualizar = new System.Windows.Forms.Button();
-            this.cmd_nuevo = new System.Windows.Forms.Button();
             this.btn_FinalizarTrans = new System.Windows.Forms.Button();
             this.btn_IniciarTrans = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -52,10 +58,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.cmb_nadadores = new System.Windows.Forms.ComboBox();
             this.txt_cod_nadador = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmb_torneo = new System.Windows.Forms.ComboBox();
-            this.txt_cod_torneo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.cmd_grabar = new System.Windows.Forms.Button();
+            this.cmd_actualizar = new System.Windows.Forms.Button();
+            this.cmd_nuevo = new System.Windows.Forms.Button();
             this.especialidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.nadadoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.torneosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -78,14 +84,12 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inscriptosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.inscriptosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.cmb_anio = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource2)).BeginInit();
@@ -108,6 +112,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label7);
@@ -120,10 +125,54 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(47, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(929, 459);
+            this.groupBox1.Size = new System.Drawing.Size(929, 554);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INCRIPCIÓN";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txt_tiempo);
+            this.groupBox6.Controls.Add(this.label4);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(253, 436);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(333, 105);
+            this.groupBox6.TabIndex = 56;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Tiempo";
+            // 
+            // txt_tiempo
+            // 
+            this.txt_tiempo.BackColor = System.Drawing.Color.White;
+            this.txt_tiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tiempo.Location = new System.Drawing.Point(112, 68);
+            this.txt_tiempo.Name = "txt_tiempo";
+            this.txt_tiempo.Size = new System.Drawing.Size(114, 26);
+            this.txt_tiempo.TabIndex = 12;
+            this.txt_tiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(54, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(242, 19);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "SS.DDD (SEGUNDOSpuntoDECIMAS)";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(511, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Ver lista";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.mostrarGrilla);
             // 
             // groupBox3
             // 
@@ -138,6 +187,25 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox3.TabIndex = 34;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Año";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 19);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Año";
+            // 
+            // cmb_anio
+            // 
+            this.cmb_anio.FormattingEnabled = true;
+            this.cmb_anio.Location = new System.Drawing.Point(71, 111);
+            this.cmb_anio.Name = "cmb_anio";
+            this.cmb_anio.Size = new System.Drawing.Size(126, 28);
+            this.cmb_anio.TabIndex = 51;
+            this.cmb_anio.SelectedIndexChanged += new System.EventHandler(this.cmb_anio_SelectedIndexChanged);
             // 
             // txt_anio
             // 
@@ -170,29 +238,49 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label7.Text = "TRANSACCIÓN:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btn_eliminar
+            // groupBox2
             // 
-            this.btn_eliminar.BackColor = System.Drawing.Color.White;
-            this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
-            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar.Location = new System.Drawing.Point(957, 198);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
-            this.btn_eliminar.TabIndex = 45;
-            this.btn_eliminar.UseVisualStyleBackColor = false;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            this.groupBox2.Controls.Add(this.cmb_torneo);
+            this.groupBox2.Controls.Add(this.txt_cod_torneo);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(448, 65);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(415, 163);
+            this.groupBox2.TabIndex = 30;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Torneo";
             // 
-            // cmd_grabar
+            // cmb_torneo
             // 
-            this.cmd_grabar.BackColor = System.Drawing.Color.White;
-            this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
-            this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_grabar.Location = new System.Drawing.Point(957, 116);
-            this.cmd_grabar.Name = "cmd_grabar";
-            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
-            this.cmd_grabar.TabIndex = 43;
-            this.cmd_grabar.UseVisualStyleBackColor = false;
-            this.cmd_grabar.Click += new System.EventHandler(this.cmd_grabar_Click);
+            this.cmb_torneo.FormattingEnabled = true;
+            this.cmb_torneo.Location = new System.Drawing.Point(71, 111);
+            this.cmb_torneo.Name = "cmb_torneo";
+            this.cmb_torneo.Size = new System.Drawing.Size(232, 28);
+            this.cmb_torneo.TabIndex = 33;
+            this.cmb_torneo.SelectedIndexChanged += new System.EventHandler(this.cmb_torneo_SelectedIndexChanged);
+            // 
+            // txt_cod_torneo
+            // 
+            this.txt_cod_torneo.BackColor = System.Drawing.Color.White;
+            this.txt_cod_torneo.Enabled = false;
+            this.txt_cod_torneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cod_torneo.Location = new System.Drawing.Point(71, 61);
+            this.txt_cod_torneo.MaxLength = 10;
+            this.txt_cod_torneo.Name = "txt_cod_torneo";
+            this.txt_cod_torneo.Size = new System.Drawing.Size(56, 26);
+            this.txt_cod_torneo.TabIndex = 31;
+            this.txt_cod_torneo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(67, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 19);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Código";
             // 
             // label5
             // 
@@ -206,31 +294,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label5.TabIndex = 50;
             this.label5.Text = "Sin iniciar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmd_actualizar
-            // 
-            this.cmd_actualizar.BackColor = System.Drawing.Color.White;
-            this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
-            this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_actualizar.Location = new System.Drawing.Point(957, 157);
-            this.cmd_actualizar.Name = "cmd_actualizar";
-            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
-            this.cmd_actualizar.TabIndex = 44;
-            this.cmd_actualizar.UseVisualStyleBackColor = false;
-            this.cmd_actualizar.Click += new System.EventHandler(this.cmd_actualizar_Click);
-            // 
-            // cmd_nuevo
-            // 
-            this.cmd_nuevo.BackColor = System.Drawing.Color.White;
-            this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__2_;
-            this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmd_nuevo.Location = new System.Drawing.Point(957, 75);
-            this.cmd_nuevo.Name = "cmd_nuevo";
-            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
-            this.cmd_nuevo.TabIndex = 42;
-            this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
-            this.cmd_nuevo.UseVisualStyleBackColor = false;
-            this.cmd_nuevo.Click += new System.EventHandler(this.cmd_nuevo_Click);
             // 
             // btn_FinalizarTrans
             // 
@@ -342,49 +405,54 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label8.TabIndex = 17;
             this.label8.Text = "DNI";
             // 
-            // groupBox2
+            // btn_eliminar
             // 
-            this.groupBox2.Controls.Add(this.cmb_torneo);
-            this.groupBox2.Controls.Add(this.txt_cod_torneo);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(448, 65);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(415, 163);
-            this.groupBox2.TabIndex = 30;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Torneo";
+            this.btn_eliminar.BackColor = System.Drawing.Color.White;
+            this.btn_eliminar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.basket;
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Location = new System.Drawing.Point(957, 198);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(38, 35);
+            this.btn_eliminar.TabIndex = 45;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
-            // cmb_torneo
+            // cmd_grabar
             // 
-            this.cmb_torneo.FormattingEnabled = true;
-            this.cmb_torneo.Location = new System.Drawing.Point(71, 111);
-            this.cmb_torneo.Name = "cmb_torneo";
-            this.cmb_torneo.Size = new System.Drawing.Size(232, 28);
-            this.cmb_torneo.TabIndex = 33;
-            this.cmb_torneo.SelectedIndexChanged += new System.EventHandler(this.cmb_torneo_SelectedIndexChanged);
+            this.cmd_grabar.BackColor = System.Drawing.Color.White;
+            this.cmd_grabar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive;
+            this.cmd_grabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_grabar.Location = new System.Drawing.Point(957, 116);
+            this.cmd_grabar.Name = "cmd_grabar";
+            this.cmd_grabar.Size = new System.Drawing.Size(37, 35);
+            this.cmd_grabar.TabIndex = 43;
+            this.cmd_grabar.UseVisualStyleBackColor = false;
+            this.cmd_grabar.Click += new System.EventHandler(this.cmd_grabar_Click);
             // 
-            // txt_cod_torneo
+            // cmd_actualizar
             // 
-            this.txt_cod_torneo.BackColor = System.Drawing.Color.White;
-            this.txt_cod_torneo.Enabled = false;
-            this.txt_cod_torneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cod_torneo.Location = new System.Drawing.Point(71, 61);
-            this.txt_cod_torneo.MaxLength = 10;
-            this.txt_cod_torneo.Name = "txt_cod_torneo";
-            this.txt_cod_torneo.Size = new System.Drawing.Size(56, 26);
-            this.txt_cod_torneo.TabIndex = 31;
-            this.txt_cod_torneo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmd_actualizar.BackColor = System.Drawing.Color.White;
+            this.cmd_actualizar.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__3_;
+            this.cmd_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_actualizar.Location = new System.Drawing.Point(957, 157);
+            this.cmd_actualizar.Name = "cmd_actualizar";
+            this.cmd_actualizar.Size = new System.Drawing.Size(37, 35);
+            this.cmd_actualizar.TabIndex = 44;
+            this.cmd_actualizar.UseVisualStyleBackColor = false;
+            this.cmd_actualizar.Click += new System.EventHandler(this.cmd_actualizar_Click);
             // 
-            // label2
+            // cmd_nuevo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 19);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Código";
+            this.cmd_nuevo.BackColor = System.Drawing.Color.White;
+            this.cmd_nuevo.BackgroundImage = global::AsociacionCordobesaDeNatacion.Properties.Resources.archive__2_;
+            this.cmd_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_nuevo.Location = new System.Drawing.Point(957, 75);
+            this.cmd_nuevo.Name = "cmd_nuevo";
+            this.cmd_nuevo.Size = new System.Drawing.Size(37, 35);
+            this.cmd_nuevo.TabIndex = 42;
+            this.cmd_nuevo.Tag = "Condiciones para crear un nuevo registro";
+            this.cmd_nuevo.UseVisualStyleBackColor = false;
+            this.cmd_nuevo.Click += new System.EventHandler(this.cmd_nuevo_Click);
             // 
             // inscriptosBindingSource1
             // 
@@ -430,37 +498,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridViewTextBoxColumn3.HeaderText = "tiempo";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(511, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 26);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Ver lista";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.mostrarGrilla);
-            // 
-            // cmb_anio
-            // 
-            this.cmb_anio.FormattingEnabled = true;
-            this.cmb_anio.Location = new System.Drawing.Point(71, 111);
-            this.cmb_anio.Name = "cmb_anio";
-            this.cmb_anio.Size = new System.Drawing.Size(126, 28);
-            this.cmb_anio.TabIndex = 51;
-            this.cmb_anio.SelectedIndexChanged += new System.EventHandler(this.cmb_anio_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 19);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Año";
-            // 
             // ABM_Inscriptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,7 +505,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1033, 532);
+            this.ClientSize = new System.Drawing.Size(1033, 609);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.cmd_grabar);
             this.Controls.Add(this.cmd_actualizar);
@@ -480,14 +517,16 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscriptos";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nadadoresBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneosBindingSource2)).EndInit();
@@ -561,5 +600,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmb_anio;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txt_tiempo;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -23,7 +23,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             try
             {
-
                 _BD = new AccesoBD(1);
                 _BD.consulta("Select * from Clubes");
                 Login frm_login = new Login(_BD);
@@ -31,28 +30,28 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
+                MessageBox.Show("Error, intentalo de nuevo.");
             }
             
         }
 
         private void btn_matias_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 _BD = new AccesoBD(2);
                 _BD.consulta("Select * from Clubes");
                 Login frm_login = new Login(_BD);
                 frm_login.ShowDialog();
-            }
-            catch(Exception)
-            {
-                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
-            }
-            
-        }
+        //}
+            //catch(Exception)
+            //{
+            //    MessageBox.Show("Error, intentalo de nuevo.");
+            //}
 
-        private void btn_lupo_Click(object sender, EventArgs e)
+}
+
+private void btn_lupo_Click(object sender, EventArgs e)
         {
             try
             {
@@ -63,7 +62,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
+                MessageBox.Show("Error, intentalo de nuevo.");
             }
 
         }
@@ -79,7 +78,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups estas equivocado amigooo, intentalo de nuevo");
+                MessageBox.Show("Error, intentalo de nuevo.");
             }
         }
     }

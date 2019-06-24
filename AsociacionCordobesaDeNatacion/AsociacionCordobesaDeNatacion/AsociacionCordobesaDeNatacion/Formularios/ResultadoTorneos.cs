@@ -30,10 +30,10 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             DataTable tabla = new DataTable();
 
             tabla = _BD.consulta("SELECT n.nombre, i.tiempo FROM Nadadores n, Inscriptos i " +
-                                 "WHERE i.cod_nad = n.cod_nacional " +
+                                 "WHERE i.cod_nadador = n.cod_nadador " +
                                  "AND i.anio = " + cmb_anio.SelectedValue +
                                  "AND i.cod_torneo = " + cmb_torneo.SelectedValue +
-                                 "AND i.cod_espe = " + cmb_especialidad.SelectedValue +
+                                 "AND i.cod_especialidad = " + cmb_especialidad.SelectedValue +
                                  "ORDER BY i.tiempo");
 
             tabla.Columns.Add("Posición", typeof(int));
@@ -55,7 +55,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         public void cargarComboBoxEspecialidad()
             {
                 cmb_especialidad.DataSource = _BD.consulta("SELECT * FROM Especialidad");
-                cmb_especialidad.ValueMember = "cod_espec";
+                cmb_especialidad.ValueMember = "cod_especialidad";
                 cmb_especialidad.DisplayMember = "descripcion";
             }
 
@@ -63,7 +63,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             {
                 cmb_torneo.DataSource = _BD.consulta("SELECT * FROM Torneos");
                 cmb_torneo.ValueMember = "cod_torneo";
-                cmb_torneo.DisplayMember = "descripccion";
+                cmb_torneo.DisplayMember = "descripcion";
             }
 
             public void cargarComboBoxAnios()
@@ -85,6 +85,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 this.dataGrid_Resultados.Rows[e.RowIndex].Cells[2].Value
                  = (e.RowIndex + 1).ToString();
             }
+        }
+
+        private void cmb_anio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

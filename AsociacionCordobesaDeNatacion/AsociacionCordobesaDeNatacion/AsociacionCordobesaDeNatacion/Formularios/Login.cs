@@ -29,13 +29,13 @@ namespace AsociacionCordobesaDeNatacion
         {
             if (this.txt_usuario.Text == "")
             {
-                MessageBox.Show("El campo 'Usuario' está vacío.");
+                MessageBox.Show("El campo 'USUARIO' está vacío.");
                 this.txt_usuario.Focus();
                 return;
             }
             if (this.txt_pssw.Text == "")
             {
-                MessageBox.Show("El campo 'Password' está vacío");
+                MessageBox.Show("El campo 'CONTRASEÑA' está vacío");
                 this.txt_pssw.Focus();
                 return;
             }
@@ -51,14 +51,14 @@ namespace AsociacionCordobesaDeNatacion
             }
             else
             {
-                MessageBox.Show("La contrasenia o el usuario es invalido");
+                MessageBox.Show("La CONTRASEÑA o el USUARIO es invalido");
             }
         }
 
         private void login_formclosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("está seguro de abandonar el formulario?"
-                , "importante", MessageBoxButtons.YesNo
+            if (MessageBox.Show("Está seguro de abandonar el formulario?"
+                , "IMPORTANTE", MessageBoxButtons.YesNo
                 , MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 e.Cancel = false;

@@ -14,8 +14,7 @@ namespace AsociacionCordobesaDeNatacion.Clases
         string _cod_club;
         string _nombre_club;
         string _calle_club;
-        string _numero_club;
-
+        
         public Clubes(AccesoBD BD)
         {
             _BD = BD;
@@ -31,12 +30,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
         {
             get { return _calle_club; }
             set { _calle_club = value; }
-        }
-
-        public string numero_club
-        {
-            get { return _numero_club; }
-            set { _numero_club = value; }
         }
 
         public string cod_club
@@ -57,13 +50,11 @@ namespace AsociacionCordobesaDeNatacion.Clases
         public void grabar_club()
         {
             int _cod_club = Int32.Parse(this.cod_club);
-            int _numero_club = Int32.Parse(this._numero_club);
             string SqlInsert = @" INSERT INTO Clubes 
-                         (cod_club, nombre , calle, numero) VALUES (" +
+                         (cod_club, nombre , calle) VALUES (" +
                          _cod_club + ", '" +
                          this._nombre_club + "', '" +
-                         this._calle_club + "', " +
-                         _numero_club + ")";
+                         this._calle_club + "')";
             MessageBox.Show(SqlInsert);
 
             this._BD.query(SqlInsert);
@@ -72,12 +63,10 @@ namespace AsociacionCordobesaDeNatacion.Clases
         public void modificar_club(string _cod_club)
         {
             int cod_club_aux = Int32.Parse(_cod_club);
-            int _numero_club = Int32.Parse(this._numero_club);
             string sqlupdate = @"UPDATE Clubes 
                          SET cod_club =" + cod_club_aux + "," +
                          "nombre ='" + this._nombre_club + "'," +
-                         "calle ='" + this.calle_club + "'," +
-                         "numero =" + _numero_club +
+                         "calle ='" + this.calle_club + "'" +
                          " WHERE cod_club =" + cod_club_aux;
 
             this._BD.query(sqlupdate);
