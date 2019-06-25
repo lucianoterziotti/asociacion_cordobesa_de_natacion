@@ -125,7 +125,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(47, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(929, 554);
+            this.groupBox1.Size = new System.Drawing.Size(929, 567);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INCRIPCIÓN";
@@ -505,7 +505,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1033, 609);
+            this.ClientSize = new System.Drawing.Size(1033, 625);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.cmd_grabar);
             this.Controls.Add(this.cmd_actualizar);

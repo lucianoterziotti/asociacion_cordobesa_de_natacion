@@ -29,17 +29,17 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         {
             DataTable tabla = new DataTable();
 
-            tabla = _BD.consulta("SELECT Inscriptos.cod_torneo, Torneos.descripcion, count (*) as cantidad " +
+            dataGrid_Torneos.DataSource=null;
+
+            tabla = _BD.consulta("SELECT Inscriptos.cod_torneo, Torneos.descripcion, count (*) as cantidad, Min(Inscriptos.tiempo) as 'Mejor Tiempo' " +
                                  "FROM Inscriptos , Torneos " +
                                  "WHERE Inscriptos.cod_torneo = Torneos.cod_torneo " +
                                  "AND anio =" + cmb_anio.SelectedValue +
                                  "GROUP BY Torneos.descripcion , Inscriptos.cod_torneo");
 
-            //tabla.Columns.Add("Posición", typeof(int));
-
             if (tabla.Rows.Count == 0)
             {
-                MessageBox.Show("No hay resultados registrados del Torneo seleccionado");
+                MessageBox.Show("No hay TORNEOS registrados del AÑO seleccionado");
                 return;
             }
 

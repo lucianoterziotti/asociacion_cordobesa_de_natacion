@@ -49,6 +49,8 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             dataGrid_Resultados.Columns[1].HeaderText = "Tiempo";
             dataGrid_Resultados.Columns[2].HeaderText = "Posición";
             dataGrid_Resultados.Columns["Posición"].DisplayIndex = 0;
+            dataGrid_Resultados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGrid_Resultados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 
         }
 

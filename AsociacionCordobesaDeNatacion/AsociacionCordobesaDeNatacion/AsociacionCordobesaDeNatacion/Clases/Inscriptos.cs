@@ -141,32 +141,6 @@ namespace AsociacionCordobesaDeNatacion.Clases
             this._BD.query(sqlUpdate);
 
         }
-
-
-
-        //private int setearPuesto()
-        //{
-        //    List<string> array = new List<string>();
-        //    DataTable tabla = new DataTable();
-        //    int puesto=0;
-
-        //    tabla = _BD.consulta("SELECT * FROM Inscriptos");
-
-        //    int counter = tabla.Rows.Count;
-        //    foreach (DataTable row in tabla.Rows)
-        //    {
-
-        //        array.Add(row.Rows[5].ToString());
-        //        array.Sort();
-        //    }
-        //    if (counter == 0)
-        //    {
-
-        //    }
-        //    return ;
-        //}
-    //}
-
-
+        
     }
 }

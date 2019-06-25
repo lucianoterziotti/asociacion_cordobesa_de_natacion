@@ -130,7 +130,7 @@
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.dataGrid_Torneos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGrid_Torneos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Torneos.Size = new System.Drawing.Size(370, 230);
+            this.dataGrid_Torneos.Size = new System.Drawing.Size(522, 230);
             this.dataGrid_Torneos.TabIndex = 58;
             // 
             // Reporte_Torneos

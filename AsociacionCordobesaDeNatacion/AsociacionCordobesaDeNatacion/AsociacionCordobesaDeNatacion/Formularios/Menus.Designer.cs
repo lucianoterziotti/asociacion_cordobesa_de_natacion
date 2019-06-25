@@ -51,7 +51,7 @@
             this.btn_clubes.BackColor = System.Drawing.Color.White;
             this.btn_clubes.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clubes.ForeColor = System.Drawing.Color.Black;
-            this.btn_clubes.Location = new System.Drawing.Point(104, 230);
+            this.btn_clubes.Location = new System.Drawing.Point(66, 230);
             this.btn_clubes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_clubes.Name = "btn_clubes";
             this.btn_clubes.Size = new System.Drawing.Size(162, 46);
@@ -65,7 +65,7 @@
             this.btn_nadadores.BackColor = System.Drawing.Color.White;
             this.btn_nadadores.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nadadores.ForeColor = System.Drawing.Color.Black;
-            this.btn_nadadores.Location = new System.Drawing.Point(104, 127);
+            this.btn_nadadores.Location = new System.Drawing.Point(66, 127);
             this.btn_nadadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_nadadores.Name = "btn_nadadores";
             this.btn_nadadores.Size = new System.Drawing.Size(162, 44);
@@ -79,7 +79,7 @@
             this.btn_profesores.BackColor = System.Drawing.Color.White;
             this.btn_profesores.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_profesores.ForeColor = System.Drawing.Color.Black;
-            this.btn_profesores.Location = new System.Drawing.Point(104, 179);
+            this.btn_profesores.Location = new System.Drawing.Point(66, 179);
             this.btn_profesores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_profesores.Name = "btn_profesores";
             this.btn_profesores.Size = new System.Drawing.Size(162, 44);
@@ -93,7 +93,7 @@
             this.btn_torneos.BackColor = System.Drawing.Color.White;
             this.btn_torneos.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_torneos.ForeColor = System.Drawing.Color.Black;
-            this.btn_torneos.Location = new System.Drawing.Point(104, 282);
+            this.btn_torneos.Location = new System.Drawing.Point(66, 282);
             this.btn_torneos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_torneos.Name = "btn_torneos";
             this.btn_torneos.Size = new System.Drawing.Size(162, 44);
@@ -107,7 +107,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 59);
+            this.label1.Location = new System.Drawing.Point(26, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 20);
             this.label1.TabIndex = 4;
@@ -118,7 +118,7 @@
             this.btn_inscriptos.BackColor = System.Drawing.Color.White;
             this.btn_inscriptos.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inscriptos.ForeColor = System.Drawing.Color.Black;
-            this.btn_inscriptos.Location = new System.Drawing.Point(301, 127);
+            this.btn_inscriptos.Location = new System.Drawing.Point(263, 127);
             this.btn_inscriptos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_inscriptos.Name = "btn_inscriptos";
             this.btn_inscriptos.Size = new System.Drawing.Size(162, 44);
@@ -132,7 +132,7 @@
             this.btn_especialidad.BackColor = System.Drawing.Color.White;
             this.btn_especialidad.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_especialidad.ForeColor = System.Drawing.Color.Black;
-            this.btn_especialidad.Location = new System.Drawing.Point(104, 334);
+            this.btn_especialidad.Location = new System.Drawing.Point(66, 334);
             this.btn_especialidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_especialidad.Name = "btn_especialidad";
             this.btn_especialidad.Size = new System.Drawing.Size(162, 46);
@@ -146,7 +146,7 @@
             this.btn_resultados.BackColor = System.Drawing.Color.White;
             this.btn_resultados.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_resultados.ForeColor = System.Drawing.Color.Black;
-            this.btn_resultados.Location = new System.Drawing.Point(501, 127);
+            this.btn_resultados.Location = new System.Drawing.Point(467, 127);
             this.btn_resultados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_resultados.Name = "btn_resultados";
             this.btn_resultados.Size = new System.Drawing.Size(162, 44);
@@ -160,7 +160,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(100, 103);
+            this.label2.Location = new System.Drawing.Point(84, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 19);
             this.label2.TabIndex = 8;
@@ -171,7 +171,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(297, 103);
+            this.label3.Location = new System.Drawing.Point(295, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 9;
@@ -182,7 +182,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(497, 103);
+            this.label4.Location = new System.Drawing.Point(496, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 19);
             this.label4.TabIndex = 10;
@@ -207,7 +207,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(26, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1020, 414);
+            this.groupBox1.Size = new System.Drawing.Size(885, 414);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MENU PRINCIPAL";
@@ -217,7 +217,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(703, 103);
+            this.label5.Location = new System.Drawing.Point(704, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 19);
             this.label5.TabIndex = 10;
@@ -228,7 +228,7 @@
             this.btn_rtorneos.BackColor = System.Drawing.Color.White;
             this.btn_rtorneos.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_rtorneos.ForeColor = System.Drawing.Color.Black;
-            this.btn_rtorneos.Location = new System.Drawing.Point(707, 127);
+            this.btn_rtorneos.Location = new System.Drawing.Point(669, 127);
             this.btn_rtorneos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_rtorneos.Name = "btn_rtorneos";
             this.btn_rtorneos.Size = new System.Drawing.Size(162, 44);
@@ -242,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1127, 472);
+            this.ClientSize = new System.Drawing.Size(938, 483);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
