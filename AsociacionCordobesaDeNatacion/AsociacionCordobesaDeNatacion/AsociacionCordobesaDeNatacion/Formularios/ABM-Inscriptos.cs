@@ -197,7 +197,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void btn_finalizar_Click(object sender, EventArgs e)
         {
-            _BD.cerrar_transaccion();
+            //_BD.cerrar_transaccion();
             this.label5.Text = "Finalizada";
         }
     }

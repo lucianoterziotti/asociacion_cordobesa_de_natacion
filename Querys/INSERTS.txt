@@ -1,55 +1,3 @@
-CREATE TABLE Usuarios(
-nombre varchar(255) NOT NULL,
-password varchar(255),
-PRIMARY KEY (nombre)
-);
-
-CREATE TABLE Especialidad(
-cod_especialidad int NOT NULL,
-descripcion varchar(255),
-PRIMARY KEY (cod_especialidad)
-);
-
-CREATE TABLE Clubes(
-cod_club int NOT NULL,
-nombre varchar(255),
-calle varchar(255),
-PRIMARY KEY (cod_club)
-);
-
-CREATE TABLE Torneos(
-cod_torneo int NOT NULL,
-descripcion varchar(255),
-PRIMARY KEY(cod_torneo)
-);
-
-CREATE TABLE Profesores (
-    cod_profesor int NOT NULL,
-    nombre varchar(255),
-    calle varchar(255),
-PRIMARY KEY(cod_profesor)
-);
-
-CREATE TABLE Nadadores (
-    cod_nadador int NOT NULL,
-    nombre varchar(255),
-    calle varchar(255),
-PRIMARY KEY(cod_nadador)
-);
-
-CREATE TABLE Inscriptos(
-cod_torneo int NOT NULL FOREIGN KEY REFERENCES Torneos(cod_torneo),
-anio int NOT NULL,
-cod_especialidad int NOT NULL FOREIGN KEY REFERENCES Especialidad(cod_especialidad),
-cod_nadador int NOT NULL FOREIGN KEY REFERENCES Nadadores(cod_nadador),
-tiempo float NULL,
-PRIMARY KEY(cod_torneo,anio,cod_especialidad,cod_nadador)
-);
-
-CREATE TABLE anioTorneo (
- anio int NOT NULL,
-PRIMARY KEY(anio)
-);
 
 INSERT INTO Usuarios (nombre, password)
 VALUES ('mati', '1234');
@@ -93,12 +41,15 @@ VALUES (2018);
 INSERT INTO anioTorneo (anio)
 VALUES (2019);
 
+INSERT INTO Profesores(cod_profesor, nombre, calle)
+VALUES (34121774, 'Roberto', 'Rivadavia 886');
 
-///////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
+INSERT INTO Profesores(cod_profesor, nombre, calle)
+VALUES (43603659, 'Agustina', 'San Martin 642');
 
-INSERT INTO Profesores (cod_profesor, nombre, calle)
-VALUES ('22', 'Agus', 'BsAs')
+
+INSERT INTO Profesores(cod_profesor, nombre, calle)
+VALUES (18567594, 'Mariela', 'Carlos Gardel 455');
 
 INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
 VALUES (1, 2019, 1, 1, '24,23');
@@ -159,6 +110,7 @@ VALUES (43603251, 'Luz', 'San Martin 642');
 
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (18565509, 'Silvina', 'Carlos Gardel 455');
+
 
 
 INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)

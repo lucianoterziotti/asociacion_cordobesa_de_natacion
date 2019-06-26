@@ -1,0 +1,52 @@
+CREATE TABLE Usuarios(
+nombre varchar(255) NOT NULL,
+password varchar(255),
+PRIMARY KEY (nombre)
+);
+
+CREATE TABLE Especialidad(
+cod_especialidad int NOT NULL,
+descripcion varchar(255),
+PRIMARY KEY (cod_especialidad)
+);
+
+CREATE TABLE Clubes(
+cod_club int NOT NULL,
+nombre varchar(255),
+calle varchar(255),
+PRIMARY KEY (cod_club)
+);
+
+CREATE TABLE Torneos(
+cod_torneo int NOT NULL,
+descripcion varchar(255),
+PRIMARY KEY(cod_torneo)
+);
+
+CREATE TABLE Profesores (
+    cod_profesor int NOT NULL,
+    nombre varchar(255),
+    calle varchar(255),
+PRIMARY KEY(cod_profesor)
+);
+
+CREATE TABLE Nadadores (
+    cod_nadador int NOT NULL,
+    nombre varchar(255),
+    calle varchar(255),
+PRIMARY KEY(cod_nadador)
+);
+
+CREATE TABLE Inscriptos(
+cod_torneo int NOT NULL FOREIGN KEY REFERENCES Torneos(cod_torneo),
+anio int NOT NULL,
+cod_especialidad int NOT NULL FOREIGN KEY REFERENCES Especialidad(cod_especialidad),
+cod_nadador int NOT NULL FOREIGN KEY REFERENCES Nadadores(cod_nadador),
+tiempo float NULL,
+PRIMARY KEY(cod_torneo,anio,cod_especialidad,cod_nadador)
+);
+
+CREATE TABLE anioTorneo (
+ anio int NOT NULL,
+PRIMARY KEY(anio)
+);
