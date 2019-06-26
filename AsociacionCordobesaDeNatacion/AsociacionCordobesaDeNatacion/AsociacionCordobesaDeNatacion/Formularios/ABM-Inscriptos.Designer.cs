@@ -84,6 +84,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inscriptosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.inscriptosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_finalizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -112,6 +113,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_finalizar);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -123,9 +125,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(47, 33);
+            this.groupBox1.Location = new System.Drawing.Point(47, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(929, 567);
+            this.groupBox1.Size = new System.Drawing.Size(948, 568);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INCRIPCIÓN";
@@ -166,7 +168,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(511, 2);
+            this.button1.Location = new System.Drawing.Point(462, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
             this.button1.TabIndex = 54;
@@ -230,7 +232,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(605, 3);
+            this.label7.Location = new System.Drawing.Point(556, 7);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 25);
@@ -287,7 +289,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(727, 3);
+            this.label5.Location = new System.Drawing.Point(678, 7);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
@@ -305,12 +307,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.btn_FinalizarTrans.TabIndex = 47;
             this.btn_FinalizarTrans.Text = "Finalizar";
             this.btn_FinalizarTrans.UseVisualStyleBackColor = true;
-            this.btn_FinalizarTrans.Click += new System.EventHandler(this.btn_FinalizarTrans_Click);
             // 
             // btn_IniciarTrans
             // 
             this.btn_IniciarTrans.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_IniciarTrans.Location = new System.Drawing.Point(810, 0);
+            this.btn_IniciarTrans.Location = new System.Drawing.Point(761, 4);
             this.btn_IniciarTrans.Margin = new System.Windows.Forms.Padding(2);
             this.btn_IniciarTrans.Name = "btn_IniciarTrans";
             this.btn_IniciarTrans.Size = new System.Drawing.Size(86, 32);
@@ -498,6 +499,18 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.dataGridViewTextBoxColumn3.HeaderText = "tiempo";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
+            // btn_finalizar
+            // 
+            this.btn_finalizar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_finalizar.Location = new System.Drawing.Point(861, 4);
+            this.btn_finalizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_finalizar.Name = "btn_finalizar";
+            this.btn_finalizar.Size = new System.Drawing.Size(86, 32);
+            this.btn_finalizar.TabIndex = 57;
+            this.btn_finalizar.Text = "Finalizar";
+            this.btn_finalizar.UseVisualStyleBackColor = true;
+            this.btn_finalizar.Click += new System.EventHandler(this.btn_finalizar_Click);
+            // 
             // ABM_Inscriptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,5 +616,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox txt_tiempo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_finalizar;
     }
 }

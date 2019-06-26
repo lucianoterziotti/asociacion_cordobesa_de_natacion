@@ -66,13 +66,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             this.label5.Text = "Iniciada";
         }
 
-        private void btn_FinalizarTrans_Click(object sender, EventArgs e)
-        {
-            _BD.cerrar_transaccion();
-            this.label5.Text = "Finalizada";
-        }
-
-
         private void cmd_actualizar_Click(object sender, EventArgs e)
         {
             List<TextBox> array = crearArray();
@@ -200,6 +193,12 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             listaInscriptos.ShowDialog();
 
             listaInscriptos.Dispose();
+        }
+
+        private void btn_finalizar_Click(object sender, EventArgs e)
+        {
+            _BD.cerrar_transaccion();
+            this.label5.Text = "Finalizada";
         }
     }
 }
