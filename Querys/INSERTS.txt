@@ -2,6 +2,12 @@
 INSERT INTO Usuarios (nombre, password)
 VALUES ('mati', '1234');
 
+INSERT INTO Usuarios (nombre, password)
+VALUES ('belen', '1234');
+
+INSERT INTO Usuarios (nombre, password)
+VALUES ('lupo', '1234');
+
 INSERT INTO Clubes(cod_club, nombre, calle)
 VALUES (1, 'Bucor', 'San Luis 53');
 
@@ -47,18 +53,14 @@ VALUES (34121774, 'Roberto', 'Rivadavia 886');
 INSERT INTO Profesores(cod_profesor, nombre, calle)
 VALUES (43603659, 'Agustina', 'San Martin 642');
 
-
 INSERT INTO Profesores(cod_profesor, nombre, calle)
 VALUES (18567594, 'Mariela', 'Carlos Gardel 455');
 
-INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
-VALUES (1, 2019, 1, 1, '24,23');
+INSERT INTO Torneos(cod_torneo, descripcion)
+VALUES ('1', 'Nacional');
 
 INSERT INTO Torneos(cod_torneo, descripcion)
 VALUES ('2', 'Provincial');
-
-INSERT INTO Torneos(cod_torneo, descripcion)
-VALUES ('1', 'Nacional');
 
 INSERT INTO Torneos(cod_torneo, descripcion)
 VALUES ('3', 'Regional');
@@ -79,14 +81,8 @@ VALUES (4, 'Mariposa');
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (38614960, 'Luciano', 'Velez Sarfield 1393');
 
-
-INSERT INTO Nadadores(cod_nadador, nombre, calle)
-VALUES (38614960, 'Luciano', 'Velez Sarfield 1393');
-
-
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (39423816, 'Belen', 'Buenos Aires 530');
-
 
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (39420100, 'Paula', 'Estrada 110');
@@ -95,22 +91,17 @@ VALUES (39420100, 'Paula', 'Estrada 110');
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (39423808, 'Joaquin', 'Poeta Lugones 30');
 
-
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (41034135, 'Emilia', 'Buenos Aires 530');
-
 
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (18111774, 'Lorenzo', 'Rivadavia 886');
 
-
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (43603251, 'Luz', 'San Martin 642');
 
-
 INSERT INTO Nadadores(cod_nadador, nombre, calle)
 VALUES (18565509, 'Silvina', 'Carlos Gardel 455');
-
 
 
 INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
