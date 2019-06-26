@@ -21,7 +21,9 @@ namespace AsociacionCordobesaDeNatacion.Formularios
         ABM_Especialidad frm_especialidad;
         ResultadoTorneos frm_resultados;
         Reporte_Torneos frm_rtorneos;
-        AccesoBD _BD;
+		ReporteEspecialidades frm_respecialidades;
+		Reporte_Nadadores frm_rnadadores;
+		AccesoBD _BD;
 
         public Menus(AccesoBD BD)
         {
@@ -85,5 +87,20 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             frm_rtorneos.ShowDialog();
             frm_rtorneos.Dispose();
         }
-    }
+
+		private void btn_ReporteEspe_Click(object sender, EventArgs e)
+		{
+			frm_respecialidades = new ReporteEspecialidades(_BD);
+			frm_respecialidades.ShowDialog();
+			frm_respecialidades.Dispose();
+
+		}
+
+		private void btn_rnadadores_Click(object sender, EventArgs e)
+		{
+			frm_rnadadores = new Reporte_Nadadores(_BD);
+			frm_rnadadores.ShowDialog();
+			frm_rnadadores.Dispose();
+		}
+	}
 }

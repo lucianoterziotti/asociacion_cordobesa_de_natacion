@@ -21,17 +21,17 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
         private void btn_belen_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 _BD = new AccesoBD(1);
                 _BD.consulta("Select * from Clubes");
                 Login frm_login = new Login(_BD);
                 frm_login.ShowDialog();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error, intentalo de nuevo.");
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Error, intentalo de nuevo.");
+            //}
             
         }
 

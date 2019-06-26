@@ -55,6 +55,11 @@
     <Compile Include="Clases\Profesores.cs" />
     <Compile Include="Clases\Torneos.cs" />
     <Compile Include="Clases\Users.cs" />
+    <Compile Include="DS_Especialidades.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Especialidades.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_Inscriptos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,11 +101,23 @@
     <Compile Include="Formularios\ABM-Torneos.Designer.cs">
       <DependentUpon>ABM-Torneos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reporte-Nadadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reporte-Nadadores.Designer.cs">
+      <DependentUpon>Reporte-Nadadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reporte-Torneos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Reporte-Torneos.Designer.cs">
       <DependentUpon>Reporte-Torneos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReporteEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteEspecialidades.Designer.cs">
+      <DependentUpon>ReporteEspecialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuario.cs">
       <SubType>Form</SubType>
@@ -168,8 +185,14 @@
     <EmbeddedResource Include="Formularios\Menus.resx">
       <DependentUpon>Menus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reporte-Nadadores.resx">
+      <DependentUpon>Reporte-Nadadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reporte-Torneos.resx">
       <DependentUpon>Reporte-Torneos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteEspecialidades.resx">
+      <DependentUpon>ReporteEspecialidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ResultadoTorneos.resx">
       <DependentUpon>ResultadoTorneos.cs</DependentUpon>
@@ -190,6 +213,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DS_Especialidades.xsc">
+      <DependentUpon>DS_Especialidades.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Especialidades.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Especialidades.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Especialidades.xss">
+      <DependentUpon>DS_Especialidades.xsd</DependentUpon>
+    </None>
     <None Include="DS_Inscriptos.xsc">
       <DependentUpon>DS_Inscriptos.xsd</DependentUpon>
     </None>

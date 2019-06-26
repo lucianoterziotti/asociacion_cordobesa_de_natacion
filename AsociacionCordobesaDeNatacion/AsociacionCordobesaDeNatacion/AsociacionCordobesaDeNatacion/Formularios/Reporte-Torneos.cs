@@ -15,8 +15,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
     internal partial class Reporte_Torneos : Form
     {
         AccesoBD _BD;
-        DataRow DR;
-        DataTable DT;
 
         public Reporte_Torneos(AccesoBD BD)
         {
@@ -31,7 +29,7 @@ namespace AsociacionCordobesaDeNatacion.Formularios
 
             dataGrid_Torneos.DataSource=null;
 
-            tabla = _BD.consulta("SELECT Inscriptos.cod_torneo, Torneos.descripcion, count (*) as cantidad, Min(Inscriptos.tiempo) as 'Mejor Tiempo' " +
+            tabla = _BD.consulta("SELECT Inscriptos.cod_torneo, Torneos.descripcion, count (*) as cantidad, Min(Inscriptos.tiempo) as 'Mejor Tiempo', Avg(Inscriptos.tiempo) as 'Tiempo Promedio'   " +
                                  "FROM Inscriptos , Torneos " +
                                  "WHERE Inscriptos.cod_torneo = Torneos.cod_torneo " +
                                  "AND anio =" + cmb_anio.SelectedValue +
@@ -46,9 +44,11 @@ namespace AsociacionCordobesaDeNatacion.Formularios
             dataGrid_Torneos.DataSource = tabla;
             dataGrid_Torneos.Columns[0].HeaderText = "Código";
             dataGrid_Torneos.Columns[1].HeaderText = "Torneo";
-            dataGrid_Torneos.Columns[2].HeaderText = "Cantidad de inscriptos";
+            dataGrid_Torneos.Columns[2].HeaderText = "Inscripciones";
+			dataGrid_Torneos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+			dataGrid_Torneos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 
-            string[] x = new string[tabla.Rows.Count];
+			string[] x = new string[tabla.Rows.Count];
             int[] y = new int[tabla.Rows.Count];
 
             for (int i = 0 ; i < tabla.Rows.Count ; i ++)
