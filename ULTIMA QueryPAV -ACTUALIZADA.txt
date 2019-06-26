@@ -54,14 +54,1704 @@ PRIMARY KEY(anio)
 INSERT INTO Usuarios (nombre, password)
 VALUES ('mati', '1234');
 
-INSERT INTO Profesores (cod_prof, nombre, calle)
+INSERT INTO Clubes(cod_club, nombre, calle)
+VALUES (1, 'Bucor', 'San Luis 53');
+
+INSERT INTO Clubes(cod_club, nombre, calle)
+VALUES (2, 'Suquia', 'Lopez y Planes 3043');
+
+INSERT INTO Clubes(cod_club, nombre, calle)
+VALUES (3, 'Jockey', 'Leon 1932');
+
+INSERT INTO anioTorneo (anio)
+VALUES (2010);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2011);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2012);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2013);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2014);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2015);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2016);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2017);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2018);
+
+INSERT INTO anioTorneo (anio)
+VALUES (2019);
+
+
+///////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+INSERT INTO Profesores (cod_profesor, nombre, calle)
 VALUES ('22', 'Agus', 'BsAs')
 
-INSERT INTO Inscriptos(cod_torneo, anio, cod_espe, cod_nad, posicion, tiempo)
-VALUES ('5', '2019', '6', '1', null, null);
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 1, 1, '24,23');
 
-INSERT INTO Nadadores(cod_nacional, nombre, calle)
-VALUES (5, '2019', '6');
+INSERT INTO Torneos(cod_torneo, descripcion)
+VALUES ('2', 'Provincial');
 
-INSERT INTO Torneos(cod_torneo, descripccion)
-VALUES ('1', 'Torneo');
+INSERT INTO Torneos(cod_torneo, descripcion)
+VALUES ('1', 'Nacional');
+
+INSERT INTO Torneos(cod_torneo, descripcion)
+VALUES ('3', 'Regional');
+
+INSERT INTO Especialidad(cod_especialidad, descripcion)
+VALUES (1, 'Libre');
+
+INSERT INTO Especialidad(cod_especialidad, descripcion)
+VALUES (2, 'Pecho');
+
+INSERT INTO Especialidad(cod_especialidad, descripcion)
+VALUES (3, 'Espalda');
+
+INSERT INTO Especialidad(cod_especialidad, descripcion)
+VALUES (4, 'Mariposa');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (38614960, 'Luciano', 'Velez Sarfield 1393');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (38614960, 'Luciano', 'Velez Sarfield 1393');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (39423816, 'Belen', 'Buenos Aires 530');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (39420100, 'Paula', 'Estrada 110');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (39423808, 'Joaquin', 'Poeta Lugones 30');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (41034135, 'Emilia', 'Buenos Aires 530');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (18111774, 'Lorenzo', 'Rivadavia 886');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (43603251, 'Luz', 'San Martin 642');
+
+
+INSERT INTO Nadadores(cod_nadador, nombre, calle)
+VALUES (18565509, 'Silvina', 'Carlos Gardel 455');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 1, 39420100, '18.23');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 1, 39420100, '18.45');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 1, 39420100, '18.98');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 1, 39420100, '17.23');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 1, 39420100, '17.01');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 1, 39420100, '17.56');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 1, 39420100, '21.49');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 1, 39420100, '21.26');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 1, 39420100, '21.78');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 1, 39420100, '20.19');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 1, 39420100, '20.45');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 1, 39420100, '20.98');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 1, 39420100, '15.48');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 1, 39420100, '15.65');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 1, 39420100, '15.32');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 1, 39420100, '19.45');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 1, 39420100, '19.59');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 1, 39420100, '19.86');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 1, 39423808, '18.00');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 1, 39423808, '18.01');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 1, 39423808, '18.88');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 1, 39423808, '18.50');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 1, 39423808, '19.24');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 1, 39423808, '20.65');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 1, 39423808, '21.46');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 1, 39423808, '20.98');
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 1, 39423808, '18.46');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 1, 38614960, '25.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 1, 18565509, '27.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 1, 41034135, '28.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 2, 18565509, '19.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 3, 41034135, '36.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 4, 43603251, '34.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2011, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 1, 18565509, '27.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2011, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2011, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2012, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2012, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2012, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2013, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2013, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2013, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2014, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2014, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 3, 41034135, '26.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2014, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2015, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2015, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2015, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2016, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2016, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2016, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 4, 43603251, '45.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2017, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2017, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2017, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2018, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2018, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2018, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2010, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 1, 18565509, '48.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2010, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 3, 39423816, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2010, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 3, 38614960, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 4, 43603251, '19.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (1, 2019, 4, 41034135, '33.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 1, 39423816, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 1, 38614960, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 3, 39423816, '31.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (2, 2019, 4, 41034135, '33.45');
+
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 1, 38614960, '24.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 1, 39423816, '29.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 1, 43603251, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 1, 18565509, '22.53');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 1, 41034135, '25.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 2, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 2, 43603251, '37.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 2, 18565509, '29.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 2, 41034135, '27.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 3, 41034135, '34.43');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 3, 43603251, '40.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 3, 18565509, '32.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 3, 39423816, '31.45');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 4, 18111774, '27.23');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 4, 43603251, '39.54');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 4, 18565509, '37.58');
+
+INSERT INTO Inscriptos(cod_torneo, anio, cod_especialidad, cod_nadador, tiempo)
+VALUES (3, 2019, 4, 41034135, '33.45');
+
+
+

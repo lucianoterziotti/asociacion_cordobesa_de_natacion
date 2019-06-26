@@ -84,7 +84,6 @@ namespace AsociacionCordobesaDeNatacion.Formularios
                 inscriptos.cod_torneo = this.txt_cod_torneo.Text;
                 inscriptos.cod_nadador = this.txt_cod_nadador.Text;
                 inscriptos.anio = this.txt_anio.Text;
-                //inscriptos.modificar_Inscripto(this.txt_cod_nadador.Text, this.txt_cod_especialidad.Text, this.txt_cod_torneo.Text, this.txt_anio.Text, this.txt_tiempo.Text);
                 this.label5.Text = "En proceso";
             }
             else
